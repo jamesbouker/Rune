@@ -10,6 +10,15 @@
 		0784C792B235A66019B5403E /* Pods_RuneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BA7E87C8AB93F0899DF89B /* Pods_RuneTests.framework */; };
 		41340A059B5F91BDB5DEEC94 /* Pods_Rune_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD1B2802C9BAFB5294DD669 /* Pods_Rune_tvOS.framework */; };
 		69D1C53BF8F5519DF955478B /* Pods_Rune_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668E4E9F26498E1E6CFD3E85 /* Pods_Rune_iOS.framework */; };
+		F58A81671F6E115000C2E0F2 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58A81661F6E115000C2E0F2 /* AssetsLibrary.framework */; };
+		F58A81691F6E115E00C2E0F2 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58A81681F6E115E00C2E0F2 /* BuddyBuildSDK.framework */; };
+		F58A816B1F6E116700C2E0F2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58A816A1F6E116700C2E0F2 /* CoreTelephony.framework */; };
+		F58A816D1F6E116F00C2E0F2 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58A816C1F6E116F00C2E0F2 /* CoreText.framework */; };
+		F58A816F1F6E117C00C2E0F2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58A816E1F6E117C00C2E0F2 /* CoreMedia.framework */; };
+		F58A81711F6E118500C2E0F2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58A81701F6E118500C2E0F2 /* AVFoundation.framework */; };
+		F58A81731F6E118D00C2E0F2 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58A81721F6E118D00C2E0F2 /* CoreVideo.framework */; };
+		F58A81751F6E119600C2E0F2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58A81741F6E119600C2E0F2 /* QuartzCore.framework */; };
+		F58A81771F6E119F00C2E0F2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58A81761F6E119F00C2E0F2 /* SystemConfiguration.framework */; };
 		F590354D1F6DA6950023B166 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59997DB1F6D9E8B00E5DDDE /* GameViewController.swift */; };
 		F590354F1F6DA80E0023B166 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F590354E1F6DA80E0023B166 /* GameScene.sks */; };
 		F59035521F6DA8640023B166 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F59035511F6DA8640023B166 /* GameScene.sks */; };
@@ -140,6 +149,15 @@
 		C1F21F0A9A8AE76492387217 /* Pods-RuneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RuneTests/Pods-RuneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF524B1D09F88EF0E8B6F3FE /* Pods-Rune iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rune iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rune iOS/Pods-Rune iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E7BA7E87C8AB93F0899DF89B /* Pods_RuneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RuneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F58A81661F6E115000C2E0F2 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
+		F58A81681F6E115E00C2E0F2 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
+		F58A816A1F6E116700C2E0F2 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+		F58A816C1F6E116F00C2E0F2 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		F58A816E1F6E117C00C2E0F2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		F58A81701F6E118500C2E0F2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		F58A81721F6E118D00C2E0F2 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/CoreVideo.framework; sourceTree = DEVELOPER_DIR; };
+		F58A81741F6E119600C2E0F2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		F58A81761F6E119F00C2E0F2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		F590354E1F6DA80E0023B166 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		F59035511F6DA8640023B166 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		F59035571F6DAC450023B166 /* RuneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,6 +237,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F58A81771F6E119F00C2E0F2 /* SystemConfiguration.framework in Frameworks */,
+				F58A81751F6E119600C2E0F2 /* QuartzCore.framework in Frameworks */,
+				F58A81731F6E118D00C2E0F2 /* CoreVideo.framework in Frameworks */,
+				F58A81711F6E118500C2E0F2 /* AVFoundation.framework in Frameworks */,
+				F58A816F1F6E117C00C2E0F2 /* CoreMedia.framework in Frameworks */,
+				F58A816D1F6E116F00C2E0F2 /* CoreText.framework in Frameworks */,
+				F58A816B1F6E116700C2E0F2 /* CoreTelephony.framework in Frameworks */,
+				F58A81691F6E115E00C2E0F2 /* BuddyBuildSDK.framework in Frameworks */,
+				F58A81671F6E115000C2E0F2 /* AssetsLibrary.framework in Frameworks */,
 				69D1C53BF8F5519DF955478B /* Pods_Rune_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +264,15 @@
 		6AF329CDB0BC9552973CA45F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F58A81761F6E119F00C2E0F2 /* SystemConfiguration.framework */,
+				F58A81741F6E119600C2E0F2 /* QuartzCore.framework */,
+				F58A81721F6E118D00C2E0F2 /* CoreVideo.framework */,
+				F58A81701F6E118500C2E0F2 /* AVFoundation.framework */,
+				F58A816E1F6E117C00C2E0F2 /* CoreMedia.framework */,
+				F58A816C1F6E116F00C2E0F2 /* CoreText.framework */,
+				F58A816A1F6E116700C2E0F2 /* CoreTelephony.framework */,
+				F58A81681F6E115E00C2E0F2 /* BuddyBuildSDK.framework */,
+				F58A81661F6E115000C2E0F2 /* AssetsLibrary.framework */,
 				668E4E9F26498E1E6CFD3E85 /* Pods_Rune_iOS.framework */,
 				1CD1B2802C9BAFB5294DD669 /* Pods_Rune_tvOS.framework */,
 				E7BA7E87C8AB93F0899DF89B /* Pods_RuneTests.framework */,
@@ -1043,6 +1079,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6KM367XE7J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Rune iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1062,6 +1102,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6KM367XE7J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Rune iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

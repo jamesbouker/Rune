@@ -1,0 +1,36 @@
+{
+	"brownBear" : {
+		"maxHp" : 4,
+		"asset" : "bear",
+        "ai" : "sightedLastKnown",
+        "range" : 8,
+		"isDirectional" : true
+	},
+	"blueSlime" : {
+		"maxHp" : 1,
+		"asset" : "slime",
+        "ai" : "random",
+		"isDirectional" : true
+	},
+	"blackBat" : {
+		"maxHp" : 1,
+		"asset" : "bat",
+        "ai" : "random",
+		"isDirectional" : false,
+        "canFly" : true
+	},
+    "whiteRat": {
+        "maxHp" : 2,
+        "asset" : "rat",
+        "ai" : "sighted",
+        "range" : 4,
+        "isDirectional" : true
+    },
+    "worm" : {
+        "maxHp" : 1,
+        "asset" : "worm",
+        "ai" : "sightedFollower",
+        "range" : 8,
+        "isDirectional" : true
+    }
+}

@@ -3,6 +3,7 @@
 		"width" : 7,
         "height" : 7,
         "atlas" : "vine",
+        "grass" : 20,
         "mustSpawn" : ["blueSlime"]
 	},
     "2" : {
@@ -10,14 +11,17 @@
         "widthVar" : 1,
         "height" : 7,
         "heightVar" : 1,
-        "grass" : false,
+        "grass" : 0,
         "atlas" : "brick",
         "mustSpawn" : ["blueSlime"]
     },
     "3" : {
-        "width" : 7,
+        "width" : 8,
+        "widthVar" : 1,
         "height" : 7,
+        "heightVar" : 1,
         "atlas" : "stone",
+        "grass" : 20,
         "mustSpawn" : ["blueSlime", "blackBat"]
     }
 }

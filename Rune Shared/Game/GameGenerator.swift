@@ -14,7 +14,7 @@ class Level: Codable {
     private let height: Int
     private let heightVar: Int?
     private let atlas: String
-    private let grass: Bool? = false
+    let grass: Int
     let mustSpawn: [String]
 
     class func level(_ json: [String: AnyObject]) -> Level? {
@@ -79,7 +79,7 @@ extension GameScene {
 
         let width = Int.random(min: level.minWidth, max: level.maxWidth)
         let height = Int.random(min: level.minHeight, max: level.maxHeight)
-        let scene = generateGame(width: width, height: height, env: level.env)
+        let scene = generateGame(width: width, height: height, level: level)
         scene.levelNum = nextLevel
 
         for spawn in level.mustSpawn {
@@ -129,11 +129,11 @@ extension GameScene {
         tileMap.set(value: true, forKey: rule, tile: tile, atlas: atlas)
     }
 
-    func generateGame(width: Int, height: Int, env: EnvAtlas) -> GameScene {
+    func generateGame(width: Int, height: Int, level: Level) -> GameScene {
         TileMeta.shared.reset()
         let game = GameScene(fileNamed: "GameScene")!
         sharedController.scene = game
-        game.atlas = env
+        game.atlas = level.env
         game.grabOutlets()
 
         game.tileMap.numberOfColumns = width
@@ -145,12 +145,12 @@ extension GameScene {
         game.tileMap.position.y = -py
 
         game.tileMap.resetMaps()
-        game.tileMap.setAllTiles(tile: .floor, atlas: env)
+        game.tileMap.setAllTiles(tile: .floor, atlas: level.env)
 
         let torches = (width + height) / 4
         game.addWallsAndItems(width: width, height: height)
         game.addLighting(torches: torches)
-        game.addGrass()
+        game.addGrass(prob: level.grass)
 
         game.scaleMode = scaleMode
 
@@ -169,10 +169,10 @@ extension GameScene {
         }
     }
 
-    func addGrass() {
+    func addGrass(prob: Int) {
         for loc in tileMap.walkables {
             let random = Int.random(100)
-            if random > 20 { continue }
+            if random > prob { continue }
             if tileMap.sfx.tileDefinition(location: loc) == nil {
                 tileMap.grass.setTile(tile: .grass, forLocation: loc)
             }

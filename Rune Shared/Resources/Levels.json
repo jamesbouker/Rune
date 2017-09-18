@@ -23,5 +23,17 @@
         "atlas" : "stone",
         "grass" : 20,
         "mustSpawn" : ["blueSlime", "blackBat"]
+    },
+    "4" : {
+        "canSpawn" : ["blueSlime", "blackBat"],
+        "canSpawnWeight" : [2, 1],
+        "numberToSpawn" : 5,
+        "numberToSpawnVar" : 2,
+        "width" : 8,
+        "widthVar" : 1,
+        "height" : 7,
+        "heightVar" : 1,
+        "grass" : 0,
+        "atlas" : "brick"
     }
 }

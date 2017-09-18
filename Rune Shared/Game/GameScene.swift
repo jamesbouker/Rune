@@ -79,7 +79,8 @@ extension GameScene {
         if !sprite.ai.canFly {
             loc = tileMap.walkableNoSprites.randomItem()
         } else {
-            loc = tileMap.locationsNoMonsters.randomItem()
+//            loc = tileMap.locationsNoMonsters.randomItem()
+            loc = tileMap.walkableNoSprites.randomItem()
         }
         guard let l = loc else {
             return

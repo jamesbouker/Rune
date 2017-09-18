@@ -14,8 +14,44 @@ class Level: Codable {
     private let height: Int
     private let heightVar: Int?
     private let atlas: String
+
+    var spawnCounter: Int {
+        let numberToSpawn = self.numberToSpawn ?? 0
+        let variance = self.numberToSpawnVar ?? 0
+        return Int.random(min: numberToSpawn - variance, max: numberToSpawn + variance)
+
+    }
+    private let numberToSpawn: Int?
+    private let numberToSpawnVar: Int?
+
+    var toMaybeSpawn: [String] {
+        var canSpawn = [String]()
+        var i = 0
+        for spawn in self.canSpawn ?? [] {
+            for _ in 0..<self.spawnWeight[i] {
+                canSpawn.append(spawn)
+            }
+            i += 1
+        }
+        return canSpawn
+    }
+
+    private let canSpawn: [String]?
+    private let canSpawnWeight: [Int]?
+    private var spawnWeight: [Int] {
+        if let spawn = canSpawn {
+            let spawnW = canSpawnWeight ?? []
+            if spawnW.count == spawn.count {
+                return spawnW
+            } else {
+                return Array(0..<spawn.count)
+            }
+        }
+        return []
+    }
+
     let grass: Int
-    let mustSpawn: [String]
+    let mustSpawn: [String]?
 
     class func level(_ json: [String: AnyObject]) -> Level? {
         let jsonDecoder = JSONDecoder()
@@ -82,9 +118,23 @@ extension GameScene {
         let scene = generateGame(width: width, height: height, level: level)
         scene.levelNum = nextLevel
 
-        for spawn in level.mustSpawn {
+        // MUST SPAWN
+        for spawn in level.mustSpawn ?? [] {
             guard let type = MonsterType(rawValue: spawn) else {
                 fatalError("\(spawn) as Monster Type does not exist")
+            }
+            let monster = MonsterManager.monster(forType: type)
+            scene.addMonster(monster)
+        }
+
+        // CAN SPAWN
+        let canSpawn = level.toMaybeSpawn
+        let spawnCounter = level.spawnCounter
+        for _ in 0..<spawnCounter {
+            let randI = Int.random(canSpawn.count)
+            let randM = canSpawn[randI]
+            guard let type = MonsterType(rawValue: randM) else {
+                fatalError("\(randM) as Monster Type does not exist")
             }
             let monster = MonsterManager.monster(forType: type)
             scene.addMonster(monster)

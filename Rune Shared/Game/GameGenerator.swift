@@ -14,6 +14,7 @@ class Level: Codable {
     private let height: Int
     private let heightVar: Int?
     private let atlas: String
+    let wallsToRemove: CGFloat?
 
     var spawnCounter: Int {
         let numberToSpawn = self.numberToSpawn ?? 0
@@ -118,28 +119,6 @@ extension GameScene {
         let scene = generateGame(width: width, height: height, level: level)
         scene.levelNum = nextLevel
 
-        // MUST SPAWN
-        for spawn in level.mustSpawn ?? [] {
-            guard let type = MonsterType(rawValue: spawn) else {
-                fatalError("\(spawn) as Monster Type does not exist")
-            }
-            let monster = MonsterManager.monster(forType: type)
-            scene.addMonster(monster)
-        }
-
-        // CAN SPAWN
-        let canSpawn = level.toMaybeSpawn
-        let spawnCounter = level.spawnCounter
-        for _ in 0..<spawnCounter {
-            let randI = Int.random(canSpawn.count)
-            let randM = canSpawn[randI]
-            guard let type = MonsterType(rawValue: randM) else {
-                fatalError("\(randM) as Monster Type does not exist")
-            }
-            let monster = MonsterManager.monster(forType: type)
-            scene.addMonster(monster)
-        }
-
         let transition = SKTransition.doorway(withDuration: 1.0)
         view?.presentScene(scene, transition: transition)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.33) {
@@ -198,13 +177,39 @@ extension GameScene {
         game.tileMap.setAllTiles(tile: .floor, atlas: level.env)
 
         let torches = (width + height) / 4
-        game.addWallsAndItems(width: width, height: height)
+        game.addWallsAndItems(width: width, height: height, level: level)
         game.addLighting(torches: torches)
         game.addGrass(prob: level.grass)
 
         game.scaleMode = scaleMode
-
+        game.addMonsters(level: level)
         return game
+    }
+
+    func addMonsters(level: Level) {
+
+        // MUST SPAWN
+        for spawn in level.mustSpawn ?? [] {
+            guard let type = MonsterType(rawValue: spawn) else {
+                fatalError("\(spawn) as Monster Type does not exist")
+            }
+            let monster = MonsterManager.monster(forType: type)
+            addMonster(monster)
+        }
+
+        // CAN SPAWN
+        let canSpawn = level.toMaybeSpawn
+        let spawnCounter = level.spawnCounter
+        for _ in 0..<spawnCounter {
+            let randI = Int.random(canSpawn.count)
+            let randM = canSpawn[randI]
+            guard let type = MonsterType(rawValue: randM) else {
+                fatalError("\(randM) as Monster Type does not exist")
+            }
+            let monster = MonsterManager.monster(forType: type)
+            addMonster(monster)
+        }
+
     }
 
     func addLighting(torches: Int) {
@@ -235,7 +240,7 @@ extension GameScene {
         }
     }
 
-    func addWallsAndItems(width: Int, height: Int) {
+    func addWallsAndItems(width: Int, height: Int, level: Level) {
 
         // set horizontal walls
         for x in 0 ..< width {
@@ -251,7 +256,16 @@ extension GameScene {
 
         let generator = Maze(width: width - 2, height: height - 2)
 
-        for t in generator.walls {
+        // Remove some walls
+        let remove = Int((level.wallsToRemove ?? 0) * CGFloat(generator.walls.count))
+        var walls = generator.walls
+        for _ in 0..<remove {
+            if walls.count > 0 {
+                walls.remove(at: Int.random(walls.count))
+            }
+        }
+
+        for t in walls {
             let randLoc = MapLocation(x: t.x + 1, y: t.y + 1)
             let randLocUp = MapLocation(x: t.x + 1, y: t.y + 2)
             let randLocDown = MapLocation(x: t.x + 1, y: t.y)
@@ -271,6 +285,15 @@ extension GameScene {
 
             if !tileMap.tileDefinitions(location: randLoc).isWall {
                 tileMap.setTile(tile: tile, forLocation: randLoc, atlas: atlas)
+            }
+        }
+
+        // Remove adjacent walls
+        for wall in tileMap.horzTorchableWalls {
+            if tileMap.numberOfAdjacentWalkables(wall) == 4 {
+                if tileMap.numberOfCornerWalkables(wall) > 0 {
+                    tileMap.setTile(tile: .floor, forLocation: wall, atlas: atlas)
+                }
             }
         }
 

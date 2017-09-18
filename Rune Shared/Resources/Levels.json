@@ -34,6 +34,7 @@
         "height" : 7,
         "heightVar" : 1,
         "grass" : 0,
-        "atlas" : "brick"
+        "atlas" : "brick",
+        "wallsToRemove" : 0.70
     }
 }

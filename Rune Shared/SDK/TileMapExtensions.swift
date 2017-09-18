@@ -123,6 +123,10 @@ extension SKTileMapNode {
         return TileMeta.shared.itemLocations!
     }
 
+    var walls: [MapLocation] {
+        return locations.filter { tileDefinitions(location: $0).isWall }
+    }
+
     var horzWalls: [MapLocation] {
         return locations.filter { tileDefinitions(location: $0).isHorz }
     }
@@ -311,6 +315,23 @@ extension SKTileMapNode {
             count += 1
         }
         if tileDefinitions(location: .init(x: loc.x, y: loc.y - 1)).isWalkable {
+            count += 1
+        }
+        return count
+    }
+
+    func numberOfCornerWalkables(_ loc: MapLocation) -> Int {
+        var count = 0
+        if tileDefinitions(location: .init(x: loc.x + 1, y: loc.y+1)).isWalkable {
+            count += 1
+        }
+        if tileDefinitions(location: .init(x: loc.x + 1, y: loc.y-1)).isWalkable {
+            count += 1
+        }
+        if tileDefinitions(location: .init(x: loc.x - 1, y: loc.y + 1)).isWalkable {
+            count += 1
+        }
+        if tileDefinitions(location: .init(x: loc.x - 1, y: loc.y - 1)).isWalkable {
             count += 1
         }
         return count

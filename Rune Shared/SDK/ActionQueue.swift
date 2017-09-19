@@ -14,6 +14,7 @@ enum ActionQueueType {
     case move(loc: MapLocation)
     case pass
     case attack(sprite: Sprite)
+    case rangedAttack(sprite: Sprite)
     case openChest(loc: MapLocation)
     case hitSwitch(loc: MapLocation)
     case none
@@ -30,6 +31,7 @@ enum ActionQueueType {
     }
 
     func bump(_ delta: MapLocation, mid: Completion? = nil) -> SKAction {
+        let delta = delta.normalized
         let duration = walkTime / 2
         let mult = tileSize / 4
         let by = CGVector(dx: mult * CGFloat(delta.x), dy: mult * CGFloat(delta.y))
@@ -49,6 +51,11 @@ enum ActionQueueType {
             return .group([.run { [weak sprite] in
                 sprite?.updateImages(delta.x)
             }, .moveBy(x: CGFloat(delta.x) * tileSize, y: CGFloat(delta.y) * tileSize, duration: walkTime)])
+        case let .rangedAttack(victim):
+            let delta = victim.mapLocation - sprite.mapLocation
+            return .group([.run { [weak sprite] in
+                sprite?.updateImages(delta.x)
+                }, hit(attacker: sprite, victim: victim)])
         case let .attack(victim):
             let delta = victim.mapLocation - sprite.mapLocation
             return .group([.run { [weak sprite] in
@@ -208,6 +215,9 @@ class ActionQueue {
                     moveAfter.append(act)
                 }
             } else if case .attack = act.action {
+                nothingAttacked = false
+                attackingEnemies.append(act)
+            } else if case .rangedAttack = act.action {
                 nothingAttacked = false
                 attackingEnemies.append(act)
             }

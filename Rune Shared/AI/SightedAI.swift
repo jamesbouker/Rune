@@ -9,14 +9,12 @@
 import Foundation
 
 class SightedAI: BaseAI {
-    let range: Int
 
-    init(range: Int, canFly: Bool?) {
-        self.range = range
-        super.init(canFly: canFly)
+    init(range: Int, canFly: Bool?, isRanged: Bool?) {
+        super.init(canFly: canFly, range: range, isRanged: isRanged)
     }
 
-    func nextMove(from: MapLocation, to: MapLocation?) -> MapLocation? {
+    private func nextMove(from: MapLocation, to: MapLocation?) -> MapLocation? {
         guard let to = to else { return nil }
         let moves = possibleMoves(from)
 
@@ -34,7 +32,7 @@ class SightedAI: BaseAI {
             delta.x = delta.x > 0 ? 1 : -1
         }
 
-        if distance < range {
+        if distance < range! {
             var loc = from
             for _ in 1 ... distance {
                 loc += delta

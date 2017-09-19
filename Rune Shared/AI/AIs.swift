@@ -8,46 +8,62 @@
 
 import Foundation
 
+enum AIType: String {
+    case random
+    case blind
+    case sighted
+    case sightedLastKnown
+    case sightedFollower
+}
+
 class BaseAI: AI {
+    var range: Int?
+    var isRanged: Bool?
     var canFly = false
 
-    init(canFly: Bool?) {
+    init(canFly: Bool?, range: Int?, isRanged: Bool?) {
         self.canFly = canFly ?? false
+        self.isRanged = isRanged ?? false
+        self.range = range
     }
 
     func nextMove(_: MapLocation) -> MapLocation {
         fatalError("Do not use this AI")
     }
 
-    static func implementation(ai: String, canFly: Bool? = false, range: Int? = nil) -> AI {
-        switch ai {
-        case "random":
-            return RandomAI(canFly: canFly)
-        case "blind":
-            return BlindAI(canFly: canFly)
-        case "sighted":
+    static func implementation(ai: String, canFly: Bool? = false, range: Int?, isRanged: Bool?) -> AI {
+        guard let aiType = AIType(rawValue: ai) else {
+            fatalError("\(ai) does not exist as an AI Type")
+        }
+
+        switch aiType {
+        case .random:
+            return RandomAI(canFly: canFly, range: range, isRanged: isRanged)
+        case .blind:
+            return BlindAI(canFly: canFly, range: range, isRanged: isRanged)
+        case .sighted:
             guard let r = range else {
                 fatalError("Missing range, creating sighted AI")
             }
-            return SightedAI(range: r, canFly: canFly)
-        case "sightedLastKnown":
+            return SightedAI(range: r, canFly: canFly, isRanged: isRanged)
+        case .sightedLastKnown:
             guard let r = range else {
                 fatalError("Missing range, creating sighted AI")
             }
-            return SightedLastKnown(range: r, canFly: canFly)
-        case "sightedFollower":
+            return SightedLastKnown(range: r, canFly: canFly, isRanged: isRanged)
+        case .sightedFollower:
             guard let r = range else {
                 fatalError("Missing range, creating sighted AI")
             }
-            return Follower(range: r, canFly: canFly)
-        default:
-            return BaseAI(canFly: canFly)
+            return Follower(range: r, canFly: canFly, isRanged: isRanged)
         }
     }
 }
 
 protocol AI {
     var canFly: Bool { get set }
+    var range: Int? { get set }
+    var isRanged: Bool? { get set }
     func nextMove(_ from: MapLocation) -> MapLocation
 }
 

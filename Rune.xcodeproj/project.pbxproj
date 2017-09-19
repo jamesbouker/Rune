@@ -420,10 +420,10 @@
 		F59998951F6DA30F00E5DDDE /* AI */ = {
 			isa = PBXGroup;
 			children = (
+				F59998051F6DA2AD00E5DDDE /* Monster.swift */,
 				F59998121F6DA2AE00E5DDDE /* AIs.swift */,
 				F599981C1F6DA2B000E5DDDE /* BlindAI.swift */,
 				F599981F1F6DA2B000E5DDDE /* Follower.swift */,
-				F59998051F6DA2AD00E5DDDE /* Monster.swift */,
 				F59998171F6DA2AF00E5DDDE /* RandomAI.swift */,
 				F59998061F6DA2AD00E5DDDE /* SightedAI.swift */,
 				F59998071F6DA2AD00E5DDDE /* SightedLastKnown.swift */,
@@ -454,9 +454,9 @@
 		F59998971F6DA37C00E5DDDE /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				F59997D01F6D9E8B00E5DDDE /* GameScene.swift */,
 				F599980B1F6DA2AE00E5DDDE /* GameGenerator.swift */,
 				F59998231F6DA2B100E5DDDE /* Maze.swift */,
-				F59997D01F6D9E8B00E5DDDE /* GameScene.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";

@@ -22,6 +22,7 @@ enum Character: String {
     case bear
     case rat
     case worm
+    case skeleton
 }
 
 enum Direction: String {

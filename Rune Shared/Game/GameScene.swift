@@ -52,6 +52,8 @@ extension GameScene {
         }
     }
 
+    /// Returns true if we should try to run this again (A monster could not move)
+    /// Determines all next monster actions
     func addActionHelper() -> Bool {
         var didRemove = false
         for monster in monsters {
@@ -79,7 +81,7 @@ extension GameScene {
         if !sprite.ai.canFly {
             loc = tileMap.walkableNoSprites.randomItem()
         } else {
-//            loc = tileMap.locationsNoMonsters.randomItem()
+            //            loc = tileMap.locationsNoMonsters.randomItem()
             loc = tileMap.walkableNoSprites.randomItem()
         }
         guard let l = loc else {

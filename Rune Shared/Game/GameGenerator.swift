@@ -18,10 +18,10 @@ class Level: Codable {
 
     var spawnCounter: Int {
         let numberToSpawn = self.numberToSpawn ?? 0
-        let variance = self.numberToSpawnVar ?? 0
+        let variance = numberToSpawnVar ?? 0
         return Int.random(min: numberToSpawn - variance, max: numberToSpawn + variance)
-
     }
+
     private let numberToSpawn: Int?
     private let numberToSpawnVar: Int?
 
@@ -29,7 +29,7 @@ class Level: Codable {
         var canSpawn = [String]()
         var i = 0
         for spawn in self.canSpawn ?? [] {
-            for _ in 0..<self.spawnWeight[i] {
+            for _ in 0 ..< spawnWeight[i] {
                 canSpawn.append(spawn)
             }
             i += 1
@@ -45,7 +45,7 @@ class Level: Codable {
             if spawnW.count == spawn.count {
                 return spawnW
             } else {
-                return Array(0..<spawn.count)
+                return Array(0 ..< spawn.count)
             }
         }
         return []
@@ -200,7 +200,7 @@ extension GameScene {
         // CAN SPAWN
         let canSpawn = level.toMaybeSpawn
         let spawnCounter = level.spawnCounter
-        for _ in 0..<spawnCounter {
+        for _ in 0 ..< spawnCounter {
             let randI = Int.random(canSpawn.count)
             let randM = canSpawn[randI]
             guard let type = MonsterType(rawValue: randM) else {
@@ -209,7 +209,6 @@ extension GameScene {
             let monster = MonsterManager.monster(forType: type)
             addMonster(monster)
         }
-
     }
 
     func addLighting(torches: Int) {
@@ -240,8 +239,7 @@ extension GameScene {
         }
     }
 
-    func addWallsAndItems(width: Int, height: Int, level: Level) {
-
+    func setupOuterWalls(width: Int, height: Int) {
         // set horizontal walls
         for x in 0 ..< width {
             tileMap.setTile(tile: .horz_wall, forLocation: MapLocation(x: x, y: 0), atlas: atlas)
@@ -253,16 +251,18 @@ extension GameScene {
             tileMap.setTile(tile: .vert_wall, forLocation: MapLocation(x: 0, y: y), atlas: atlas)
             tileMap.setTile(tile: .vert_wall, forLocation: MapLocation(x: width - 1, y: y), atlas: atlas)
         }
+    }
 
+    func addWallsAndItems(width: Int, height: Int, level: Level) {
+
+        setupOuterWalls(width: width, height: height)
         let generator = Maze(width: width - 2, height: height - 2)
 
         // Remove some walls
         let remove = Int((level.wallsToRemove ?? 0) * CGFloat(generator.walls.count))
         var walls = generator.walls
-        for _ in 0..<remove {
-            if walls.count > 0 {
-                walls.remove(at: Int.random(walls.count))
-            }
+        for _ in 0 ..< remove where walls.count > 0 {
+            walls.remove(at: Int.random(walls.count))
         }
 
         for t in walls {
@@ -306,7 +306,6 @@ extension GameScene {
 
         addItem(item: .switch_off)
         addItem(item: .chest_closed)
-
         player.setPosition(location: tileMap.walkableNoSprites.randomItem()!)
     }
 

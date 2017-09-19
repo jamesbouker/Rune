@@ -13,11 +13,6 @@
 import SpriteKit
 import ObjectiveC
 
-struct MapLocation {
-    var x: Int
-    var y: Int
-}
-
 enum Tile: String {
     case blank
     case floor
@@ -38,7 +33,10 @@ enum Tile: String {
     case fire
 }
 
-extension MapLocation: Equatable {
+struct MapLocation: Equatable {
+    var x: Int
+    var y: Int
+
     static func ==(lhs: MapLocation, rhs: MapLocation) -> Bool {
         return lhs.x == rhs.x && lhs.y == rhs.y
     }
@@ -55,8 +53,23 @@ extension MapLocation: Equatable {
         lhs = lhs + rhs
     }
 
-    var point: CGPoint {
-        return CGPoint(x: x, y: y)
+    func isInline(_ loc: MapLocation) -> Bool {
+        let delta = loc - self
+        return delta.x == 0 || delta.y == 0
+    }
+
+    func distance(_ loc: MapLocation) -> Int {
+        return (loc.x - x) + (loc.y - y)
+    }
+
+    var normalized: MapLocation {
+        if x == 0 && y == 0 {
+            return MapLocation(x: 0, y: 0)
+        } else if abs(x) > 0 {
+            return MapLocation(x: x > 0 ? 1 : -1, y: 0)
+        } else {
+            return MapLocation(x: 0, y: y > 0 ? 1 : -1)
+        }
     }
 }
 
@@ -322,10 +335,10 @@ extension SKTileMapNode {
 
     func numberOfCornerWalkables(_ loc: MapLocation) -> Int {
         var count = 0
-        if tileDefinitions(location: .init(x: loc.x + 1, y: loc.y+1)).isWalkable {
+        if tileDefinitions(location: .init(x: loc.x + 1, y: loc.y + 1)).isWalkable {
             count += 1
         }
-        if tileDefinitions(location: .init(x: loc.x + 1, y: loc.y-1)).isWalkable {
+        if tileDefinitions(location: .init(x: loc.x + 1, y: loc.y - 1)).isWalkable {
             count += 1
         }
         if tileDefinitions(location: .init(x: loc.x - 1, y: loc.y + 1)).isWalkable {

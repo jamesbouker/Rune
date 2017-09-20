@@ -16,6 +16,8 @@
 		F5116DD31F72117B004519F8 /* Range.json in Resources */ = {isa = PBXBuildFile; fileRef = F5116DD11F72117B004519F8 /* Range.json */; };
 		F5116DD61F721408004519F8 /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5116DD51F721408004519F8 /* JSONLoader.swift */; };
 		F5116DD71F721408004519F8 /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5116DD51F721408004519F8 /* JSONLoader.swift */; };
+		F5116DDA1F72179E004519F8 /* RangedSpells.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5116DD91F72179E004519F8 /* RangedSpells.swift */; };
+		F5116DDB1F72179E004519F8 /* RangedSpells.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5116DD91F72179E004519F8 /* RangedSpells.swift */; };
 		F58A81671F6E115000C2E0F2 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58A81661F6E115000C2E0F2 /* AssetsLibrary.framework */; };
 		F58A81691F6E115E00C2E0F2 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58A81681F6E115E00C2E0F2 /* BuddyBuildSDK.framework */; };
 		F58A816B1F6E116700C2E0F2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58A816A1F6E116700C2E0F2 /* CoreTelephony.framework */; };
@@ -158,6 +160,7 @@
 		F5116DCE1F7210D4004519F8 /* Range.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Range.atlas; sourceTree = "<group>"; };
 		F5116DD11F72117B004519F8 /* Range.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Range.json; sourceTree = "<group>"; };
 		F5116DD51F721408004519F8 /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
+		F5116DD91F72179E004519F8 /* RangedSpells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangedSpells.swift; sourceTree = "<group>"; };
 		F58A81661F6E115000C2E0F2 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
 		F58A81681F6E115E00C2E0F2 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		F58A816A1F6E116700C2E0F2 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
@@ -328,6 +331,19 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		F5116DDC1F7217AC004519F8 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				F59998121F6DA2AE00E5DDDE /* AIs.swift */,
+				F599981C1F6DA2B000E5DDDE /* BlindAI.swift */,
+				F599981F1F6DA2B000E5DDDE /* Follower.swift */,
+				F59998171F6DA2AF00E5DDDE /* RandomAI.swift */,
+				F59998061F6DA2AD00E5DDDE /* SightedAI.swift */,
+				F59998071F6DA2AD00E5DDDE /* SightedLastKnown.swift */,
+			);
+			path = AI;
+			sourceTree = "<group>";
+		};
 		F59035581F6DAC450023B166 /* RuneTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,7 +372,7 @@
 				F59998931F6DA2B700E5DDDE /* Resources */,
 				F59998971F6DA37C00E5DDDE /* Game */,
 				F59998961F6DA34300E5DDDE /* SDK */,
-				F59998951F6DA30F00E5DDDE /* AI */,
+				F59998951F6DA30F00E5DDDE /* Monsters */,
 				F59998941F6DA2F500E5DDDE /* Player */,
 			);
 			path = "Rune Shared";
@@ -436,19 +452,15 @@
 			path = Player;
 			sourceTree = "<group>";
 		};
-		F59998951F6DA30F00E5DDDE /* AI */ = {
+		F59998951F6DA30F00E5DDDE /* Monsters */ = {
 			isa = PBXGroup;
 			children = (
+				F5116DDC1F7217AC004519F8 /* AI */,
 				F59998051F6DA2AD00E5DDDE /* Monster.swift */,
-				F59998121F6DA2AE00E5DDDE /* AIs.swift */,
-				F599981C1F6DA2B000E5DDDE /* BlindAI.swift */,
-				F599981F1F6DA2B000E5DDDE /* Follower.swift */,
-				F59998171F6DA2AF00E5DDDE /* RandomAI.swift */,
-				F59998061F6DA2AD00E5DDDE /* SightedAI.swift */,
-				F59998071F6DA2AD00E5DDDE /* SightedLastKnown.swift */,
+				F5116DD91F72179E004519F8 /* RangedSpells.swift */,
 				F59998151F6DA2AF00E5DDDE /* Sprite.swift */,
 			);
-			path = AI;
+			path = Monsters;
 			sourceTree = "<group>";
 		};
 		F59998961F6DA34300E5DDDE /* SDK */ = {
@@ -863,6 +875,7 @@
 				F59998831F6DA2B100E5DDDE /* SKAction+SpecialEffects.swift in Sources */,
 				F599987B1F6DA2B100E5DDDE /* CGPoint+Extensions.swift in Sources */,
 				F599986D1F6DA2B100E5DDDE /* Follower.swift in Sources */,
+				F5116DDA1F72179E004519F8 /* RangedSpells.swift in Sources */,
 				F599985B1F6DA2B100E5DDDE /* Characters.swift in Sources */,
 				F59998591F6DA2B100E5DDDE /* Sprite.swift in Sources */,
 				F59998531F6DA2B100E5DDDE /* AIs.swift in Sources */,
@@ -910,6 +923,7 @@
 				F59998841F6DA2B100E5DDDE /* SKAction+SpecialEffects.swift in Sources */,
 				F599987C1F6DA2B100E5DDDE /* CGPoint+Extensions.swift in Sources */,
 				F599986E1F6DA2B100E5DDDE /* Follower.swift in Sources */,
+				F5116DDB1F72179E004519F8 /* RangedSpells.swift in Sources */,
 				F599985C1F6DA2B100E5DDDE /* Characters.swift in Sources */,
 				F599985A1F6DA2B100E5DDDE /* Sprite.swift in Sources */,
 				F59998541F6DA2B100E5DDDE /* AIs.swift in Sources */,

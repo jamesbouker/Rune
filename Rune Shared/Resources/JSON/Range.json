@@ -1,6 +1,7 @@
-{
-	"bone" : {
+[
+    {
+        "rangeId" : "bone",
         "frames" : 4,
         "timePerFrame" : 0.25
     }
-}
+]

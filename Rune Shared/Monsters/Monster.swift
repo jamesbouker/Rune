@@ -85,14 +85,7 @@ class MonsterManager {
 
     var monsters: [String: MonsterMeta]
     private init() {
-        monsters = [String: MonsterMeta]()
-        let data = JSONLoader.data("Monsters")
-        let jsonDecoder = JSONDecoder()
-        let monsterMetas = try? jsonDecoder.decode([MonsterMeta].self, from: data)
-        guard let metas = monsterMetas else { fatalError("Could not parse Monster Meta") }
-        for meta in metas {
-            monsters[meta.monsterId] = meta
-        }
+        monsters = JSONLoader.createMap(resource: "Monsters") { $0.monsterId }
     }
 
     class func monster(forType type: MonsterType) -> Monster {

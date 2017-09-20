@@ -1,39 +1,45 @@
-{
-	"brownBear" : {
+[
+    {
+        "monsterId" : "brownBear",
 		"maxHp" : 4,
 		"asset" : "bear",
         "ai" : "sightedLastKnown",
         "range" : 8,
 		"isDirectional" : true
 	},
-	"blueSlime" : {
-		"maxHp" : 1,
-		"asset" : "slime",
+    {
+        "monsterId" : "blueSlime",
+        "maxHp" : 1,
+        "asset" : "slime",
         "ai" : "random",
-		"isDirectional" : true
+        "isDirectional" : true
 	},
-	"blackBat" : {
+    {
+        "monsterId" : "blackBat",
 		"maxHp" : 1,
 		"asset" : "bat",
         "ai" : "random",
 		"isDirectional" : false,
         "canFly" : true
 	},
-    "whiteRat": {
+    {
+        "monsterId" : "whiteRat",
         "maxHp" : 2,
         "asset" : "rat",
         "ai" : "sighted",
         "range" : 4,
         "isDirectional" : true
     },
-    "worm" : {
+    {
+        "monsterId" : "worm",
         "maxHp" : 1,
         "asset" : "worm",
         "ai" : "sightedFollower",
         "range" : 8,
         "isDirectional" : true
     },
-    "skeleton" : {
+    {
+        "monsterId" : "skeleton",
         "maxHp" : 4,
         "asset" : "skeleton",
         "ai" : "sightedFollower",
@@ -42,4 +48,4 @@
         "isRanged" : true,
         "rangedItem" : "bone"
     }
-}
+]

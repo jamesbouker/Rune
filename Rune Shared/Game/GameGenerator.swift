@@ -103,7 +103,7 @@ extension SKNode {
 
 extension GameScene {
     func loadNextLevel() {
-        let json = JSONLoader.load("Levels")
+        let json = JSONLoader.json("Levels")
         let nextLevel = levelNum + 1
         guard let levelJSON = json["\(nextLevel)"] else {
             return

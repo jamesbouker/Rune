@@ -17,38 +17,19 @@ enum MonsterType: String {
     case skeleton
 }
 
-struct MonsterMeta {
+class MonsterMeta: Codable {
     var monsterId: String
     var asset: String
     var ai: String
-    var health: Int
-    var isDirectional = true
+    var maxHp: Int
+    var isDirectional: Bool
     var range: Int?
     var canFly: Bool?
-    var isRanged: Bool
-
-    init?(json: [String: AnyObject], id: String) {
-        range = json["range"] as? Int
-        canFly = json["canFly"] as? Bool
-        isRanged = json["isRanged"] as? Bool ?? false
-
-        guard let health = json["maxHp"] as? Int,
-            let asset = json["asset"] as? String,
-            let ai = json["ai"] as? String,
-            let directional = json["isDirectional"] as? Bool else {
-            return nil
-        }
-        
-        monsterId = id
-        self.asset = asset
-        self.ai = ai
-        self.health = health
-        isDirectional = directional
-    }
+    var isRanged: Bool?
 
     var monster: Monster {
         let aiImp = BaseAI.implementation(ai: ai, canFly: canFly, range: range, isRanged: isRanged)
-        return Monster(monsterId: monsterId, maxHealth: health, asset: asset, ai: aiImp, isDirectional: isDirectional)
+        return Monster(monsterId: monsterId, maxHealth: maxHp, asset: asset, ai: aiImp, isDirectional: isDirectional)
     }
 }
 
@@ -99,31 +80,18 @@ class Monster: Sprite {
     }
 }
 
-class JSONLoader {
-    class func load(_ resource: String) -> [String: [String: AnyObject]] {
-        guard let url = Bundle.main.url(forResource: resource, withExtension: "json") else {
-            fatalError("Missing \(resource).json")
-        }
-        guard let data = try? Data(contentsOf: url) else {
-            fatalError("Could not load \(resource).json")
-        }
-        let j = try? JSONSerialization.jsonObject(with: data, options: [])
-        guard let json = j as? [String: [String: AnyObject]] else {
-            fatalError("Could not create json")
-        }
-        return json
-    }
-}
-
 class MonsterManager {
     static let shared = MonsterManager()
 
     var monsters: [String: MonsterMeta]
     private init() {
         monsters = [String: MonsterMeta]()
-        let json = JSONLoader.load("Monsters")
-        for (key, monsterJSON) in json {
-            monsters[key] = MonsterMeta(json: monsterJSON, id: key)
+        let data = JSONLoader.data("Monsters")
+        let jsonDecoder = JSONDecoder()
+        let monsterMetas = try? jsonDecoder.decode([MonsterMeta].self, from: data)
+        guard let metas = monsterMetas else { fatalError("Could not parse Monster Meta") }
+        for meta in metas {
+            monsters[meta.monsterId] = meta
         }
     }
 

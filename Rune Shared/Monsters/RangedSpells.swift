@@ -58,6 +58,13 @@ class RangedSpell: Codable {
     func spawnAndFire(loc: MapLocation, target: MapLocation) {
         sprite.spawnAndFire(loc: loc, target: target)
     }
+
+    func duration(loc: MapLocation, target: MapLocation) -> TimeInterval {
+        var delta = target - loc
+        let norm = delta.normalized
+        delta -= norm
+        return Double(delta.length) * rangeTimePerTile
+    }
 }
 
 class RangedSpells {

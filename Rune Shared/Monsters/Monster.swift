@@ -62,17 +62,16 @@ class Monster: Sprite {
             return .attack(sprite: player)
         } else {
             if ai.isRanged == true {
-                if let nextPlayer = player.nextLoc {
-                    if nextPlayer.isInline(mapLocation) && nextPlayer.distance(mapLocation) < self.ai.range! {
+                guard let nextPlayer = player.nextLoc else { return .move(loc: next) }
+                if nextPlayer.isInline(mapLocation) && nextPlayer.distance(mapLocation) < self.ai.range! {
+                    if tileMap.isWalkableFrom(start: next, target: nextPlayer) {
                         let spell = RangedSpells.spell(forType: ai.rangedItem!)
                         return .rangedAttack(victim: player, spell: spell)
                     }
                 }
-                return .move(loc: next)
-            } else {
-                return .move(loc: next)
             }
         }
+        return .move(loc: next)
     }
 
     required init?(coder _: NSCoder) {

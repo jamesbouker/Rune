@@ -93,10 +93,19 @@ protocol ActionQueueDelegate: class {
 class SpriteAction {
     let sprite: Sprite
     let action: ActionQueueType
+    let duration: TimeInterval
 
     init(sprite: Sprite, action: ActionQueueType) {
         self.sprite = sprite
         self.action = action
+
+        switch action {
+        case let .rangedAttack(victim, spell):
+            let target = victim.nextLoc ?? victim.mapLocation
+            duration = spell.duration(loc: sprite.mapLocation, target: target)
+        default:
+            duration = walkTime
+        }
     }
 
     var skAction: SKAction? {
@@ -231,25 +240,28 @@ class ActionQueue {
             let start = Date()
 
             // Wait for player to move, then move all remaining in sequence
-            var didMove = 0
+            var anEnemyDidWalk = false
             for enemy in moveAfter {
                 if let enemyAct = enemy.skAction {
                     enemy.sprite.run(enemyAct)
-                    didMove = 1
+                    anEnemyDidWalk = true
                 }
             }
 
             // Iterate through enemies and attack
-            var i = 0
+            var waitTime = 0.0
             for attacker in attackingEnemies {
                 if let act = attacker.skAction {
-                    attacker.sprite.runs([SKAction.wait(forDuration: walkTime * Double(i)), act])
-                    i += 1
+                    attacker.sprite.runs([SKAction.wait(forDuration: waitTime), act])
+                    waitTime += attacker.duration
                 }
             }
 
-            // End it all,
-            game.afterDelay(walkTime * Double(i + didMove) + 1.0 / 30.0) { [weak strongSelf] in
+            // End it all
+            if anEnemyDidWalk {
+                waitTime += walkTime
+            }
+            game.afterDelay(waitTime + 1.0 / 30.0) { [weak strongSelf] in
                 if nothingAttacked {
                     guard case .none = strongSelf?.playerAction else {
                         strongSelf?.execute()

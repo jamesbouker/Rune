@@ -63,7 +63,7 @@ struct MapLocation: Equatable {
     }
 
     func distance(_ loc: MapLocation) -> Int {
-        return (loc.x - x) + (loc.y - y)
+        return abs(loc.x - x) + abs(loc.y - y)
     }
 
     var length: Int {
@@ -366,6 +366,29 @@ extension SKTileMapNode {
     func tileDefinitions(position: CGPoint) -> [SKTileDefinition] {
         let loc = mapLocation(fromPosition: position)
         return tileDefinitions(location: loc)
+    }
+
+    func isWalkableFrom(start: MapLocation, target: MapLocation) -> Bool {
+        return tilesFrom(start: start, target: target)?.isWalkable ?? false
+    }
+
+    func tilesFrom(start: MapLocation, target: MapLocation, inclusive: Bool = false) -> [SKTileDefinition]? {
+        guard start.isInline(target) else { return nil }
+        let distance = start.distance(target) - (inclusive ? 1 : 0)
+        let direction = (target - start).normalized
+        var current = start
+
+        var tiles = [SKTileDefinition]()
+        if inclusive {
+            guard let tile = tileDefinition(location: start) else { return tiles }
+            tiles.append(tile)
+        }
+        for _ in 0..<distance {
+            current += direction
+            guard let tile = tileDefinition(location: current) else { return tiles }
+            tiles.append(tile)
+        }
+        return tiles
     }
 
     func tileDefinitions(location: MapLocation) -> [SKTileDefinition] {

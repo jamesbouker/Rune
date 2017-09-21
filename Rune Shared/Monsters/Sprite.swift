@@ -8,6 +8,29 @@
 
 import SpriteKit
 
+extension SKSpriteNode {
+    var mapLocation: MapLocation {
+        return tileMap.mapLocation(fromPosition: position + CGPoint(x: tileSize / 2, y: tileSize / 2))
+    }
+
+    var tileMap: SKTileMapNode {
+        return gameScene.tileMap
+    }
+
+    var itemsMap: SKTileMapNode {
+        return tileMap.items
+    }
+
+    var gameScene: GameScene {
+        return sharedController!.scene
+    }
+
+    func setPosition(location: MapLocation) {
+        position = tileMap.mapPosition(fromLocation: location)
+        position -= CGPoint(x: tileSize / 2, y: tileSize / 2)
+    }
+}
+
 class Sprite: SKSpriteNode {
     var maxHelath: Int
     var health: Int
@@ -21,8 +44,9 @@ class Sprite: SKSpriteNode {
         super.init(coder: aDecoder)
     }
 
-    convenience init(location _: MapLocation, maxHp: Int) {
+    convenience init(location: MapLocation, maxHp: Int) {
         self.init(maxHp: maxHp)
+        setPosition(location: location)
     }
 
     init(maxHp: Int) {
@@ -42,21 +66,6 @@ class Sprite: SKSpriteNode {
     }
 
     var nextLoc: MapLocation?
-    var mapLocation: MapLocation {
-        return tileMap.mapLocation(fromPosition: position + CGPoint(x: tileSize / 2, y: tileSize / 2))
-    }
-
-    var tileMap: SKTileMapNode {
-        return gameScene.tileMap
-    }
-
-    var itemsMap: SKTileMapNode {
-        return tileMap.items
-    }
-
-    var gameScene: GameScene {
-        return sharedController!.scene
-    }
 
     func updateImages(_ deltaX: Int) {
         guard abs(deltaX) > 0 else { return }
@@ -74,9 +83,8 @@ class Sprite: SKSpriteNode {
         }
     }
 
-    func setPosition(location: MapLocation) {
-        position = tileMap.mapPosition(fromLocation: location)
-        position -= CGPoint(x: tileSize / 2, y: tileSize / 2)
+    func fire(spell: RangedSpell, at victim: Sprite) {
+        spell.spawnAndFire(loc: mapLocation, target: victim.nextLoc!)
     }
 
     func die() {

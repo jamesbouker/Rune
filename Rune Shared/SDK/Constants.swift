@@ -24,3 +24,6 @@ let startingPlayerHealth = 100
 
 // Show debug colors / values
 let debug = false
+
+// The amount of time a ranged spell moves across a tile
+let rangeTimePerTile = 0.15

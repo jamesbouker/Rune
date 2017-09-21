@@ -10,10 +10,6 @@ import Foundation
 
 class SightedAI: BaseAI {
 
-    init(range: Int, canFly: Bool?, isRanged: Bool?) {
-        super.init(canFly: canFly, range: range, isRanged: isRanged)
-    }
-
     private func nextMove(from: MapLocation, to: MapLocation?) -> MapLocation? {
         guard let to = to else { return nil }
         let moves = possibleMoves(from)

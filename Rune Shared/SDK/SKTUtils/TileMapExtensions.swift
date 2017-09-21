@@ -53,6 +53,10 @@ struct MapLocation: Equatable {
         lhs = lhs + rhs
     }
 
+    static func -=(lhs: inout MapLocation, rhs: MapLocation) {
+        lhs = lhs - rhs
+    }
+
     func isInline(_ loc: MapLocation) -> Bool {
         let delta = loc - self
         return delta.x == 0 || delta.y == 0
@@ -60,6 +64,10 @@ struct MapLocation: Equatable {
 
     func distance(_ loc: MapLocation) -> Int {
         return (loc.x - x) + (loc.y - y)
+    }
+
+    var length: Int {
+        return abs(x) + abs(y)
     }
 
     var normalized: MapLocation {

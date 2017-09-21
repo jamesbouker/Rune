@@ -26,9 +26,10 @@ class MonsterMeta: Codable {
     var range: Int?
     var canFly: Bool?
     var isRanged: Bool?
+    var rangedItem: String?
 
     var monster: Monster {
-        let aiImp = BaseAI.implementation(ai: ai, canFly: canFly, range: range, isRanged: isRanged)
+        let aiImp = BaseAI.implementation(ai: ai, canFly: canFly, range: range, isRanged: isRanged, rangedItem: rangedItem)
         return Monster(monsterId: monsterId, maxHealth: maxHp, asset: asset, ai: aiImp, isDirectional: isDirectional)
     }
 }
@@ -62,10 +63,9 @@ class Monster: Sprite {
         } else {
             if ai.isRanged == true {
                 if let nextPlayer = player.nextLoc {
-
-                    //TODO: Check range
                     if nextPlayer.isInline(mapLocation) && nextPlayer.distance(mapLocation) < self.ai.range! {
-                        return .rangedAttack(sprite: player)
+                        let spell = RangedSpells.spell(forType: ai.rangedItem!)
+                        return .rangedAttack(victim: player, spell: spell)
                     }
                 }
                 return .move(loc: next)

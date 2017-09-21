@@ -43,7 +43,7 @@
         "maxHp" : 4,
         "asset" : "skeleton",
         "ai" : "sightedFollower",
-        "range" : 8,
+        "range" : 2,
         "isDirectional" : true,
         "isRanged" : true,
         "rangedItem" : "bone"

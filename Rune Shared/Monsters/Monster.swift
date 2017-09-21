@@ -29,7 +29,8 @@ class MonsterMeta: Codable {
     var rangedItem: String?
 
     var monster: Monster {
-        let aiImp = BaseAI.implementation(ai: ai, canFly: canFly, range: range, isRanged: isRanged, rangedItem: rangedItem)
+        let adjustedRange = range != nil ? range! + 2 : 0
+        let aiImp = BaseAI.implementation(ai: ai, canFly: canFly, range: adjustedRange, isRanged: isRanged, rangedItem: rangedItem)
         return Monster(monsterId: monsterId, maxHealth: maxHp, asset: asset, ai: aiImp, isDirectional: isDirectional)
     }
 }

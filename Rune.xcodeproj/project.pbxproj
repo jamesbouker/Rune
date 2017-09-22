@@ -16,6 +16,8 @@
 		F5116DD71F721408004519F8 /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5116DD51F721408004519F8 /* JSONLoader.swift */; };
 		F5116DDA1F72179E004519F8 /* RangedSpells.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5116DD91F72179E004519F8 /* RangedSpells.swift */; };
 		F5116DDB1F72179E004519F8 /* RangedSpells.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5116DD91F72179E004519F8 /* RangedSpells.swift */; };
+		F51E2A591F74B4FA00CDF381 /* Death.json in Resources */ = {isa = PBXBuildFile; fileRef = F51E2A581F74B17700CDF381 /* Death.json */; };
+		F51E2A5A1F74B4FB00CDF381 /* Death.json in Resources */ = {isa = PBXBuildFile; fileRef = F51E2A581F74B17700CDF381 /* Death.json */; };
 		F58A81671F6E115000C2E0F2 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58A81661F6E115000C2E0F2 /* AssetsLibrary.framework */; };
 		F58A81691F6E115E00C2E0F2 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58A81681F6E115E00C2E0F2 /* BuddyBuildSDK.framework */; };
 		F58A816B1F6E116700C2E0F2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58A816A1F6E116700C2E0F2 /* CoreTelephony.framework */; };
@@ -158,6 +160,7 @@
 		F5116DD11F72117B004519F8 /* Range.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Range.json; sourceTree = "<group>"; };
 		F5116DD51F721408004519F8 /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
 		F5116DD91F72179E004519F8 /* RangedSpells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangedSpells.swift; sourceTree = "<group>"; };
+		F51E2A581F74B17700CDF381 /* Death.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Death.json; sourceTree = "<group>"; };
 		F58A81661F6E115000C2E0F2 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
 		F58A81681F6E115E00C2E0F2 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		F58A816A1F6E116700C2E0F2 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
@@ -320,9 +323,10 @@
 		F5116DD41F72117E004519F8 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				F5116DD11F72117B004519F8 /* Range.json */,
+				F51E2A581F74B17700CDF381 /* Death.json */,
 				F59998021F6DA2AD00E5DDDE /* Levels.json */,
 				F59998111F6DA2AE00E5DDDE /* Monsters.json */,
+				F5116DD11F72117B004519F8 /* Range.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -628,6 +632,7 @@
 				F59998511F6DA2B100E5DDDE /* Monsters.json in Resources */,
 				F5116DD21F72117B004519F8 /* Range.json in Resources */,
 				F599984F1F6DA2B100E5DDDE /* vine.atlas in Resources */,
+				F51E2A591F74B4FA00CDF381 /* Death.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,6 +648,7 @@
 				F599986C1F6DA2B100E5DDDE /* Items.atlas in Resources */,
 				F599984C1F6DA2B100E5DDDE /* Shadows.atlas in Resources */,
 				F59998381F6DA2B100E5DDDE /* brick.atlas in Resources */,
+				F51E2A5A1F74B4FB00CDF381 /* Death.json in Resources */,
 				F59998501F6DA2B100E5DDDE /* vine.atlas in Resources */,
 				F59998921F6DA2B100E5DDDE /* Sprites.atlas in Resources */,
 				F59997F01F6D9E8B00E5DDDE /* Main.storyboard in Resources */,

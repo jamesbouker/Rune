@@ -5,14 +5,15 @@
 		"asset" : "bear",
         "ai" : "sightedLastKnown",
         "range" : 8,
-		"isDirectional" : true
+		"isDirectional" : true,
+        "onDeath" : "bones"
 	},
     {
         "monsterId" : "blueSlime",
         "maxHp" : 1,
         "asset" : "slime",
         "ai" : "random",
-        "isDirectional" : true
+        "isDirectional" : true,
 	},
     {
         "monsterId" : "blackBat",
@@ -20,7 +21,8 @@
 		"asset" : "bat",
         "ai" : "random",
 		"isDirectional" : false,
-        "canFly" : true
+        "canFly" : true,
+        "onDeath" : "blood"
 	},
     {
         "monsterId" : "whiteRat",
@@ -28,7 +30,8 @@
         "asset" : "rat",
         "ai" : "sighted",
         "range" : 4,
-        "isDirectional" : true
+        "isDirectional" : true,
+        "onDeath" : "bones"
     },
     {
         "monsterId" : "worm",
@@ -36,16 +39,18 @@
         "asset" : "worm",
         "ai" : "sightedFollower",
         "range" : 8,
-        "isDirectional" : true
+        "isDirectional" : true,
+        "onDeath" : "blood"
     },
     {
         "monsterId" : "skeleton",
-        "maxHp" : 4,
+        "maxHp" : 1,
         "asset" : "skeleton",
         "ai" : "sightedFollower",
         "range" : 2,
         "isDirectional" : true,
         "isRanged" : true,
-        "rangedItem" : "bone"
+        "rangedItem" : "bone",
+        "onDeath" : "bones"
     }
 ]

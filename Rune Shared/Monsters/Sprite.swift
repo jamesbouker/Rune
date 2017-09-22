@@ -88,12 +88,6 @@ class Sprite: SKSpriteNode {
     }
 
     func die() {
-        let indx = gameScene.monsters.index { $0 === self }
-        if let indx = indx {
-            gameScene.monsters.remove(at: indx)
-        }
-        anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        position += CGPoint(x: size.width / 2, y: size.height / 2)
-        runs([.resize(toWidth: 0, height: 0, duration: walkTime / 2), .removeFromParent()])
+        fatalError("Please Override")
     }
 }

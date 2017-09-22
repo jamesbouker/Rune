@@ -45,6 +45,7 @@ enum ActionQueueType {
     }
 
     func skAction(action: ActionQueueType, sprite: Sprite) -> SKAction? {
+        guard sprite.health > 0 else { return nil }
         switch action {
         case let .move(loc):
             let delta = loc - sprite.mapLocation

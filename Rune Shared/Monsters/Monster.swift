@@ -27,11 +27,10 @@ class MonsterMeta: Codable {
     var canFly: Bool?
     var isRanged: Bool?
     var rangedItem: String?
+    var onDeath: String?
 
     var monster: Monster {
-        let adjustedRange = range != nil ? range! + 2 : 0
-        let aiImp = BaseAI.implementation(ai: ai, canFly: canFly, range: adjustedRange, isRanged: isRanged, rangedItem: rangedItem)
-        return Monster(monsterId: monsterId, maxHealth: maxHp, asset: asset, ai: aiImp, isDirectional: isDirectional)
+        return Monster(meta: self)
     }
 }
 
@@ -39,18 +38,27 @@ class Monster: Sprite {
     var ai: AI
     var asset: String
     var monsterId: String
+    var meta: MonsterMeta
 
     var action: SpriteAction?
 
-    init(monsterId: String, maxHealth: Int, asset: String, ai: AI, isDirectional: Bool) {
-        self.ai = ai
-        self.asset = asset
-        self.monsterId = monsterId
-        super.init(maxHp: maxHealth)
-        self.isDirectional = isDirectional
+    var remains: SKSpriteNode? {
+        return MonsterManager.remains(forMonster: self)
+    }
 
-        guard let char = Character(rawValue: asset) else {
-            fatalError("Character not supported: \(asset)")
+    init(meta: MonsterMeta) {
+        let adjustedRange = meta.range != nil ? meta.range! + 2 : 0
+        let aiImp = BaseAI.implementation(ai: meta.ai, canFly: meta.canFly, range: adjustedRange, isRanged: meta.isRanged, rangedItem: meta.rangedItem)
+
+        self.ai = aiImp
+        self.asset = meta.asset
+        self.monsterId = meta.monsterId
+        self.meta = meta
+        super.init(maxHp: meta.maxHp)
+        self.isDirectional = meta.isDirectional
+
+        guard let char = Character(rawValue: meta.asset) else {
+            fatalError("Character not supported: \(meta.asset)")
         }
         character = char
     }
@@ -75,17 +83,61 @@ class Monster: Sprite {
         return .move(loc: next)
     }
 
+    override func die() {
+        // Remove from monsters array
+        let indx = gameScene.monsters.index { $0 === self }
+        if let indx = indx {
+            gameScene.monsters.remove(at: indx)
+        }
+
+        // Flicker!
+        let duration = walkTime / 6.0
+        let fade = SKAction.sequence([.fadeOut(withDuration: duration), .fadeIn(withDuration: duration), .fadeOut(withDuration: duration)])
+
+        // Create remains sprite (Bones, blood, etc...)
+        let loc = mapLocation
+        if let death = self.remains {
+            death.setPosition(location: loc)
+            runs([fade, fade, .run {
+                self.tileMap.items.addChild(death)
+            }, .removeFromParent()])
+        } else {
+            runs([fade, fade, .removeFromParent()])
+        }
+    }
+
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+class MonsterRemainMeta: Codable {
+    var deathId: String
+    var numVariance: Int
 }
 
 class MonsterManager {
     static let shared = MonsterManager()
 
     var monsters: [String: MonsterMeta]
+    var monsterRemains: [String: MonsterRemainMeta]
+
     private init() {
         monsters = JSONLoader.createMap(resource: "Monsters") { $0.monsterId }
+        monsterRemains = JSONLoader.createMap(resource: "Death") { $0.deathId }
+    }
+
+    class func remains(forMonster monster: Monster) -> SKSpriteNode? {
+        guard let onDeath = monster.meta.onDeath else { return nil }
+        guard let death = shared.monsterRemains[onDeath] else {
+            fatalError("Missing Monster Remains \(onDeath)")
+        }
+
+        let rand = Int.random(min: 1, max: death.numVariance)
+        let texture = SKTexture.pixelatedImage(file: "\(death.deathId)_\(rand)")
+        let node = SKSpriteNode.init(texture: texture, size: CGSize(width: tileSize, height: tileSize))
+        node.anchorPoint = .zero
+        return node
     }
 
     class func monster(forType type: MonsterType) -> Monster {

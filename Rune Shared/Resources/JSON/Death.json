@@ -1,0 +1,14 @@
+[
+    {
+        "deathId" : "bones",
+        "numVariance" : 3
+	},
+    {
+        "deathId" : "blood",
+        "numVariance" : 4
+    },
+    {
+        "deathId" : "slime",
+        "numVariance" : 2
+    }
+]

@@ -10,30 +10,36 @@ import UIKit
 import SpriteKit
 
 class SpellSprite: SKSpriteNode {
-    let numberFrames: Int
-    let images: [SKTexture]
+    let directional: Bool
+    let meta: SpellMeta
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("Missing init with decoder")
     }
 
-    init(spell: RangedSpell) {
-        var images = [SKTexture]()
-        for i in 1...spell.frames {
-            let file = spell.asset + "_\(i)"
-            let image = SKTexture.pixelatedImage(file: file)
-            images.append(image)
-        }
-        self.images = images
-        self.numberFrames = spell.frames
-        let texture = images.first!
-        super.init(texture: texture, color: .white, size: CGSize(width: tileSize, height: tileSize))
+    init(spell: SpellMeta) {
+        self.directional = spell.directional ?? false
+        self.meta = spell
+        super.init(texture: nil, color: .white, size: CGSize(width: tileSize, height: tileSize))
         anchorPoint = .zero
     }
 
-    func spawnAndFire(loc: MapLocation, target: MapLocation) {
+    func spawnAndFire(loc: MapLocation, target: MapLocation, direction: Direction) {
+        var images = [SKTexture]()
+        for i in 1...meta.frames {
+            let file = meta.asset + "_\(i)" + (directional ? "_\(direction.rawValue)" : "")
+            let image = SKTexture.pixelatedImage(file: file)
+            images.append(image)
+        }
+        guard let image = images.first else {
+            fatalError("Could not load images for ranged spell \(meta.spellId)")
+        }
+        self.texture = image
+
         tileMap.addChild(self)
-        run(.repeatForever(.animate(with: images, timePerFrame: rangeTimePerTile / Double(self.numberFrames))))
+        if meta.frames > 1 {
+            run(.repeatForever(.animate(with: images, timePerFrame: rangeTimePerTile / Double(meta.frames))))
+        }
         self.setPosition(location: loc)
 
         var delta = target - loc
@@ -46,17 +52,18 @@ class SpellSprite: SKSpriteNode {
     }
 }
 
-class RangedSpell: Codable {
-    var rangeId: String
-    var asset: String
-    var frames: Int
+class SpellMeta: Codable {
+    let spellId: String
+    let asset: String
+    let frames: Int
+    let directional: Bool?
 
     private var sprite: SpellSprite {
         return SpellSprite(spell: self)
     }
 
-    func spawnAndFire(loc: MapLocation, target: MapLocation) {
-        sprite.spawnAndFire(loc: loc, target: target)
+    func spawnAndFire(loc: MapLocation, target: MapLocation, direction: Direction) {
+        sprite.spawnAndFire(loc: loc, target: target, direction: direction)
     }
 
     func duration(loc: MapLocation, target: MapLocation) -> TimeInterval {
@@ -68,14 +75,14 @@ class RangedSpell: Codable {
 }
 
 class RangedSpells {
-    var spells = [String : RangedSpell]()
+    var spells = [String : SpellMeta]()
 
     private static let shared = RangedSpells()
     private init() {
-        spells = JSONLoader.createMap(resource: "Range") { $0.rangeId }
+        spells = JSONLoader.createMap(resource: "Spells") { $0.spellId }
     }
 
-    class func spell(forType type: String) -> RangedSpell {
+    class func spell(forType type: String) -> SpellMeta {
         return shared.spells[type]!
     }
 }

@@ -1,0 +1,13 @@
+[
+    {
+        "spellId" : "bone",
+        "frames" : 4,
+        "asset" : "bone",
+    },
+    {
+        "spellId" : "fireball",
+        "frames" : 1,
+        "asset" : "fireball",
+        "directional" : true
+    }
+]

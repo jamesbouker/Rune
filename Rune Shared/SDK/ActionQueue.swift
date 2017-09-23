@@ -14,7 +14,7 @@ enum ActionQueueType {
     case move(loc: MapLocation)
     case pass
     case attack(sprite: Sprite)
-    case rangedAttack(victim: Sprite, spell: RangedSpell)
+    case rangedAttack(victim: Sprite, spell: SpellMeta)
     case openChest(loc: MapLocation)
     case hitSwitch(loc: MapLocation)
     case none

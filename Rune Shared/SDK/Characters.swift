@@ -31,6 +31,24 @@ enum Direction: String {
     case d
     case l
     case r
+
+    init(facing: MapLocation) {
+        let direction = facing.normalized
+        switch direction {
+        case MapLocation(x:0,y:0):
+            self = .l
+        case MapLocation(x:1,y:0):
+            self = .r
+        case MapLocation(x:-1,y:0):
+            self = .l
+        case MapLocation(x:0,y:1):
+            self = .u
+        case MapLocation(x:0,y:-1):
+            self = .d
+        default:
+            self = .l
+        }
+    }
 }
 
 extension Character {

@@ -52,5 +52,16 @@
         "isRanged" : true,
         "rangedItem" : "bone",
         "onDeath" : "bones"
+    },
+    {
+    "monsterId" : "redDragon",
+    "maxHp" : 4,
+    "asset" : "dragon",
+    "ai" : "sightedFollower",
+    "range" : 4,
+    "isDirectional" : true,
+    "isRanged" : true,
+    "rangedItem" : "bone",
+    "onDeath" : "blood"
     }
 ]

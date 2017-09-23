@@ -13,7 +13,7 @@
         "heightVar" : 1,
         "grass" : 0,
         "atlas" : "brick",
-        "mustSpawn" : ["skeleton"]
+        "mustSpawn" : ["skeleton", "redDragon"]
     },
     "3" : {
         "width" : 8,

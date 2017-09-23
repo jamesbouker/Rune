@@ -33,6 +33,7 @@ extension SKTexture {
 
     static func pixelatedImage(file: String) -> SKTexture {
         if let cached = TextureCache.shared.pixelatedTexture(pixelatedImage: file) {
+            cached.pixelate()
             return cached
         }
 

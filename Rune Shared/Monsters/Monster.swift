@@ -15,6 +15,7 @@ enum MonsterType: String {
     case whiteRat
     case worm
     case skeleton
+    case redDragon
 }
 
 class MonsterMeta: Codable {

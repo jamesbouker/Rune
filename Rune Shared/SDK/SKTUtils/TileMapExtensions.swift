@@ -383,7 +383,7 @@ extension SKTileMapNode {
             guard let tile = tileDefinition(location: start) else { return tiles }
             tiles.append(tile)
         }
-        for _ in 0..<distance {
+        for _ in 0 ..< distance {
             current += direction
             guard let tile = tileDefinition(location: current) else { return tiles }
             tiles.append(tile)

@@ -57,7 +57,7 @@ enum ActionQueueType {
             return .group([.run { [weak sprite] in
                 sprite?.updateImages(delta.x)
                 sprite?.fire(spell: spell, at: victim)
-                }, hit(attacker: sprite, victim: victim)])
+            }, hit(attacker: sprite, victim: victim)])
         case let .attack(victim):
             let delta = victim.mapLocation - sprite.mapLocation
             return .group([.run { [weak sprite] in

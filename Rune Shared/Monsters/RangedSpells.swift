@@ -13,20 +13,20 @@ class SpellSprite: SKSpriteNode {
     let directional: Bool
     let meta: SpellMeta
 
-    required init?(coder aDecoder: NSCoder) {
+    required init?(coder _: NSCoder) {
         fatalError("Missing init with decoder")
     }
 
     init(spell: SpellMeta) {
-        self.directional = spell.directional ?? false
-        self.meta = spell
+        directional = spell.directional ?? false
+        meta = spell
         super.init(texture: nil, color: .white, size: CGSize(width: tileSize, height: tileSize))
         anchorPoint = .zero
     }
 
     func spawnAndFire(loc: MapLocation, target: MapLocation, direction: Direction) {
         var images = [SKTexture]()
-        for i in 1...meta.frames {
+        for i in 1 ... meta.frames {
             let file = meta.asset + "_\(i)" + (directional ? "_\(direction.rawValue)" : "")
             let image = SKTexture.pixelatedImage(file: file)
             images.append(image)
@@ -34,21 +34,23 @@ class SpellSprite: SKSpriteNode {
         guard let image = images.first else {
             fatalError("Could not load images for ranged spell \(meta.spellId)")
         }
-        self.texture = image
+        texture = image
 
         tileMap.addChild(self)
         if meta.frames > 1 {
             run(.repeatForever(.animate(with: images, timePerFrame: rangeTimePerTile / Double(meta.frames))))
         }
-        self.setPosition(location: loc)
+        setPosition(location: loc)
 
         var delta = target - loc
         let norm = delta.normalized
         delta -= norm
-        position += CGPoint(x: CGFloat(norm.x) * tileSize/2.0, y: CGFloat(norm.y) * tileSize/2.0)
+        position += CGPoint(x: CGFloat(norm.x) * tileSize / 2.0, y: CGFloat(norm.y) * tileSize / 2.0)
 
         let duration = Double(delta.length) * rangeTimePerTile
-        runs([.moveBy(x: CGFloat(delta.x) * tileSize, y: CGFloat(delta.y) * tileSize, duration: duration), .removeFromParent()])
+        let moveByX = CGFloat(delta.x) * tileSize
+        let moveByY = CGFloat(delta.y) * tileSize
+        runs([.moveBy(x: moveByX, y: moveByY, duration: duration), .removeFromParent()])
     }
 }
 
@@ -75,7 +77,7 @@ class SpellMeta: Codable {
 }
 
 class RangedSpells {
-    var spells = [String : SpellMeta]()
+    var spells = [String: SpellMeta]()
 
     private static let shared = RangedSpells()
     private init() {

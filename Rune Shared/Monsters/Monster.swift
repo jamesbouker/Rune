@@ -48,15 +48,12 @@ class Monster: Sprite {
     }
 
     init(meta: MonsterMeta) {
-        let adjustedRange = meta.range != nil ? meta.range! + 2 : 0
-        let aiImp = BaseAI.implementation(ai: meta.ai, canFly: meta.canFly, range: adjustedRange, isRanged: meta.isRanged, rangedItem: meta.rangedItem)
-
-        self.ai = aiImp
-        self.asset = meta.asset
-        self.monsterId = meta.monsterId
         self.meta = meta
+        asset = meta.asset
+        monsterId = meta.monsterId
+        ai = BaseAI.implementation(meta: meta)
         super.init(maxHp: meta.maxHp)
-        self.isDirectional = meta.isDirectional
+        isDirectional = meta.isDirectional
 
         guard let char = Character(rawValue: meta.asset) else {
             fatalError("Character not supported: \(meta.asset)")
@@ -73,7 +70,7 @@ class Monster: Sprite {
         } else {
             if ai.isRanged == true {
                 guard let nextPlayer = player.nextLoc else { return .move(loc: next) }
-                if nextPlayer.isInline(mapLocation) && nextPlayer.distance(mapLocation) < self.ai.range! {
+                if nextPlayer.isInline(mapLocation) && nextPlayer.distance(mapLocation) < ai.range! {
                     if tileMap.isWalkableFrom(start: next, target: nextPlayer) {
                         let spell = RangedSpells.spell(forType: ai.rangedItem!)
                         return .rangedAttack(victim: player, spell: spell)
@@ -93,7 +90,9 @@ class Monster: Sprite {
 
         // Flicker!
         let duration = walkTime / 6.0
-        let fade = SKAction.sequence([.fadeOut(withDuration: duration), .fadeIn(withDuration: duration), .fadeOut(withDuration: duration)])
+        let fadeOut = SKAction.fadeOut(withDuration: duration)
+        let fadeIn = SKAction.fadeIn(withDuration: duration)
+        let fade = SKAction.sequence([fadeOut, fadeIn, fadeOut])
 
         // Create remains sprite (Bones, blood, etc...)
         let loc = mapLocation
@@ -136,7 +135,7 @@ class MonsterManager {
 
         let rand = Int.random(min: 1, max: death.numVariance)
         let texture = SKTexture.pixelatedImage(file: "\(death.deathId)_\(rand)")
-        let node = SKSpriteNode.init(texture: texture, size: CGSize(width: tileSize, height: tileSize))
+        let node = SKSpriteNode(texture: texture, size: CGSize(width: tileSize, height: tileSize))
         node.anchorPoint = .zero
         return node
     }

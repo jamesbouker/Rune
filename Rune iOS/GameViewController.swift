@@ -34,8 +34,8 @@ class GameViewController: UIViewController, Events {
         view.preferredFramesPerSecond = 60
         view.presentScene(scene)
         view.ignoresSiblingOrder = true
-        view.showsFPS = true
-        view.showsNodeCount = true
+        //        view.showsFPS = true
+        //        view.showsNodeCount = true
 
         self.scene = view.scene as? GameScene
     }

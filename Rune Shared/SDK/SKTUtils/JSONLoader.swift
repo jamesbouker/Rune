@@ -17,7 +17,7 @@ class JSONLoader {
             fatalError("Could not parse objects: \(T.self)")
         }
 
-        var map = [String : T]()
+        var map = [String: T]()
         for object in objects {
             let k = key(object)
             map[k] = object

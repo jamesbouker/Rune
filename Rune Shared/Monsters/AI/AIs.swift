@@ -22,42 +22,35 @@ class BaseAI: AI {
     var isRanged: Bool
     var canFly = false
 
-    init(canFly: Bool?, range: Int?, isRanged: Bool?, rangedItem: String?) {
-        self.canFly = canFly ?? false
-        self.isRanged = isRanged ?? false
-        self.rangedItem = rangedItem ?? ""
-        self.range = range
+    init(meta: MonsterMeta) {
+        canFly = meta.canFly ?? false
+        isRanged = meta.isRanged ?? false
+        rangedItem = meta.rangedItem ?? ""
+        range = meta.range
     }
 
     func nextMove(_: MapLocation) -> MapLocation {
         fatalError("Do not use this AI")
     }
 
-    static func implementation(ai: String, canFly: Bool? = false, range: Int?, isRanged: Bool?, rangedItem: String?) -> AI {
-        guard let aiType = AIType(rawValue: ai) else {
-            fatalError("\(ai) does not exist as an AI Type")
+    static func implementation(meta: MonsterMeta) -> AI {
+        guard let aiType = AIType(rawValue: meta.ai) else {
+            fatalError("\(meta.ai) does not exist as an AI Type")
         }
+        let adjustedRange = meta.range != nil ? meta.range! + 2 : 0
+        meta.range = adjustedRange
 
         switch aiType {
         case .random:
-            return RandomAI(canFly: canFly, range: range, isRanged: isRanged, rangedItem: rangedItem)
+            return RandomAI(meta: meta)
         case .blind:
-            return BlindAI(canFly: canFly, range: range, isRanged: isRanged, rangedItem: rangedItem)
+            return BlindAI(meta: meta)
         case .sighted:
-            guard let r = range else {
-                fatalError("Missing range, creating sighted AI")
-            }
-            return SightedAI(canFly: canFly, range: r, isRanged: isRanged, rangedItem: rangedItem)
+            return SightedAI(meta: meta)
         case .sightedLastKnown:
-            guard let r = range else {
-                fatalError("Missing range, creating sighted AI")
-            }
-            return SightedLastKnown(canFly: canFly, range: r, isRanged: isRanged, rangedItem: rangedItem)
+            return SightedLastKnown(meta: meta)
         case .sightedFollower:
-            guard let r = range else {
-                fatalError("Missing range, creating sighted AI")
-            }
-            return Follower(canFly: canFly, range: r, isRanged: isRanged, rangedItem: rangedItem)
+            return Follower(meta: meta)
         }
     }
 }

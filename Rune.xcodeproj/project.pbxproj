@@ -18,6 +18,67 @@
 		F5116DDB1F72179E004519F8 /* RangedSpells.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5116DD91F72179E004519F8 /* RangedSpells.swift */; };
 		F51E2A591F74B4FA00CDF381 /* Death.json in Resources */ = {isa = PBXBuildFile; fileRef = F51E2A581F74B17700CDF381 /* Death.json */; };
 		F51E2A5A1F74B4FB00CDF381 /* Death.json in Resources */ = {isa = PBXBuildFile; fileRef = F51E2A581F74B17700CDF381 /* Death.json */; };
+		F55685381F78BEEE00D66AC1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55685361F78BEEE00D66AC1 /* Interface.storyboard */; };
+		F556853A1F78BEEE00D66AC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F55685391F78BEEE00D66AC1 /* Assets.xcassets */; };
+		F55685411F78BEEF00D66AC1 /* Rune watchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F55685401F78BEEE00D66AC1 /* Rune watchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F55685461F78BEEF00D66AC1 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55685451F78BEEF00D66AC1 /* InterfaceController.swift */; };
+		F556854C1F78BEEF00D66AC1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F556854B1F78BEEF00D66AC1 /* ExtensionDelegate.swift */; };
+		F556854E1F78BEEF00D66AC1 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F556854D1F78BEEF00D66AC1 /* NotificationController.swift */; };
+		F55685501F78BEEF00D66AC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F556854F1F78BEEF00D66AC1 /* Assets.xcassets */; };
+		F55685561F78BEEF00D66AC1 /* Rune watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F55685341F78BEEE00D66AC1 /* Rune watchOS.app */; };
+		F55685621F78C99400D66AC1 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F55685611F78C99400D66AC1 /* GameScene.sks */; };
+		F55685641F78CA9100D66AC1 /* Death.json in Resources */ = {isa = PBXBuildFile; fileRef = F51E2A581F74B17700CDF381 /* Death.json */; };
+		F55685651F78CA9100D66AC1 /* Levels.json in Resources */ = {isa = PBXBuildFile; fileRef = F59998021F6DA2AD00E5DDDE /* Levels.json */; };
+		F55685661F78CA9100D66AC1 /* Monsters.json in Resources */ = {isa = PBXBuildFile; fileRef = F59998111F6DA2AE00E5DDDE /* Monsters.json */; };
+		F55685671F78CA9100D66AC1 /* Spells.json in Resources */ = {isa = PBXBuildFile; fileRef = F5116DD11F72117B004519F8 /* Spells.json */; };
+		F55685681F78CA9700D66AC1 /* sand.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F59998191F6DA2AF00E5DDDE /* sand.atlas */; };
+		F55685691F78CA9700D66AC1 /* Shadows.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F599980E1F6DA2AE00E5DDDE /* Shadows.atlas */; };
+		F556856A1F78CA9700D66AC1 /* brick.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F59998041F6DA2AD00E5DDDE /* brick.atlas */; };
+		F556856B1F78CA9700D66AC1 /* Grass.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F599981A1F6DA2AF00E5DDDE /* Grass.atlas */; };
+		F556856C1F78CA9700D66AC1 /* Items.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F599981E1F6DA2B000E5DDDE /* Items.atlas */; };
+		F556856D1F78CA9700D66AC1 /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F59998321F6DA2B100E5DDDE /* Sprites.atlas */; };
+		F556856E1F78CA9700D66AC1 /* stone.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F59998211F6DA2B000E5DDDE /* stone.atlas */; };
+		F556856F1F78CA9700D66AC1 /* vine.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F59998101F6DA2AE00E5DDDE /* vine.atlas */; };
+		F55685701F78CA9F00D66AC1 /* Default.sks in Resources */ = {isa = PBXBuildFile; fileRef = F59998141F6DA2AF00E5DDDE /* Default.sks */; };
+		F55685731F78CAB700D66AC1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59997D01F6D9E8B00E5DDDE /* GameScene.swift */; };
+		F55685741F78CAB700D66AC1 /* GameGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599980B1F6DA2AE00E5DDDE /* GameGenerator.swift */; };
+		F55685751F78CAB700D66AC1 /* Maze.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998231F6DA2B100E5DDDE /* Maze.swift */; };
+		F55685761F78CABD00D66AC1 /* ActionQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998131F6DA2AE00E5DDDE /* ActionQueue.swift */; };
+		F55685771F78CABD00D66AC1 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998081F6DA2AD00E5DDDE /* Assets.swift */; };
+		F55685781F78CABD00D66AC1 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998161F6DA2AF00E5DDDE /* Characters.swift */; };
+		F55685791F78CABD00D66AC1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599981D1F6DA2B000E5DDDE /* Constants.swift */; };
+		F556857A1F78CABD00D66AC1 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998181F6DA2AF00E5DDDE /* Events.swift */; };
+		F556857B1F78CABD00D66AC1 /* NodeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998221F6DA2B100E5DDDE /* NodeExtensions.swift */; };
+		F556857C1F78CABD00D66AC1 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599981B1F6DA2AF00E5DDDE /* UserDefaultsExtensions.swift */; };
+		F556857D1F78CAC400D66AC1 /* ActionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998201F6DA2B000E5DDDE /* ActionExtensions.swift */; };
+		F556857E1F78CAC400D66AC1 /* ChildNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998031F6DA2AD00E5DDDE /* ChildNode.swift */; };
+		F556857F1F78CAC400D66AC1 /* TextureExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998091F6DA2AD00E5DDDE /* TextureExtensions.swift */; };
+		F55685801F78CAC400D66AC1 /* TileMapExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599980F1F6DA2AE00E5DDDE /* TileMapExtensions.swift */; };
+		F55685811F78CAC400D66AC1 /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5116DD51F721408004519F8 /* JSONLoader.swift */; };
+		F55685821F78CAC400D66AC1 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998251F6DA2B100E5DDDE /* Array+Extensions.swift */; };
+		F55685831F78CAC400D66AC1 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998261F6DA2B100E5DDDE /* CGFloat+Extensions.swift */; };
+		F55685841F78CAC400D66AC1 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998271F6DA2B100E5DDDE /* CGPoint+Extensions.swift */; };
+		F55685851F78CAC400D66AC1 /* CGVector+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998281F6DA2B100E5DDDE /* CGVector+Extensions.swift */; };
+		F55685861F78CAC400D66AC1 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998291F6DA2B100E5DDDE /* Int+Extensions.swift */; };
+		F55685871F78CAC400D66AC1 /* SKAction+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599982A1F6DA2B100E5DDDE /* SKAction+Extensions.swift */; };
+		F55685881F78CAC400D66AC1 /* SKAction+SpecialEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599982B1F6DA2B100E5DDDE /* SKAction+SpecialEffects.swift */; };
+		F55685891F78CAC400D66AC1 /* SKColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599982C1F6DA2B100E5DDDE /* SKColor+Extensions.swift */; };
+		F556858A1F78CAC400D66AC1 /* SKNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599982D1F6DA2B100E5DDDE /* SKNode+Extensions.swift */; };
+		F556858B1F78CAC400D66AC1 /* SKTAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599982E1F6DA2B100E5DDDE /* SKTAudio.swift */; };
+		F556858C1F78CAC400D66AC1 /* SKTEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599982F1F6DA2B100E5DDDE /* SKTEffects.swift */; };
+		F556858D1F78CAC400D66AC1 /* SKTTimingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998301F6DA2B100E5DDDE /* SKTTimingFunctions.swift */; };
+		F556858E1F78CAC400D66AC1 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998311F6DA2B100E5DDDE /* Vector3.swift */; };
+		F556858F1F78CACE00D66AC1 /* AIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998121F6DA2AE00E5DDDE /* AIs.swift */; };
+		F55685901F78CACE00D66AC1 /* BlindAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599981C1F6DA2B000E5DDDE /* BlindAI.swift */; };
+		F55685911F78CACE00D66AC1 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599981F1F6DA2B000E5DDDE /* Follower.swift */; };
+		F55685921F78CACE00D66AC1 /* RandomAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998171F6DA2AF00E5DDDE /* RandomAI.swift */; };
+		F55685931F78CACE00D66AC1 /* SightedAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998061F6DA2AD00E5DDDE /* SightedAI.swift */; };
+		F55685941F78CACE00D66AC1 /* SightedLastKnown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998071F6DA2AD00E5DDDE /* SightedLastKnown.swift */; };
+		F55685951F78CACE00D66AC1 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998051F6DA2AD00E5DDDE /* Monster.swift */; };
+		F55685961F78CACE00D66AC1 /* RangedSpells.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5116DD91F72179E004519F8 /* RangedSpells.swift */; };
+		F55685971F78CACE00D66AC1 /* Sprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998151F6DA2AF00E5DDDE /* Sprite.swift */; };
+		F55685981F78CAD600D66AC1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599980A1F6DA2AD00E5DDDE /* Player.swift */; };
+		F55685991F78CAD600D66AC1 /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599980D1F6DA2AE00E5DDDE /* PlayerController.swift */; };
 		F58A81671F6E115000C2E0F2 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58A81661F6E115000C2E0F2 /* AssetsLibrary.framework */; };
 		F58A81691F6E115E00C2E0F2 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58A81681F6E115E00C2E0F2 /* BuddyBuildSDK.framework */; };
 		F58A816B1F6E116700C2E0F2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58A816A1F6E116700C2E0F2 /* CoreTelephony.framework */; };
@@ -138,6 +199,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F55685421F78BEEF00D66AC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F59997C91F6D9E8B00E5DDDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F556853F1F78BEEE00D66AC1;
+			remoteInfo = "Rune watchOS Extension";
+		};
+		F55685531F78BEEF00D66AC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F59997C91F6D9E8B00E5DDDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F55685331F78BEEE00D66AC1;
+			remoteInfo = "Rune watchOS";
+		};
 		F590355C1F6DAC450023B166 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F59997C91F6D9E8B00E5DDDE /* Project object */;
@@ -146,6 +221,31 @@
 			remoteInfo = "Rune iOS";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F55685551F78BEEF00D66AC1 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F55685561F78BEEF00D66AC1 /* Rune watchOS.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F556855C1F78BEEF00D66AC1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F55685411F78BEEF00D66AC1 /* Rune watchOS Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		18DFDE5E1A6F08CE50A2E6D9 /* Pods-Rune tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rune tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rune tvOS/Pods-Rune tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +261,18 @@
 		F5116DD51F721408004519F8 /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
 		F5116DD91F72179E004519F8 /* RangedSpells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangedSpells.swift; sourceTree = "<group>"; };
 		F51E2A581F74B17700CDF381 /* Death.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Death.json; sourceTree = "<group>"; };
+		F55685341F78BEEE00D66AC1 /* Rune watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rune watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F55685371F78BEEE00D66AC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		F55685391F78BEEE00D66AC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F556853B1F78BEEE00D66AC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F55685401F78BEEE00D66AC1 /* Rune watchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Rune watchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F55685451F78BEEF00D66AC1 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		F556854B1F78BEEF00D66AC1 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		F556854D1F78BEEF00D66AC1 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		F556854F1F78BEEF00D66AC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F55685511F78BEEF00D66AC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F55685521F78BEEF00D66AC1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		F55685611F78C99400D66AC1 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		F58A81661F6E115000C2E0F2 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
 		F58A81681F6E115E00C2E0F2 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		F58A816A1F6E116700C2E0F2 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
@@ -237,6 +349,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F556853D1F78BEEE00D66AC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F59035541F6DAC450023B166 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,6 +463,30 @@
 			path = AI;
 			sourceTree = "<group>";
 		};
+		F55685351F78BEEE00D66AC1 /* Rune watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				F55685361F78BEEE00D66AC1 /* Interface.storyboard */,
+				F55685391F78BEEE00D66AC1 /* Assets.xcassets */,
+				F556853B1F78BEEE00D66AC1 /* Info.plist */,
+			);
+			path = "Rune watchOS";
+			sourceTree = "<group>";
+		};
+		F55685441F78BEEF00D66AC1 /* Rune watchOS Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F55685611F78C99400D66AC1 /* GameScene.sks */,
+				F55685451F78BEEF00D66AC1 /* InterfaceController.swift */,
+				F556854B1F78BEEF00D66AC1 /* ExtensionDelegate.swift */,
+				F556854D1F78BEEF00D66AC1 /* NotificationController.swift */,
+				F556854F1F78BEEF00D66AC1 /* Assets.xcassets */,
+				F55685511F78BEEF00D66AC1 /* Info.plist */,
+				F55685521F78BEEF00D66AC1 /* PushNotificationPayload.apns */,
+			);
+			path = "Rune watchOS Extension";
+			sourceTree = "<group>";
+		};
 		F59035581F6DAC450023B166 /* RuneTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,6 +503,8 @@
 				F59997D81F6D9E8B00E5DDDE /* Rune iOS */,
 				F59997E91F6D9E8B00E5DDDE /* Rune tvOS */,
 				F59035581F6DAC450023B166 /* RuneTests */,
+				F55685351F78BEEE00D66AC1 /* Rune watchOS */,
+				F55685441F78BEEF00D66AC1 /* Rune watchOS Extension */,
 				F59997D71F6D9E8B00E5DDDE /* Products */,
 				997B554B5D8001A0400DDAD4 /* Pods */,
 				6AF329CDB0BC9552973CA45F /* Frameworks */,
@@ -384,6 +529,8 @@
 				F59997D61F6D9E8B00E5DDDE /* Rune.app */,
 				F59997E81F6D9E8B00E5DDDE /* Rune.app */,
 				F59035571F6DAC450023B166 /* RuneTests.xctest */,
+				F55685341F78BEEE00D66AC1 /* Rune watchOS.app */,
+				F55685401F78BEEE00D66AC1 /* Rune watchOS Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -496,6 +643,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F55685331F78BEEE00D66AC1 /* Rune watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F556855D1F78BEEF00D66AC1 /* Build configuration list for PBXNativeTarget "Rune watchOS" */;
+			buildPhases = (
+				F55685321F78BEEE00D66AC1 /* Resources */,
+				F556855C1F78BEEF00D66AC1 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F55685431F78BEEF00D66AC1 /* PBXTargetDependency */,
+			);
+			name = "Rune watchOS";
+			productName = "Rune watchOS";
+			productReference = F55685341F78BEEE00D66AC1 /* Rune watchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		F556853F1F78BEEE00D66AC1 /* Rune watchOS Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F556855B1F78BEEF00D66AC1 /* Build configuration list for PBXNativeTarget "Rune watchOS Extension" */;
+			buildPhases = (
+				F556853C1F78BEEE00D66AC1 /* Sources */,
+				F556853D1F78BEEE00D66AC1 /* Frameworks */,
+				F556853E1F78BEEE00D66AC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rune watchOS Extension";
+			productName = "Rune watchOS Extension";
+			productReference = F55685401F78BEEE00D66AC1 /* Rune watchOS Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		F59035561F6DAC450023B166 /* RuneTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F590355E1F6DAC450023B166 /* Build configuration list for PBXNativeTarget "RuneTests" */;
@@ -529,10 +710,12 @@
 				F59997D41F6D9E8B00E5DDDE /* Resources */,
 				D1E63C82A677073766C69349 /* [CP] Embed Pods Frameworks */,
 				01EF7BE8488BB7011067A48C /* [CP] Copy Pods Resources */,
+				F55685551F78BEEF00D66AC1 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F55685541F78BEEF00D66AC1 /* PBXTargetDependency */,
 			);
 			name = "Rune iOS";
 			productName = "Rune iOS";
@@ -569,6 +752,15 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = JimmyBouker;
 				TargetAttributes = {
+					F55685331F78BEEE00D66AC1 = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+					F556853F1F78BEEE00D66AC1 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
 					F59035561F6DAC450023B166 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -600,11 +792,44 @@
 				F59997D51F6D9E8B00E5DDDE /* Rune iOS */,
 				F59997E71F6D9E8B00E5DDDE /* Rune tvOS */,
 				F59035561F6DAC450023B166 /* RuneTests */,
+				F55685331F78BEEE00D66AC1 /* Rune watchOS */,
+				F556853F1F78BEEE00D66AC1 /* Rune watchOS Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F55685321F78BEEE00D66AC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F556853A1F78BEEE00D66AC1 /* Assets.xcassets in Resources */,
+				F55685381F78BEEE00D66AC1 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F556853E1F78BEEE00D66AC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F556856B1F78CA9700D66AC1 /* Grass.atlas in Resources */,
+				F55685701F78CA9F00D66AC1 /* Default.sks in Resources */,
+				F55685681F78CA9700D66AC1 /* sand.atlas in Resources */,
+				F55685691F78CA9700D66AC1 /* Shadows.atlas in Resources */,
+				F556856F1F78CA9700D66AC1 /* vine.atlas in Resources */,
+				F556856A1F78CA9700D66AC1 /* brick.atlas in Resources */,
+				F55685621F78C99400D66AC1 /* GameScene.sks in Resources */,
+				F55685501F78BEEF00D66AC1 /* Assets.xcassets in Resources */,
+				F556856D1F78CA9700D66AC1 /* Sprites.atlas in Resources */,
+				F55685671F78CA9100D66AC1 /* Spells.json in Resources */,
+				F55685661F78CA9100D66AC1 /* Monsters.json in Resources */,
+				F556856E1F78CA9700D66AC1 /* stone.atlas in Resources */,
+				F556856C1F78CA9700D66AC1 /* Items.atlas in Resources */,
+				F55685651F78CA9100D66AC1 /* Levels.json in Resources */,
+				F55685641F78CA9100D66AC1 /* Death.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F59035551F6DAC450023B166 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -828,6 +1053,55 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F556853C1F78BEEE00D66AC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F55685931F78CACE00D66AC1 /* SightedAI.swift in Sources */,
+				F55685461F78BEEF00D66AC1 /* InterfaceController.swift in Sources */,
+				F55685961F78CACE00D66AC1 /* RangedSpells.swift in Sources */,
+				F55685941F78CACE00D66AC1 /* SightedLastKnown.swift in Sources */,
+				F556858F1F78CACE00D66AC1 /* AIs.swift in Sources */,
+				F556857A1F78CABD00D66AC1 /* Events.swift in Sources */,
+				F55685811F78CAC400D66AC1 /* JSONLoader.swift in Sources */,
+				F55685871F78CAC400D66AC1 /* SKAction+Extensions.swift in Sources */,
+				F556854E1F78BEEF00D66AC1 /* NotificationController.swift in Sources */,
+				F556858E1F78CAC400D66AC1 /* Vector3.swift in Sources */,
+				F55685851F78CAC400D66AC1 /* CGVector+Extensions.swift in Sources */,
+				F556857F1F78CAC400D66AC1 /* TextureExtensions.swift in Sources */,
+				F55685911F78CACE00D66AC1 /* Follower.swift in Sources */,
+				F55685771F78CABD00D66AC1 /* Assets.swift in Sources */,
+				F55685831F78CAC400D66AC1 /* CGFloat+Extensions.swift in Sources */,
+				F55685951F78CACE00D66AC1 /* Monster.swift in Sources */,
+				F55685841F78CAC400D66AC1 /* CGPoint+Extensions.swift in Sources */,
+				F55685801F78CAC400D66AC1 /* TileMapExtensions.swift in Sources */,
+				F556858A1F78CAC400D66AC1 /* SKNode+Extensions.swift in Sources */,
+				F556857E1F78CAC400D66AC1 /* ChildNode.swift in Sources */,
+				F55685751F78CAB700D66AC1 /* Maze.swift in Sources */,
+				F556858C1F78CAC400D66AC1 /* SKTEffects.swift in Sources */,
+				F55685781F78CABD00D66AC1 /* Characters.swift in Sources */,
+				F556858D1F78CAC400D66AC1 /* SKTTimingFunctions.swift in Sources */,
+				F55685791F78CABD00D66AC1 /* Constants.swift in Sources */,
+				F556857C1F78CABD00D66AC1 /* UserDefaultsExtensions.swift in Sources */,
+				F55685921F78CACE00D66AC1 /* RandomAI.swift in Sources */,
+				F55685981F78CAD600D66AC1 /* Player.swift in Sources */,
+				F55685861F78CAC400D66AC1 /* Int+Extensions.swift in Sources */,
+				F55685901F78CACE00D66AC1 /* BlindAI.swift in Sources */,
+				F55685731F78CAB700D66AC1 /* GameScene.swift in Sources */,
+				F55685971F78CACE00D66AC1 /* Sprite.swift in Sources */,
+				F55685991F78CAD600D66AC1 /* PlayerController.swift in Sources */,
+				F55685881F78CAC400D66AC1 /* SKAction+SpecialEffects.swift in Sources */,
+				F55685741F78CAB700D66AC1 /* GameGenerator.swift in Sources */,
+				F556857B1F78CABD00D66AC1 /* NodeExtensions.swift in Sources */,
+				F55685761F78CABD00D66AC1 /* ActionQueue.swift in Sources */,
+				F556854C1F78BEEF00D66AC1 /* ExtensionDelegate.swift in Sources */,
+				F55685821F78CAC400D66AC1 /* Array+Extensions.swift in Sources */,
+				F556858B1F78CAC400D66AC1 /* SKTAudio.swift in Sources */,
+				F556857D1F78CAC400D66AC1 /* ActionExtensions.swift in Sources */,
+				F55685891F78CAC400D66AC1 /* SKColor+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F59035531F6DAC450023B166 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -935,6 +1209,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F55685431F78BEEF00D66AC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F556853F1F78BEEE00D66AC1 /* Rune watchOS Extension */;
+			targetProxy = F55685421F78BEEF00D66AC1 /* PBXContainerItemProxy */;
+		};
+		F55685541F78BEEF00D66AC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F55685331F78BEEE00D66AC1 /* Rune watchOS */;
+			targetProxy = F55685531F78BEEF00D66AC1 /* PBXContainerItemProxy */;
+		};
 		F590355D1F6DAC450023B166 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F59997D51F6D9E8B00E5DDDE /* Rune iOS */;
@@ -943,6 +1227,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		F55685361F78BEEE00D66AC1 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F55685371F78BEEE00D66AC1 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		F59997DD1F6D9E8B00E5DDDE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -970,6 +1262,93 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F55685571F78BEEF00D66AC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6KM367XE7J;
+				IBSC_MODULE = Rune_watchOS_Extension;
+				INFOPLIST_FILE = "Rune watchOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JimmyBouker.Rune.watchkitapp;
+				PRODUCT_MODULE_NAME = Rune;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Debug;
+		};
+		F55685581F78BEEF00D66AC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6KM367XE7J;
+				IBSC_MODULE = Rune_watchOS_Extension;
+				INFOPLIST_FILE = "Rune watchOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JimmyBouker.Rune.watchkitapp;
+				PRODUCT_MODULE_NAME = Rune;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Release;
+		};
+		F55685591F78BEEF00D66AC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6KM367XE7J;
+				INFOPLIST_FILE = "Rune watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JimmyBouker.Rune.watchkitapp.watchkitextension;
+				PRODUCT_MODULE_NAME = Rune;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Debug;
+		};
+		F556855A1F78BEEF00D66AC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6KM367XE7J;
+				INFOPLIST_FILE = "Rune watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JimmyBouker.Rune.watchkitapp.watchkitextension;
+				PRODUCT_MODULE_NAME = Rune;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Release;
+		};
 		F590355F1F6DAC450023B166 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C1F21F0A9A8AE76492387217 /* Pods-RuneTests.debug.xcconfig */;
@@ -1200,6 +1579,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F556855B1F78BEEF00D66AC1 /* Build configuration list for PBXNativeTarget "Rune watchOS Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F55685591F78BEEF00D66AC1 /* Debug */,
+				F556855A1F78BEEF00D66AC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F556855D1F78BEEF00D66AC1 /* Build configuration list for PBXNativeTarget "Rune watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F55685571F78BEEF00D66AC1 /* Debug */,
+				F55685581F78BEEF00D66AC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F590355E1F6DAC450023B166 /* Build configuration list for PBXNativeTarget "RuneTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

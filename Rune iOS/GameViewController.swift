@@ -28,14 +28,10 @@ class GameViewController: UIViewController, Events {
         guard let view = self.view as? SKView else { return }
         let scene = GameScene.loadScene()
 
-        // Set the scale mode to scale to fit the window
         scene.scaleMode = .aspectFill
-
         view.preferredFramesPerSecond = 60
-        view.presentScene(scene)
         view.ignoresSiblingOrder = true
-        //        view.showsFPS = true
-        //        view.showsNodeCount = true
+        view.presentScene(scene)
 
         self.scene = view.scene as? GameScene
     }
@@ -94,21 +90,5 @@ class GameViewController: UIViewController, Events {
                 fireEvent(event: .swipedUp)
             }
         }
-    }
-
-    @IBAction func swipedUp() {
-        fireEvent(event: .swipedUp)
-    }
-
-    @IBAction func swipedDown() {
-        fireEvent(event: .swipedDown)
-    }
-
-    @IBAction func swipedLeft() {
-        fireEvent(event: .swipedLeft)
-    }
-
-    @IBAction func swipedRight() {
-        fireEvent(event: .swipedRight)
     }
 }

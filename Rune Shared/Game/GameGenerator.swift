@@ -120,7 +120,13 @@ extension GameScene {
         scene.levelNum = nextLevel
 
         let transition = SKTransition.doorway(withDuration: 1.0)
-        view?.presentScene(scene, transition: transition)
+
+        #if os(watchOS)
+            sharedController.skInterface.presentScene(scene, transition: transition)
+        #else
+            view?.presentScene(scene, transition: transition)
+        #endif
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.33) {
             self.cleanup()
             ActionQueue.shared.game = scene

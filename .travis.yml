@@ -1,0 +1,5 @@
+language: swift
+osx_image: xcode9
+xcode_workspace: Rune.xcworkspace
+xcode_scheme: Rune iOS
+xcode_sdk: iphonesimulator11.0

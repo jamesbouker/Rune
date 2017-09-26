@@ -5,18 +5,17 @@
 //  Created by james bouker on 9/25/17.
 //  Copyright © 2017 JimmyBouker. All rights reserved.
 //
+// swiftlint:disable line_length
 
 import WatchKit
 import Foundation
 import UserNotifications
-
 
 class NotificationController: WKUserNotificationInterfaceController {
 
     override init() {
         // Initialize variables here.
         super.init()
-        
         // Configure interface objects here.
     }
 

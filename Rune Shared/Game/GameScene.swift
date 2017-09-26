@@ -25,13 +25,14 @@ class GameScene: SKScene, ActionQueueDelegate, Events {
     }
 
     #if os(watchOS)
-    override func sceneDidLoad() {
-        setupView()
-    }
+        override func sceneDidLoad() {
+            setupView()
+        }
+
     #else
-    override func didMove(to _: SKView) {
-        setupView()
-    }
+        override func didMove(to _: SKView) {
+            setupView()
+        }
     #endif
 
     func setupView() {

@@ -12,7 +12,7 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Rune">
+                <controller fullScreen="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Rune">
                     <items>
                         <spriteKitScene alignment="left" preferredFramesPerSecond="60" id="eh2-bW-rMT" customClass="WatchScene" customModule="Rune">
                             <gestureRecognizers>
@@ -23,12 +23,13 @@
                                 </panGestureRecognizer>
                                 <longPressGestureRecognizer minimumPressDuration="0.29999999999999999" id="xbp-jw-kbg">
                                     <connections>
-                                        <action selector="screenLongPressed" destination="AgC-eL-Hgc" id="f9G-LT-Syp"/>
+                                        <action selector="screenLongPressedWithGesture:" destination="AgC-eL-Hgc" id="6tc-y9-cZe"/>
                                     </connections>
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
                         </spriteKitScene>
                     </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                     <connections>
                         <outlet property="skInterface" destination="eh2-bW-rMT" id="Wme-JX-I9n"/>
                     </connections>
@@ -55,7 +56,7 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Rune_watchOS" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Rune" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>

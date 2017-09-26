@@ -29,15 +29,20 @@ class InterfaceController: WKInterfaceController, Events {
         self.scene = scene
     }
 
-    @IBAction func screenLongPressed() {
-        fireEvent(event: .pressed)
+    var initialLocation: CGPoint?
+    @IBAction func screenLongPressed(gesture: WKLongPressGestureRecognizer) {
+        if gesture.state == .began {
+            initialLocation = gesture.locationInObject()
+        }
+        if gesture.state == .ended, let loc = initialLocation {
+            let delta = gesture.locationInObject() - loc
+            if delta.lengthSquared() < 100 {
+                fireEvent(event: .pressed)
+            }
+        }
     }
 
-    @IBAction func screenPanned(_ sender: AnyObject) {
-        guard let gesture = sender as? WKPanGestureRecognizer else {
-            return
-        }
-
+    @IBAction func screenPanned(_ gesture: WKPanGestureRecognizer) {
         if touchDownTime == nil {
             print("Gesture.state: \(gesture.state)")
             touchDownTime = Date()

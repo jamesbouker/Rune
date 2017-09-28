@@ -203,8 +203,6 @@ extension SKTileMapNode {
         return tileSet.tileGroups.filter {
             var name = (atlas != nil) ? atlas! + "_" : ""
             name += tile.rawValue
-            print("$0.name: \($0.name ?? "")")
-            print("name: \(name)")
             return $0.name == name
         }.first
     }

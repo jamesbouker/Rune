@@ -122,7 +122,7 @@ extension GameScene {
         let transition = SKTransition.doorway(withDuration: 1.0)
 
         #if os(watchOS)
-            sharedController.skInterface.presentScene(scene, transition: transition)
+            sharedController.skInterface.presentScene(scene)
         #else
             view?.presentScene(scene, transition: transition)
         #endif

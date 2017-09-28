@@ -146,7 +146,6 @@ class ActionQueue {
                     game.player.nextLoc = loc
                 default:
                     game.player.nextLoc = game.player.mapLocation
-                    print("Player: \(game.player.mapLocation)")
                 }
                 if !isExecuting {
                     execute()
@@ -238,8 +237,6 @@ class ActionQueue {
         game.player.runs([playerAct, .run { [weak self] in
             guard let strongSelf = self else { return }
 
-            let start = Date()
-
             // Wait for player to move, then move all remaining in sequence
             var anEnemyDidWalk = false
             for enemy in moveAfter {
@@ -271,9 +268,6 @@ class ActionQueue {
                 }
                 strongSelf?.isExecuting = false
             }
-
-            let diff = Date().timeIntervalSince(start)
-            print("Diff: \(diff)")
         }])
 
         for enemy in movingEnemies {

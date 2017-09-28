@@ -539,9 +539,9 @@
 			children = (
 				F59998931F6DA2B700E5DDDE /* Resources */,
 				F59998971F6DA37C00E5DDDE /* Game */,
-				F59998961F6DA34300E5DDDE /* SDK */,
 				F59998951F6DA30F00E5DDDE /* Monsters */,
 				F59998941F6DA2F500E5DDDE /* Player */,
+				F59998961F6DA34300E5DDDE /* SDK */,
 			);
 			path = "Rune Shared";
 			sourceTree = "<group>";

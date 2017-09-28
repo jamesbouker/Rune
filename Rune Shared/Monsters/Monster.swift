@@ -66,7 +66,7 @@ class Monster: Sprite {
         let next = ai.nextMove(mapLocation)
 
         if next == player.nextLoc {
-            return .attack(sprite: player)
+            return .attack(victim: player)
         } else {
             if ai.isRanged == true {
                 guard let nextPlayer = player.nextLoc else { return .move(loc: next) }

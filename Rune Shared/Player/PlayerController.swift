@@ -44,7 +44,7 @@ extension Player {
 
         let next = delta + mapLocation
         if let monster = gameScene.monsterAt(next) {
-            ActionQueue.shared.playerAction = .attack(sprite: monster)
+            ActionQueue.shared.playerAction = .attack(victim: monster)
         } else if tiles.isWalkable {
             // Move the player
             ActionQueue.shared.playerAction = .move(loc: next)

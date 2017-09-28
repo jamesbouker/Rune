@@ -13,14 +13,15 @@ import SpriteKit
 enum ActionQueueType {
     case move(loc: MapLocation)
     case pass
-    case attack(sprite: Sprite)
+    case attack(victim: Sprite)
     case rangedAttack(victim: Sprite, spell: SpellMeta)
     case openChest(loc: MapLocation)
     case hitSwitch(loc: MapLocation)
     case none
 
-    func hit(attacker: Sprite, victim: Sprite) -> SKAction {
-        let delta = victim.mapLocation - attacker.mapLocation
+    func hit(attacker: Sprite, victim: Sprite, target: MapLocation?) -> SKAction {
+        let victimLoc = target ?? victim.mapLocation
+        let delta = victimLoc - attacker.mapLocation
         return bump(delta) { [weak victim] in
             guard let strongVictim = victim else { return }
             strongVictim.health -= 1
@@ -44,7 +45,7 @@ enum ActionQueueType {
         return SKAction.sequence(seq)
     }
 
-    func skAction(action: ActionQueueType, sprite: Sprite) -> SKAction? {
+    func skAction(action: ActionQueueType, sprite: Sprite, target: MapLocation? = nil) -> SKAction? {
         guard sprite.health > 0 else { return nil }
         switch action {
         case let .move(loc):
@@ -53,16 +54,18 @@ enum ActionQueueType {
                 sprite?.updateImages(delta.x)
             }, .moveBy(x: CGFloat(delta.x) * tileSize, y: CGFloat(delta.y) * tileSize, duration: walkTime)])
         case let .rangedAttack(victim, spell):
-            let delta = victim.mapLocation - sprite.mapLocation
+            let victimLoc = target ?? victim.mapLocation
+            let delta = victimLoc - sprite.mapLocation
             return .group([.run { [weak sprite] in
                 sprite?.updateImages(delta.x)
-                sprite?.fire(spell: spell, at: victim)
-            }, hit(attacker: sprite, victim: victim)])
+                sprite?.fire(spell: spell, at: victimLoc)
+            }, hit(attacker: sprite, victim: victim, target: victimLoc)])
         case let .attack(victim):
-            let delta = victim.mapLocation - sprite.mapLocation
+            let victimLoc = target ?? victim.mapLocation
+            let delta = victimLoc - sprite.mapLocation
             return .group([.run { [weak sprite] in
                 sprite?.updateImages(delta.x)
-            }, hit(attacker: sprite, victim: victim)])
+            }, hit(attacker: sprite, victim: victim, target: victimLoc)])
         case let .openChest(loc):
             sprite.tileMap.items.setTile(tile: .chest_empty, forLocation: loc)
             let delta = loc - sprite.mapLocation
@@ -95,22 +98,27 @@ class SpriteAction {
     let sprite: Sprite
     let action: ActionQueueType
     let duration: TimeInterval
+    let target: MapLocation?
 
     init(sprite: Sprite, action: ActionQueueType) {
         self.sprite = sprite
         self.action = action
 
         switch action {
+        case let .attack(victim):
+            target = victim.nextLoc ?? victim.mapLocation
+            duration = walkTime
         case let .rangedAttack(victim, spell):
-            let target = victim.nextLoc ?? victim.mapLocation
-            duration = spell.duration(loc: sprite.mapLocation, target: target)
+            target = victim.nextLoc ?? victim.mapLocation
+            duration = spell.duration(loc: sprite.mapLocation, target: target!)
         default:
+            target = nil
             duration = walkTime
         }
     }
 
     var skAction: SKAction? {
-        return action.skAction(action: action, sprite: sprite)
+        return action.skAction(action: action, sprite: sprite, target: target)
     }
 }
 

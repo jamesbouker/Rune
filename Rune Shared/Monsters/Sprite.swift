@@ -83,9 +83,9 @@ class Sprite: SKSpriteNode {
         }
     }
 
-    func fire(spell: SpellMeta, at victim: Sprite) {
-        let direction = Direction(facing: victim.nextLoc! - mapLocation)
-        spell.spawnAndFire(loc: mapLocation, target: victim.nextLoc!, direction: direction)
+    func fire(spell: SpellMeta, at target: MapLocation) {
+        let direction = Direction(facing: target - mapLocation)
+        spell.spawnAndFire(loc: mapLocation, target: target, direction: direction)
     }
 
     func die() {

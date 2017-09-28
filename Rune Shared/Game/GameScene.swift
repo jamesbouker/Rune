@@ -70,8 +70,7 @@ extension GameScene {
         for monster in monsters {
             guard monster.action == nil else { continue }
             let action = monster.makeMove()
-            let spriteAction = ActionQueue.shared.addAction(action, sprite: monster)
-            monster.action = spriteAction
+            monster.action = ActionQueue.shared.addAction(action, sprite: monster)
 
             // We did not move
             if monster.mapLocation == monster.nextLoc {

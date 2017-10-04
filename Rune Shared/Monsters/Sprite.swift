@@ -66,6 +66,7 @@ class Sprite: SKSpriteNode {
     }
 
     var nextLoc: MapLocation?
+    var nextLocations: [MapLocation]?
 
     func updateImages(_ deltaX: Int) {
         guard abs(deltaX) > 0 else { return }

@@ -25,10 +25,7 @@
         "mustSpawn" : ["blueSlime", "blackBat"]
     },
     "4" : {
-        "canSpawn" : ["blueSlime", "blackBat"],
-        "canSpawnWeight" : [2, 1],
-        "numberToSpawn" : 5,
-        "numberToSpawnVar" : 2,
+        "mustSpawn" : ["skeleton", "redDragon","skeleton", "redDragon","skeleton", "redDragon"],
         "width" : 8,
         "widthVar" : 1,
         "height" : 7,

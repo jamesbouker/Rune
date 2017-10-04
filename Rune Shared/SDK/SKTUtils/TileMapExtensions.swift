@@ -66,6 +66,24 @@ struct MapLocation: Equatable {
         return abs(loc.x - x) + abs(loc.y - y)
     }
 
+    func locationsTo(_ end: MapLocation, inclusive: Bool = true) -> [MapLocation] {
+        let delta = end - self
+        let step = delta.normalized
+        let distance = delta.length
+        var locs = [MapLocation]()
+        var current = self
+        locs.append(current)
+        for _ in 0 ..< distance {
+            current += step
+            locs.append(current)
+        }
+        if !inclusive && locs.count > 1 {
+            locs.remove(at: 0)
+            locs.remove(at: locs.count-1)
+        }
+        return locs
+    }
+
     var length: Int {
         return abs(x) + abs(y)
     }
@@ -133,7 +151,11 @@ extension SKTileMapNode {
     }
 
     var monsterNextLocations: [MapLocation] {
-        return monsters.flatMap { $0.nextLoc }
+        var locations = [MapLocation]()
+        for m in monsters where m.nextLocations != nil {
+            locations.append(contentsOf: m.nextLocations!)
+        }
+        return locations
     }
 
     var itemLocations: [MapLocation] {

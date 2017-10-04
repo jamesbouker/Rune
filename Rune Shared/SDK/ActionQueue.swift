@@ -169,8 +169,14 @@ class ActionQueue {
         switch action {
         case let .move(loc):
             sprite.nextLoc = loc
+            sprite.nextLocations = [loc]
+        case let .rangedAttack(victim, _):
+            sprite.nextLoc = sprite.mapLocation
+            sprite.nextLocations = sprite.mapLocation.locationsTo(victim.nextLoc ?? victim.mapLocation)
+            sprite.nextLocations?.removeLast()
         default:
             sprite.nextLoc = sprite.mapLocation
+            sprite.nextLocations = [sprite.mapLocation]
         }
 
         let sAction = SpriteAction(sprite: sprite, action: action)

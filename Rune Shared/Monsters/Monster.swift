@@ -70,8 +70,19 @@ class Monster: Sprite {
         } else {
             if ai.isRanged == true {
                 guard let nextPlayer = player.nextLoc else { return .move(loc: next) }
+
+                // If next player POS is inline and in firing range
                 if nextPlayer.isInline(mapLocation) && nextPlayer.distance(mapLocation) < ai.range! {
-                    if tileMap.isWalkableFrom(start: next, target: nextPlayer) {
+
+                    // No walls in the way
+                    if tileMap.isWalkableFrom(start: mapLocation, target: nextPlayer) {
+
+                        // No monster next locations in the way?
+                        let firingRange = mapLocation.locationsTo(nextPlayer)
+                        let locs = gameScene.tileMap.monsterNextLocations
+                        if firingRange.contains(where: { locs.contains($0) }) {
+                            return .move(loc: next)
+                        }
                         let spell = RangedSpells.spell(forType: ai.rangedItem!)
                         return .rangedAttack(victim: player, spell: spell)
                     }

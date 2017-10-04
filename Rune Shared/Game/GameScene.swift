@@ -56,6 +56,10 @@ class GameScene: SKScene, ActionQueueDelegate, Events {
 
 extension GameScene {
     func addActions() {
+        _=monsters.map {
+            $0.nextLoc = nil
+            $0.nextLocations = nil
+        }
         for _ in 0 ... 5 {
             if !addActionHelper() {
                 return
@@ -79,8 +83,25 @@ extension GameScene {
                 let first = monsters.first { $0.nextLoc == monster.nextLoc && $0 !== monster }
                 if let firstAction = first?.action {
                     didRemove = true
+                    first?.nextLoc = nil
+                    first?.nextLocations = nil
                     ActionQueue.shared.removeAction(action: firstAction)
                 }
+
+                // Remove any action moving to 'these' actions
+                guard let firingRange = monster.nextLocations else { continue }
+                for m in monsters where m != monster {
+                    if let mLoc = m.nextLoc, firingRange.contains(mLoc) {
+                        didRemove = true
+
+                        m.nextLoc = nil
+                        m.nextLocations = nil
+                        if let act = m.action {
+                            ActionQueue.shared.removeAction(action: act)
+                        }
+                    }
+                }
+
             }
         }
         return didRemove

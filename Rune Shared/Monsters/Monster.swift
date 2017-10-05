@@ -63,7 +63,10 @@ class Monster: Sprite {
 
     func makeMove() -> ActionQueueType {
         guard let player = gameScene.player else { return .pass }
-        let next = ai.nextMove(mapLocation)
+        let next = ai.nextMove(self)
+        if !ai.possibleMoves(self).contains(next) && next != mapLocation {
+            return .pass
+        }
 
         if next == player.nextLoc {
             return .attack(victim: player)

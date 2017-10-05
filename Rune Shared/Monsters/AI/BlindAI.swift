@@ -9,12 +9,12 @@
 import Foundation
 
 class BlindAI: BaseAI {
-    override func nextMove(_ from: MapLocation) -> MapLocation {
+    override func nextMove(_ from: Sprite) -> MapLocation {
         let moves = possibleMoves(from)
         let playerLoc = moves.first { $0 == nextPlayerLoc }
         if let playerLoc = playerLoc {
             return playerLoc
         }
-        return moves.randomItem() ?? from
+        return moves.randomItem() ?? from.mapLocation
     }
 }

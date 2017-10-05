@@ -5,6 +5,7 @@
 //  Created by james bouker on 7/29/17.
 //  Copyright © 2017 Jimmy Bouker. All rights reserved.
 //
+// swiftlint:disable cyclomatic_complexity
 
 import SpriteKit
 
@@ -56,12 +57,15 @@ class GameScene: SKScene, ActionQueueDelegate, Events {
 
 extension GameScene {
     func addActions() {
-        _=monsters.map {
+        _ = monsters.map {
             $0.nextLoc = nil
             $0.nextLocations = nil
         }
+
+        _ = addActionHelper(1)
+        _ = addActionHelper(2)
         for _ in 0 ... 5 {
-            if !addActionHelper() {
+            if !addActionHelper(3) {
                 return
             }
         }
@@ -69,11 +73,29 @@ extension GameScene {
 
     /// Returns true if we should try to run this again (A monster could not move)
     /// Determines all next monster actions
-    func addActionHelper() -> Bool {
+    func addActionHelper(_ step: Int) -> Bool {
         var didRemove = false
         for monster in monsters {
             guard monster.action == nil else { continue }
             let action = monster.makeMove()
+
+            if case .attack = action {} else {
+                if step == 1 {
+                    // Can only assign attacks on first turn
+                    continue
+                }
+            }
+
+            if case .rangedAttack = action {} else {
+                if case .attack = action {} else {
+
+                    // Not ranged or attack!
+                    if step == 2 {
+                        // Can only assign attacks on first turn
+                        continue
+                    }
+                }
+            }
             monster.action = ActionQueue.shared.addAction(action, sprite: monster)
 
             // We did not move
@@ -101,7 +123,6 @@ extension GameScene {
                         }
                     }
                 }
-
             }
         }
         return didRemove

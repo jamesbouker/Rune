@@ -9,9 +9,9 @@
 import Foundation
 
 class RandomAI: BaseAI {
-    override func nextMove(_ from: MapLocation) -> MapLocation {
+    override func nextMove(_ from: Sprite) -> MapLocation {
         guard let next = possibleMoves(from).randomItem() else {
-            return from
+            return from.mapLocation
         }
         return next
     }

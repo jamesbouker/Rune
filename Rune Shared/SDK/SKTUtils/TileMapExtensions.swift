@@ -79,7 +79,7 @@ struct MapLocation: Equatable {
         }
         if !inclusive && locs.count > 1 {
             locs.remove(at: 0)
-            locs.remove(at: locs.count-1)
+            locs.remove(at: locs.count - 1)
         }
         return locs
     }

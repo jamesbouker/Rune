@@ -29,7 +29,7 @@ class BaseAI: AI {
         range = meta.range
     }
 
-    func nextMove(_: MapLocation) -> MapLocation {
+    func nextMove(_: Sprite) -> MapLocation {
         fatalError("Do not use this AI")
     }
 
@@ -61,7 +61,7 @@ protocol AI {
     var isRanged: Bool { get set }
     var rangedItem: String? { get set }
 
-    func nextMove(_ from: MapLocation) -> MapLocation
+    func nextMove(_ from: Sprite) -> MapLocation
 }
 
 extension AI {
@@ -73,18 +73,19 @@ extension AI {
         return sharedController.scene.player.nextLoc
     }
 
-    func possibleMoves(_ from: MapLocation) -> [MapLocation] {
+    func possibleMoves(_ from: Sprite) -> [MapLocation] {
         let open: [MapLocation]
         if !canFly {
             open = sharedController!.scene.tileMap.playableNoMonsters
         } else {
             open = sharedController!.scene.tileMap.playableNoMonstersFlying
         }
+
         var locations = [MapLocation]()
-        locations.append(.init(x: 1, y: 0) + from)
-        locations.append(.init(x: -1, y: 0) + from)
-        locations.append(.init(x: 0, y: 1) + from)
-        locations.append(.init(x: 0, y: -1) + from)
+        locations.append(.init(x: 1, y: 0) + from.mapLocation)
+        locations.append(.init(x: -1, y: 0) + from.mapLocation)
+        locations.append(.init(x: 0, y: 1) + from.mapLocation)
+        locations.append(.init(x: 0, y: -1) + from.mapLocation)
         return locations.filter { open.contains($0) }
     }
 }

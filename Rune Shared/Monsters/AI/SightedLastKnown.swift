@@ -12,14 +12,14 @@ import Foundation
 class SightedLastKnown: SightedAI {
     var lastKnownPlayer: MapLocation?
 
-    func findNextMove(_ from: MapLocation) -> (loc: MapLocation, lostSight: Bool, endOfTheRoad: Bool) {
+    func findNextMove(_ from: Sprite) -> (loc: MapLocation, lostSight: Bool, endOfTheRoad: Bool) {
         // Can we spot the player?
         let next = super.nextMove(from: from, to: [nextPlayerLoc])
         let last = super.nextMove(from: from, to: [playerLoc])
         let toUse = super.nextMove(from: from, to: [nextPlayerLoc, playerLoc])
 
         let lostSight = next.sawPlayer == nil && last.sawPlayer != nil
-        let end = from == lastKnownPlayer
+        let end = from.mapLocation == lastKnownPlayer
 
         if let player = toUse.sawPlayer {
             // If so remember it for hunting them down!
@@ -37,7 +37,7 @@ class SightedLastKnown: SightedAI {
         return (guess.loc, lostSight, end)
     }
 
-    override func nextMove(_ from: MapLocation) -> MapLocation {
+    override func nextMove(_ from: Sprite) -> MapLocation {
         return findNextMove(from).loc
     }
 }

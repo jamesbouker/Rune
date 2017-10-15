@@ -25,6 +25,7 @@ class MonsterMeta: Codable {
     var maxHp: Int
     var isDirectional: Bool
     var range: Int?
+    var shootRange: Int?
     var canFly: Bool?
     var isRanged: Bool?
     var rangedItem: String?
@@ -75,7 +76,7 @@ class Monster: Sprite {
                 guard let nextPlayer = player.nextLoc else { return .move(loc: next) }
 
                 // If next player POS is inline and in firing range
-                if nextPlayer.isInline(mapLocation) && nextPlayer.distance(mapLocation) < ai.range! {
+                if nextPlayer.isInline(mapLocation) && nextPlayer.distance(mapLocation) < ai.shootRange! {
 
                     // No walls in the way
                     if tileMap.isWalkableFrom(start: mapLocation, target: nextPlayer) {
@@ -139,6 +140,16 @@ class MonsterManager {
     private init() {
         monsters = JSONLoader.createMap(resource: "Monsters") { $0.monsterId }
         monsterRemains = JSONLoader.createMap(resource: "Death") { $0.deathId }
+
+        // Adjust monster meta
+        for monster in monsters {
+            let meta = monster.value
+            let adjustedRange = meta.range != nil ? meta.range! + 2 : 0
+            meta.range = adjustedRange
+
+            let adjustedShootRange = meta.shootRange != nil ? meta.shootRange! + 2 : 0
+            meta.shootRange = adjustedShootRange
+        }
     }
 
     class func remains(forMonster monster: Monster) -> SKSpriteNode? {

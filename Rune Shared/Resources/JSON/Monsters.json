@@ -59,6 +59,7 @@
         "asset" : "dragon",
         "ai" : "sightedFollower",
         "range" : 4,
+        "shootRange" : 1,
         "isDirectional" : true,
         "isRanged" : true,
         "rangedItem" : "fireball",

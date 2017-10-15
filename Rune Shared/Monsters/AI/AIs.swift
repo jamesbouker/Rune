@@ -18,6 +18,7 @@ enum AIType: String {
 
 class BaseAI: AI {
     var range: Int?
+    var shootRange: Int?
     var rangedItem: String?
     var isRanged: Bool
     var canFly = false
@@ -27,6 +28,7 @@ class BaseAI: AI {
         isRanged = meta.isRanged ?? false
         rangedItem = meta.rangedItem ?? ""
         range = meta.range
+        shootRange = meta.shootRange ?? range
     }
 
     func nextMove(_: Sprite) -> MapLocation {
@@ -37,8 +39,6 @@ class BaseAI: AI {
         guard let aiType = AIType(rawValue: meta.ai) else {
             fatalError("\(meta.ai) does not exist as an AI Type")
         }
-        let adjustedRange = meta.range != nil ? meta.range! + 2 : 0
-        meta.range = adjustedRange
 
         switch aiType {
         case .random:
@@ -58,6 +58,7 @@ class BaseAI: AI {
 protocol AI {
     var canFly: Bool { get set }
     var range: Int? { get set }
+    var shootRange: Int? { get set }
     var isRanged: Bool { get set }
     var rangedItem: String? { get set }
 

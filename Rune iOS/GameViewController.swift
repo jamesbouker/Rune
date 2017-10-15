@@ -36,12 +36,14 @@ class GameViewController: UIViewController, Events {
         self.scene = view.scene as? GameScene
     }
 
+    #if DEBUG
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
         super.motionBegan(motion, with: event)
         guard let view = self.view as? SKView else { return }
         guard let scene = view.scene as? GameScene else { return }
         scene.loadNextLevel()
     }
+    #endif
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)

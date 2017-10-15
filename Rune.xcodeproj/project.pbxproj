@@ -523,9 +523,9 @@
 			isa = PBXGroup;
 			children = (
 				F59997CD1F6D9E8B00E5DDDE /* Rune Shared */,
+				F59035581F6DAC450023B166 /* RuneTests */,
 				F59997D81F6D9E8B00E5DDDE /* Rune iOS */,
 				F59997E91F6D9E8B00E5DDDE /* Rune tvOS */,
-				F59035581F6DAC450023B166 /* RuneTests */,
 				F55685351F78BEEE00D66AC1 /* Rune watchOS */,
 				F55685441F78BEEF00D66AC1 /* Rune watchOS Extension */,
 				F59997D71F6D9E8B00E5DDDE /* Products */,

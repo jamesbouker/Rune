@@ -39,7 +39,7 @@ class SightedAI: BaseAI {
                 }
             }
 
-            // Possibly fire in this direction!
+            // Possibly fire or move in this direction!
             let next = from.mapLocation + delta
             if moves.contains(next) {
                 return next

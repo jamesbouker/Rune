@@ -70,6 +70,8 @@ enum ActionQueueType {
             sprite.tileMap.items.setTile(tile: .chest_empty, forLocation: loc)
             let delta = loc - sprite.mapLocation
             return .group([.run { [weak sprite] in
+                let wep = WeaponSprite(metal: .bronze, weaponClass: .axe)
+                wep.addToTileMap(chestLoc: loc)
                 sprite?.updateImages(delta.x)
             }, bump(delta)])
         case let .hitSwitch(loc):

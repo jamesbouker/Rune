@@ -201,6 +201,9 @@
 		F59998901F6DA2B100E5DDDE /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998311F6DA2B100E5DDDE /* Vector3.swift */; };
 		F59998911F6DA2B100E5DDDE /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F59998321F6DA2B100E5DDDE /* Sprites.atlas */; };
 		F59998921F6DA2B100E5DDDE /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F59998321F6DA2B100E5DDDE /* Sprites.atlas */; };
+		F5D2FADD1F93F5B700D6B7E9 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2FADC1F93F5B700D6B7E9 /* Weapon.swift */; };
+		F5D2FADE1F93F5B700D6B7E9 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2FADC1F93F5B700D6B7E9 /* Weapon.swift */; };
+		F5D2FADF1F93F5B700D6B7E9 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2FADC1F93F5B700D6B7E9 /* Weapon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -358,6 +361,7 @@
 		F59998301F6DA2B100E5DDDE /* SKTTimingFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTTimingFunctions.swift; sourceTree = "<group>"; };
 		F59998311F6DA2B100E5DDDE /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
 		F59998321F6DA2B100E5DDDE /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
+		F5D2FADC1F93F5B700D6B7E9 /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -628,6 +632,7 @@
 			children = (
 				F599980A1F6DA2AD00E5DDDE /* Player.swift */,
 				F599980D1F6DA2AE00E5DDDE /* PlayerController.swift */,
+				F5D2FADC1F93F5B700D6B7E9 /* Weapon.swift */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -1187,6 +1192,7 @@
 				F55685951F78CACE00D66AC1 /* Monster.swift in Sources */,
 				F55685841F78CAC400D66AC1 /* CGPoint+Extensions.swift in Sources */,
 				F55685801F78CAC400D66AC1 /* TileMapExtensions.swift in Sources */,
+				F5D2FADF1F93F5B700D6B7E9 /* Weapon.swift in Sources */,
 				F556858A1F78CAC400D66AC1 /* SKNode+Extensions.swift in Sources */,
 				F556857E1F78CAC400D66AC1 /* ChildNode.swift in Sources */,
 				F55685751F78CAB700D66AC1 /* Maze.swift in Sources */,
@@ -1243,6 +1249,7 @@
 				F59998811F6DA2B100E5DDDE /* SKAction+Extensions.swift in Sources */,
 				F59998351F6DA2B100E5DDDE /* ChildNode.swift in Sources */,
 				F59997F61F6D9E8B00E5DDDE /* GameScene.swift in Sources */,
+				F5D2FADD1F93F5B700D6B7E9 /* Weapon.swift in Sources */,
 				F59998671F6DA2B100E5DDDE /* BlindAI.swift in Sources */,
 				F59998851F6DA2B100E5DDDE /* SKColor+Extensions.swift in Sources */,
 				F59997DC1F6D9E8B00E5DDDE /* GameViewController.swift in Sources */,
@@ -1291,6 +1298,7 @@
 				F59998821F6DA2B100E5DDDE /* SKAction+Extensions.swift in Sources */,
 				F59998361F6DA2B100E5DDDE /* ChildNode.swift in Sources */,
 				F59997F71F6D9E8B00E5DDDE /* GameScene.swift in Sources */,
+				F5D2FADE1F93F5B700D6B7E9 /* Weapon.swift in Sources */,
 				F59998681F6DA2B100E5DDDE /* BlindAI.swift in Sources */,
 				F59998861F6DA2B100E5DDDE /* SKColor+Extensions.swift in Sources */,
 				F590354D1F6DA6950023B166 /* GameViewController.swift in Sources */,

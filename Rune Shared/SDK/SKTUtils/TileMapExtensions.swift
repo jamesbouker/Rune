@@ -33,9 +33,12 @@ enum Tile: String {
     case fire
 }
 
-struct MapLocation: Equatable {
+struct MapLocation: Codable {
     var x: Int
     var y: Int
+}
+
+extension MapLocation: Equatable {
 
     static func ==(lhs: MapLocation, rhs: MapLocation) -> Bool {
         return lhs.x == rhs.x && lhs.y == rhs.y

@@ -8,6 +8,9 @@
 // swiftlint:disable cyclomatic_complexity
 
 import SpriteKit
+import ReSwift
+
+var store: Store<GameState> = Store(reducer: gameReducer, state: nil)
 
 class GameScene: SKScene, ActionQueueDelegate, Events {
     var levelNum = 0

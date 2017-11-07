@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 
 var sharedController: GameViewController!
-class GameViewController: UIViewController, Events {
+class GameViewController: UIViewController {
 
     var scene: GameScene!
     var touchDownLocation: CGPoint?
@@ -37,12 +37,12 @@ class GameViewController: UIViewController, Events {
     }
 
     #if DEBUG
-    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
-        super.motionBegan(motion, with: event)
-        guard let view = self.view as? SKView else { return }
-        guard let scene = view.scene as? GameScene else { return }
-        scene.loadNextLevel()
-    }
+        override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+            super.motionBegan(motion, with: event)
+            guard let view = self.view as? SKView else { return }
+            guard let scene = view.scene as? GameScene else { return }
+            scene.loadNextLevel()
+        }
     #endif
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -70,7 +70,7 @@ class GameViewController: UIViewController, Events {
         guard abs(deltaX) > delta || abs(deltaY) > delta else {
             if time > 0.3 {
                 kill()
-                fireEvent(event: .pressed)
+                store.dispatch(PlayerAction.pressed)
             }
             return
         }
@@ -78,18 +78,18 @@ class GameViewController: UIViewController, Events {
         if abs(deltaX) > abs(deltaY) {
             if deltaX > delta {
                 kill()
-                fireEvent(event: .swipedRight)
+                store.dispatch(PlayerAction.moveRight)
             } else if deltaX < -delta {
                 kill()
-                fireEvent(event: .swipedLeft)
+                store.dispatch(PlayerAction.moveLeft)
             }
         } else {
             if deltaY > delta {
                 kill()
-                fireEvent(event: .swipedDown)
+                store.dispatch(PlayerAction.moveDown)
             } else if deltaY < -delta {
                 kill()
-                fireEvent(event: .swipedUp)
+                store.dispatch(PlayerAction.moveUp)
             }
         }
     }

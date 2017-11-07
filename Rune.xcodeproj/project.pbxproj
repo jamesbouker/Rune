@@ -198,6 +198,18 @@
 		F59998901F6DA2B100E5DDDE /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59998311F6DA2B100E5DDDE /* Vector3.swift */; };
 		F59998911F6DA2B100E5DDDE /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F59998321F6DA2B100E5DDDE /* Sprites.atlas */; };
 		F59998921F6DA2B100E5DDDE /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F59998321F6DA2B100E5DDDE /* Sprites.atlas */; };
+		F5DBF0781FB165990088046C /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBF0771FB165990088046C /* GameState.swift */; };
+		F5DBF0791FB165990088046C /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBF0771FB165990088046C /* GameState.swift */; };
+		F5DBF07A1FB165990088046C /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBF0771FB165990088046C /* GameState.swift */; };
+		F5DBF07C1FB166A30088046C /* GameReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBF07B1FB166A30088046C /* GameReducer.swift */; };
+		F5DBF07D1FB166A30088046C /* GameReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBF07B1FB166A30088046C /* GameReducer.swift */; };
+		F5DBF07E1FB166A30088046C /* GameReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBF07B1FB166A30088046C /* GameReducer.swift */; };
+		F5DBF0801FB16D230088046C /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBF07F1FB16D230088046C /* Actions.swift */; };
+		F5DBF0811FB16D230088046C /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBF07F1FB16D230088046C /* Actions.swift */; };
+		F5DBF0821FB16D230088046C /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBF07F1FB16D230088046C /* Actions.swift */; };
+		F5DBF0841FB16E5F0088046C /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBF0831FB16E5F0088046C /* GameViewModel.swift */; };
+		F5DBF0851FB16E5F0088046C /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBF0831FB16E5F0088046C /* GameViewModel.swift */; };
+		F5DBF0861FB16E5F0088046C /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DBF0831FB16E5F0088046C /* GameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -354,6 +366,10 @@
 		F59998301F6DA2B100E5DDDE /* SKTTimingFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTTimingFunctions.swift; sourceTree = "<group>"; };
 		F59998311F6DA2B100E5DDDE /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
 		F59998321F6DA2B100E5DDDE /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
+		F5DBF0771FB165990088046C /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		F5DBF07B1FB166A30088046C /* GameReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameReducer.swift; sourceTree = "<group>"; };
+		F5DBF07F1FB16D230088046C /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		F5DBF0831FB16E5F0088046C /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -537,8 +553,8 @@
 		F59997CD1F6D9E8B00E5DDDE /* Rune Shared */ = {
 			isa = PBXGroup;
 			children = (
-				F5DBF0741FB161320088046C /* ReSwift */,
 				F59998931F6DA2B700E5DDDE /* Resources */,
+				F5DBF0741FB161320088046C /* Redux */,
 				F59998971F6DA37C00E5DDDE /* Game */,
 				F59998951F6DA30F00E5DDDE /* Monsters */,
 				F59998941F6DA2F500E5DDDE /* Player */,
@@ -664,11 +680,15 @@
 			path = Game;
 			sourceTree = "<group>";
 		};
-		F5DBF0741FB161320088046C /* ReSwift */ = {
+		F5DBF0741FB161320088046C /* Redux */ = {
 			isa = PBXGroup;
 			children = (
+				F5DBF0771FB165990088046C /* GameState.swift */,
+				F5DBF07B1FB166A30088046C /* GameReducer.swift */,
+				F5DBF07F1FB16D230088046C /* Actions.swift */,
+				F5DBF0831FB16E5F0088046C /* GameViewModel.swift */,
 			);
-			path = ReSwift;
+			path = Redux;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1208,6 +1228,7 @@
 				F55685911F78CACE00D66AC1 /* Follower.swift in Sources */,
 				F55685771F78CABD00D66AC1 /* Assets.swift in Sources */,
 				F55685831F78CAC400D66AC1 /* CGFloat+Extensions.swift in Sources */,
+				F5DBF0821FB16D230088046C /* Actions.swift in Sources */,
 				F55685951F78CACE00D66AC1 /* Monster.swift in Sources */,
 				F55685841F78CAC400D66AC1 /* CGPoint+Extensions.swift in Sources */,
 				F55685801F78CAC400D66AC1 /* TileMapExtensions.swift in Sources */,
@@ -1224,7 +1245,9 @@
 				F55685861F78CAC400D66AC1 /* Int+Extensions.swift in Sources */,
 				F55685901F78CACE00D66AC1 /* BlindAI.swift in Sources */,
 				F55685731F78CAB700D66AC1 /* GameScene.swift in Sources */,
+				F5DBF0861FB16E5F0088046C /* GameViewModel.swift in Sources */,
 				F55685971F78CACE00D66AC1 /* Sprite.swift in Sources */,
+				F5DBF07E1FB166A30088046C /* GameReducer.swift in Sources */,
 				F55685991F78CAD600D66AC1 /* PlayerController.swift in Sources */,
 				F55685881F78CAC400D66AC1 /* SKAction+SpecialEffects.swift in Sources */,
 				F55685741F78CAB700D66AC1 /* GameGenerator.swift in Sources */,
@@ -1235,6 +1258,7 @@
 				F556858B1F78CAC400D66AC1 /* SKTAudio.swift in Sources */,
 				F556857D1F78CAC400D66AC1 /* ActionExtensions.swift in Sources */,
 				F55685891F78CAC400D66AC1 /* SKColor+Extensions.swift in Sources */,
+				F5DBF07A1FB165990088046C /* GameState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1255,7 +1279,9 @@
 				F599988D1F6DA2B100E5DDDE /* SKTTimingFunctions.swift in Sources */,
 				F59998791F6DA2B100E5DDDE /* CGFloat+Extensions.swift in Sources */,
 				F599983B1F6DA2B100E5DDDE /* SightedAI.swift in Sources */,
+				F5DBF0801FB16D230088046C /* Actions.swift in Sources */,
 				F59998651F6DA2B100E5DDDE /* UserDefaultsExtensions.swift in Sources */,
+				F5DBF07C1FB166A30088046C /* GameReducer.swift in Sources */,
 				F599984D1F6DA2B100E5DDDE /* TileMapExtensions.swift in Sources */,
 				F59998391F6DA2B100E5DDDE /* Monster.swift in Sources */,
 				F59998871F6DA2B100E5DDDE /* SKNode+Extensions.swift in Sources */,
@@ -1266,11 +1292,13 @@
 				F599983F1F6DA2B100E5DDDE /* Assets.swift in Sources */,
 				F59998811F6DA2B100E5DDDE /* SKAction+Extensions.swift in Sources */,
 				F59998351F6DA2B100E5DDDE /* ChildNode.swift in Sources */,
+				F5DBF0841FB16E5F0088046C /* GameViewModel.swift in Sources */,
 				F59997F61F6D9E8B00E5DDDE /* GameScene.swift in Sources */,
 				F59998671F6DA2B100E5DDDE /* BlindAI.swift in Sources */,
 				F59998851F6DA2B100E5DDDE /* SKColor+Extensions.swift in Sources */,
 				F59997DC1F6D9E8B00E5DDDE /* GameViewController.swift in Sources */,
 				F5116DD61F721408004519F8 /* JSONLoader.swift in Sources */,
+				F5DBF0781FB165990088046C /* GameState.swift in Sources */,
 				F59997DA1F6D9E8B00E5DDDE /* AppDelegate.swift in Sources */,
 				F59998731F6DA2B100E5DDDE /* NodeExtensions.swift in Sources */,
 				F59998451F6DA2B100E5DDDE /* GameGenerator.swift in Sources */,
@@ -1303,7 +1331,9 @@
 				F599988E1F6DA2B100E5DDDE /* SKTTimingFunctions.swift in Sources */,
 				F599987A1F6DA2B100E5DDDE /* CGFloat+Extensions.swift in Sources */,
 				F599983C1F6DA2B100E5DDDE /* SightedAI.swift in Sources */,
+				F5DBF0811FB16D230088046C /* Actions.swift in Sources */,
 				F59998661F6DA2B100E5DDDE /* UserDefaultsExtensions.swift in Sources */,
+				F5DBF07D1FB166A30088046C /* GameReducer.swift in Sources */,
 				F599984E1F6DA2B100E5DDDE /* TileMapExtensions.swift in Sources */,
 				F599983A1F6DA2B100E5DDDE /* Monster.swift in Sources */,
 				F59998881F6DA2B100E5DDDE /* SKNode+Extensions.swift in Sources */,
@@ -1314,11 +1344,13 @@
 				F59998401F6DA2B100E5DDDE /* Assets.swift in Sources */,
 				F59998821F6DA2B100E5DDDE /* SKAction+Extensions.swift in Sources */,
 				F59998361F6DA2B100E5DDDE /* ChildNode.swift in Sources */,
+				F5DBF0851FB16E5F0088046C /* GameViewModel.swift in Sources */,
 				F59997F71F6D9E8B00E5DDDE /* GameScene.swift in Sources */,
 				F59998681F6DA2B100E5DDDE /* BlindAI.swift in Sources */,
 				F59998861F6DA2B100E5DDDE /* SKColor+Extensions.swift in Sources */,
 				F590354D1F6DA6950023B166 /* GameViewController.swift in Sources */,
 				F5116DD71F721408004519F8 /* JSONLoader.swift in Sources */,
+				F5DBF0791FB165990088046C /* GameState.swift in Sources */,
 				F59997EB1F6D9E8B00E5DDDE /* AppDelegate.swift in Sources */,
 				F59998741F6DA2B100E5DDDE /* NodeExtensions.swift in Sources */,
 				F59998461F6DA2B100E5DDDE /* GameGenerator.swift in Sources */,

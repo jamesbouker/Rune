@@ -51,33 +51,9 @@ extension Player {
         }
     }
 
-    func registerSwipes() {
-        registerForEvent(.pressed, #selector(pressed))
-        registerForEvent(.swipedUp, #selector(swipedUp))
-        registerForEvent(.swipedDown, #selector(swipedDown))
-        registerForEvent(.swipedLeft, #selector(swipedLeft))
-        registerForEvent(.swipedRight, #selector(swipedRight))
-    }
-
     @objc func pressed() {
         guard !gameScene.isGameOver else { return }
         flickerSquare()
         ActionQueue.shared.playerAction = .pass
-    }
-
-    @objc func swipedUp() {
-        moveLocation(.init(x: 0, y: 1))
-    }
-
-    @objc func swipedDown() {
-        moveLocation(.init(x: 0, y: -1))
-    }
-
-    @objc func swipedLeft() {
-        moveLocation(.init(x: -1, y: 0))
-    }
-
-    @objc func swipedRight() {
-        moveLocation(.init(x: 1, y: 0))
     }
 }

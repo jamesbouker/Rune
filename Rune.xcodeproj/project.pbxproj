@@ -683,10 +683,10 @@
 		F5DBF0741FB161320088046C /* Redux */ = {
 			isa = PBXGroup;
 			children = (
+				F5DBF0831FB16E5F0088046C /* GameViewModel.swift */,
 				F5DBF0771FB165990088046C /* GameState.swift */,
 				F5DBF07B1FB166A30088046C /* GameReducer.swift */,
 				F5DBF07F1FB16D230088046C /* Actions.swift */,
-				F5DBF0831FB16E5F0088046C /* GameViewModel.swift */,
 			);
 			path = Redux;
 			sourceTree = "<group>";

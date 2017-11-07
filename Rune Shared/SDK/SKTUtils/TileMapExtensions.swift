@@ -38,6 +38,12 @@ struct MapLocation: Codable {
     var y: Int
 }
 
+extension MapLocation: Hashable {
+    var hashValue: Int {
+        return x ^ y
+    }
+}
+
 extension MapLocation: Equatable {
 
     static func ==(lhs: MapLocation, rhs: MapLocation) -> Bool {

@@ -7,46 +7,129 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		143743688406B617708E161FE4F3DA47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80BD18536CEBA1BA2EF2567175719C5A /* Foundation.framework */; };
+		01DBC726A5C55B323B754DF0262A0F05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D736508F81C90331AF2F1FC481C42B /* Foundation.framework */; };
+		0330FDF347689990E5514F711D74B917 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4FF81B92149622508E028C0801E207 /* Foundation.framework */; };
+		041AE4E079C86926B085D3670A93E0F2 /* Pods-Rune tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DDB72459EDC9814050B2B759AC0FC0C /* Pods-Rune tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08D6A974B6134AFE5E53A41E42D10B87 /* Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778E64206107ADC4B10CE46B05DF4A6 /* Assertions.swift */; };
+		0B1CBFFB4248F5C107328E622253CFF3 /* ReSwift-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE59D9E1DA1DA489FFBD2801E601EDF /* ReSwift-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DD45D043EC36F6C51EC97CD4155A127 /* TypeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C686C8D628C5B4D96901A70092C026F /* TypeHelper.swift */; };
 		1EDB409606E3328E6CB7E7CDCFD52A33 /* Pods-RuneTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BFC344974D9F462BD986E02296EA90 /* Pods-RuneTests-dummy.m */; };
+		20AC4D131EB1B29468601ACB971BE248 /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F98B3782067AF95D33FAADF229A5F /* Coding.swift */; };
+		21138BACBD231DF24AB3EB3AED04E62D /* StoreSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC864B7C0C24912FF979B6674FBF4C5 /* StoreSubscriber.swift */; };
+		224C8B4D0395C33F4CC70BF932346B21 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA9EAD55A02F7DD89C76D002EB7D97B /* Subscription.swift */; };
 		261EF66C830D250E6742A033061198CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4FF81B92149622508E028C0801E207 /* Foundation.framework */; };
 		290E3DA489BF6E91CDB6AD4964E86A86 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D736508F81C90331AF2F1FC481C42B /* Foundation.framework */; };
-		3C96A68AD742D32BF89C012202093200 /* Pods-Rune iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F5F9FCD0E4835F39AE1EF5221B58D91 /* Pods-Rune iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4FD460CDE86485A52F6078CEB163BB73 /* Pods-Rune iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5738AF192D78A1953C8260AC6F5515 /* Pods-Rune iOS-dummy.m */; };
-		590DDE4D3FC99D23770385C0BAC18C83 /* Pods-Rune watchOS Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6962337C4372A9E98CD5424EC173C52A /* Pods-Rune watchOS Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9170AA9B6D1FE1414FA4448DDE9287F3 /* Pods-Rune tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DDB72459EDC9814050B2B759AC0FC0C /* Pods-Rune tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		298D28A66DADED94582836DE5A8E26E1 /* Pods-Rune watchOS Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6962337C4372A9E98CD5424EC173C52A /* Pods-Rune watchOS Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33DCF02C1E2CF790BB5CFE391E57DE01 /* TypeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C686C8D628C5B4D96901A70092C026F /* TypeHelper.swift */; };
+		34D4D88550DD7889823F333B44CA7A38 /* StoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4999D29DD9617DE2A76935DF954CF8E /* StoreType.swift */; };
+		34DF18BC1537DED96261407D20A1D66E /* Pods-Rune iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F5F9FCD0E4835F39AE1EF5221B58D91 /* Pods-Rune iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3742A9652340544E5511299802B409FB /* Pods-Rune tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5128E9DC2B445417A59B63775B0091CF /* Pods-Rune tvOS-dummy.m */; };
+		3B99B2D1A149FB9F5C0C0DF7977BD8A7 /* Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778E64206107ADC4B10CE46B05DF4A6 /* Assertions.swift */; };
+		3EC270D701AFC227EF5F2AA4872CB879 /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA142F26C2DA616FD6091B0ED6C2E4 /* Middleware.swift */; };
+		4C89869EAC6193E5105D6E6997F8F4DC /* DispatchingStoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C360B5458AAA042F277176558EA612D2 /* DispatchingStoreType.swift */; };
+		4E13F25D9B1C4FB9E5DC27FD8960D734 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB99EECA17266A6514DD51984EBF16B /* Store.swift */; };
+		4F8805012ACD5B3585F4CB9AE04909B0 /* Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5778E64206107ADC4B10CE46B05DF4A6 /* Assertions.swift */; };
+		507DBAAD3B6C005DA6F3AA5C456C371F /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA9EAD55A02F7DD89C76D002EB7D97B /* Subscription.swift */; };
+		554A5DF51E51169825653BC1591F7A64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4FF81B92149622508E028C0801E207 /* Foundation.framework */; };
+		5850636737D3E45AD136297BA41F79F3 /* ReSwift-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FFCCC17B273539561112226A91EB6C5F /* ReSwift-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63D354D38B39BAA4E810F5B76AB13F24 /* StoreSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC864B7C0C24912FF979B6674FBF4C5 /* StoreSubscriber.swift */; };
+		69E2262E55F0E7E9C0FBEEC59E49D296 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB99EECA17266A6514DD51984EBF16B /* Store.swift */; };
+		6BAC910BDF5AE19A4D85FE162FE20E52 /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA142F26C2DA616FD6091B0ED6C2E4 /* Middleware.swift */; };
+		6CADCCF412F9DB702C9726740EBD246D /* DispatchingStoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C360B5458AAA042F277176558EA612D2 /* DispatchingStoreType.swift */; };
+		7B080F2780049217D3454B976B51F01A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80BD18536CEBA1BA2EF2567175719C5A /* Foundation.framework */; };
+		7F33D6A8C741A83C1C1AAE5853786949 /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F98B3782067AF95D33FAADF229A5F /* Coding.swift */; };
+		87FF5CA8029BAE08229FBBDF57B4A7AF /* Pods-Rune watchOS Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B1DDB7C174388F64F1411BA3BB61F4 /* Pods-Rune watchOS Extension-dummy.m */; };
+		890ED22713D8974243D8CD97C9A2417C /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA9EAD55A02F7DD89C76D002EB7D97B /* Subscription.swift */; };
+		944446244AE1A82B7AEE0753FD418EE0 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B2726DF7D4CC2C14BF9FD7B0943B71 /* Reducer.swift */; };
 		980AE297DAD9E10FC152A980633E9AD3 /* Pods-RuneTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BE05DA09FB2867BF438EA0BB09D4502 /* Pods-RuneTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B947BD0691E7F113564D841C2E83625 /* Pods-Rune watchOS Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B1DDB7C174388F64F1411BA3BB61F4 /* Pods-Rune watchOS Extension-dummy.m */; };
-		A3BE9250571260A30BF86A88B7F1A174 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4FF81B92149622508E028C0801E207 /* Foundation.framework */; };
+		9D79FE8B2B674754286E06D1F2222471 /* ReSwift-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 436A7F3ABA0F7227BB9AA997AAEDAB71 /* ReSwift-iOS-dummy.m */; };
+		9E0976C6ACA222579D0AF2D2B7811B78 /* ReSwift-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A624EAEC4201B4D73C9736755391E2 /* ReSwift-tvOS-dummy.m */; };
+		A75908C370E88B74F92C42AF5AE2B451 /* Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F98B3782067AF95D33FAADF229A5F /* Coding.swift */; };
+		A78FA9BB6875B522F5802502A687E63D /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436487FBCCEB7F1E87C47F5B68C666D6 /* Action.swift */; };
+		B1163A33632B0AD4566C7DB8967EC667 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80BD18536CEBA1BA2EF2567175719C5A /* Foundation.framework */; };
+		B3CC58DE82DDB8482A857349585A1A7C /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AB3AAD23833C86881F6171437421E7 /* State.swift */; };
+		B571DE1099F0DA09C2D8C383F16C89A7 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B2726DF7D4CC2C14BF9FD7B0943B71 /* Reducer.swift */; };
+		B5F8210A8D8034AA6777D1F1D158B5FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D736508F81C90331AF2F1FC481C42B /* Foundation.framework */; };
+		BC09BF2E1EA7019D39820D5C6567B7C1 /* StoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4999D29DD9617DE2A76935DF954CF8E /* StoreType.swift */; };
+		BE988D8498B73EB31BD4C3B8309772BE /* TypeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C686C8D628C5B4D96901A70092C026F /* TypeHelper.swift */; };
+		C122317292F2C2ADCDFDAB2028CB425C /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436487FBCCEB7F1E87C47F5B68C666D6 /* Action.swift */; };
+		D3E832AD061365A5E7B436729A797A98 /* StoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4999D29DD9617DE2A76935DF954CF8E /* StoreType.swift */; };
+		DBA26D96988F7BD9EDCA67C0CB364B1B /* StoreSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC864B7C0C24912FF979B6674FBF4C5 /* StoreSubscriber.swift */; };
+		DD86E442EB9498A433FBB14FE0BD7548 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB99EECA17266A6514DD51984EBF16B /* Store.swift */; };
+		DF5E270D6131B718DC0370B55960F7C8 /* DispatchingStoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C360B5458AAA042F277176558EA612D2 /* DispatchingStoreType.swift */; };
 		E134E2468D041285EEE1962331E55BB3 /* Pods-Rune watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C8C96E209967E84F7EEB3C5CD0FF3B18 /* Pods-Rune watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E16F5C16E551066EB1F145756A6C4407 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D736508F81C90331AF2F1FC481C42B /* Foundation.framework */; };
+		E37E19276577AF185C9318BECF37B744 /* ReSwift-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EC80E1323841E440E05BDCE5123408 /* ReSwift-watchOS-dummy.m */; };
+		E3C24B283E4CDDF437D85862D2812B0A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436487FBCCEB7F1E87C47F5B68C666D6 /* Action.swift */; };
 		E9AC51A210BE8B35EE43E406BAB37DB7 /* Pods-Rune watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B6BBACE1BCC7D0AB269F28CECFEC52 /* Pods-Rune watchOS-dummy.m */; };
-		F7D537C7F387B13AFBBD3B1A8C665AA9 /* Pods-Rune tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5128E9DC2B445417A59B63775B0091CF /* Pods-Rune tvOS-dummy.m */; };
+		EA947BCF180742C14E3EC5C0DD3977B0 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B2726DF7D4CC2C14BF9FD7B0943B71 /* Reducer.swift */; };
+		EAE73899FAC07DC4CF2E720711140E2E /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA142F26C2DA616FD6091B0ED6C2E4 /* Middleware.swift */; };
+		F7F43726D1E8E0522AB558D37D8A2831 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AB3AAD23833C86881F6171437421E7 /* State.swift */; };
+		FA4DB48D3B393886B0AED9D89984FFCA /* ReSwift-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AFDC81216C253F2F26866EDBA0EBFC6 /* ReSwift-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF70207327BAB2D5F0C96533B817DEA5 /* Pods-Rune iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5738AF192D78A1953C8260AC6F5515 /* Pods-Rune iOS-dummy.m */; };
+		FF9C267D96DC06516C963186275DF749 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AB3AAD23833C86881F6171437421E7 /* State.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		570FFAFDD6615F3AD2AC0B3708E3E86B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFC08CC1175C669BADAE3F7F408ABC20;
+			remoteInfo = "ReSwift-tvOS";
+		};
+		A791D735139CA92353611AE6F9E0D61F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 722E4A7CF14D569B2E9CB36688660A3A;
+			remoteInfo = "ReSwift-iOS";
+		};
+		B2FDAB19153E9424B528B7547465A685 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C5E31A2A564D7EACE03B4C9928435B8;
+			remoteInfo = "ReSwift-watchOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		013915A3875331243B8293C49ACEB89D /* Pods-Rune iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rune iOS.release.xcconfig"; sourceTree = "<group>"; };
 		0C4FF81B92149622508E028C0801E207 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		0D0967C8F49C151A7EFD21ECE871741D /* Pods-Rune tvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rune tvOS-frameworks.sh"; sourceTree = "<group>"; };
-		15F185738A64C9B5DE1CB2C2271D67AF /* Pods_Rune_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rune_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E2B684443FCE4ABC8765466298B6C07 /* ReSwift-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "ReSwift-watchOS.modulemap"; path = "../ReSwift-watchOS/ReSwift-watchOS.modulemap"; sourceTree = "<group>"; };
+		15DB589E034A55FB93C326A0B5AA7429 /* Pods_Rune_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rune_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C31EDAB694B71EAAA87AEFD22DBD740 /* Pods-Rune watchOS Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rune watchOS Extension-acknowledgements.plist"; sourceTree = "<group>"; };
-		1C6DE1702EBC6396CD822975A3401ED5 /* Pods_RuneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RuneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		217537AC65653D704BE652BB65C33D47 /* Pods-Rune iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rune iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		245C0C555CFD4B749A81498F6DF89D04 /* Pods-Rune tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Rune tvOS.modulemap"; sourceTree = "<group>"; };
+		268E601F128D7F2679AF551DB6F4C8ED /* ReSwift-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "ReSwift-iOS.modulemap"; sourceTree = "<group>"; };
 		27BFC344974D9F462BD986E02296EA90 /* Pods-RuneTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RuneTests-dummy.m"; sourceTree = "<group>"; };
 		2BE05DA09FB2867BF438EA0BB09D4502 /* Pods-RuneTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RuneTests-umbrella.h"; sourceTree = "<group>"; };
 		2DDB72459EDC9814050B2B759AC0FC0C /* Pods-Rune tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Rune tvOS-umbrella.h"; sourceTree = "<group>"; };
+		2DEA142F26C2DA616FD6091B0ED6C2E4 /* Middleware.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Middleware.swift; path = ReSwift/CoreTypes/Middleware.swift; sourceTree = "<group>"; };
 		30EDED6EE149C856200221330305CC05 /* Pods-Rune tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Rune tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		347C591971B0525E8FD0641A8856F02D /* Pods-Rune watchOS Extension-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rune watchOS Extension-resources.sh"; sourceTree = "<group>"; };
 		3513B4939B806A33601E442A5D80F41B /* Pods-Rune watchOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rune watchOS-resources.sh"; sourceTree = "<group>"; };
 		36BBCE4C5E504A921BB640C1930E264B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36E63802BCB3B9B015120E063CE00A86 /* Pods-Rune watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rune watchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		3FE59D9E1DA1DA489FFBD2801E601EDF /* ReSwift-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReSwift-iOS-umbrella.h"; sourceTree = "<group>"; };
+		403F98B3782067AF95D33FAADF229A5F /* Coding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coding.swift; path = ReSwift/Utils/Coding.swift; sourceTree = "<group>"; };
 		4245C907957AF8963AF1FD7614C01F51 /* Pods-Rune iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rune iOS-resources.sh"; sourceTree = "<group>"; };
+		430BDA0F249670B3DF70A5CB1DC99090 /* ReSwift-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "ReSwift-watchOS.xcconfig"; path = "../ReSwift-watchOS/ReSwift-watchOS.xcconfig"; sourceTree = "<group>"; };
+		436487FBCCEB7F1E87C47F5B68C666D6 /* Action.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Action.swift; path = ReSwift/CoreTypes/Action.swift; sourceTree = "<group>"; };
+		436A7F3ABA0F7227BB9AA997AAEDAB71 /* ReSwift-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ReSwift-iOS-dummy.m"; sourceTree = "<group>"; };
+		43A624EAEC4201B4D73C9736755391E2 /* ReSwift-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ReSwift-tvOS-dummy.m"; path = "../ReSwift-tvOS/ReSwift-tvOS-dummy.m"; sourceTree = "<group>"; };
 		4C5738AF192D78A1953C8260AC6F5515 /* Pods-Rune iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Rune iOS-dummy.m"; sourceTree = "<group>"; };
 		5128E9DC2B445417A59B63775B0091CF /* Pods-Rune tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Rune tvOS-dummy.m"; sourceTree = "<group>"; };
 		53B6BBACE1BCC7D0AB269F28CECFEC52 /* Pods-Rune watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Rune watchOS-dummy.m"; sourceTree = "<group>"; };
+		5778E64206107ADC4B10CE46B05DF4A6 /* Assertions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Assertions.swift; path = ReSwift/Utils/Assertions.swift; sourceTree = "<group>"; };
 		5A90CDEEAC9CD34E8180067D3F611F4B /* Pods-RuneTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RuneTests-resources.sh"; sourceTree = "<group>"; };
+		5AB99EECA17266A6514DD51984EBF16B /* Store.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Store.swift; path = ReSwift/CoreTypes/Store.swift; sourceTree = "<group>"; };
+		5AFDC81216C253F2F26866EDBA0EBFC6 /* ReSwift-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ReSwift-tvOS-umbrella.h"; path = "../ReSwift-tvOS/ReSwift-tvOS-umbrella.h"; sourceTree = "<group>"; };
+		5CA9EAD55A02F7DD89C76D002EB7D97B /* Subscription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Subscription.swift; path = ReSwift/CoreTypes/Subscription.swift; sourceTree = "<group>"; };
+		5E8B3DD153E962CD01A2869E33735339 /* ReSwift-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ReSwift-iOS.xcconfig"; sourceTree = "<group>"; };
 		5F5F9FCD0E4835F39AE1EF5221B58D91 /* Pods-Rune iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Rune iOS-umbrella.h"; sourceTree = "<group>"; };
+		5FE4E4F9FEE9B6E4F579C23757EED617 /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		622657E94F3A847B667B6C5B2CEF4BB7 /* Pods-Rune iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Rune iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6252CD8D20EDFC9F6618E8151024AE4C /* Pods-RuneTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RuneTests.modulemap"; sourceTree = "<group>"; };
 		6807C42019D8A04875375B503E6D1B0F /* Pods-Rune iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rune iOS-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -55,7 +138,9 @@
 		6C3AD476F041BDD4822825C57D70800D /* Pods-Rune watchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rune watchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
 		6FF7851AE060DF56E0414168F1C26C4C /* Pods-Rune iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rune iOS-frameworks.sh"; sourceTree = "<group>"; };
 		724C82328731408C5D0A9CCBE8F51B55 /* Pods-RuneTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RuneTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		748C019FFE4DEAA0BFCCE080CDD279DC /* Pods_RuneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RuneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D35F1B04BD4B5F0B2D1B01AFC1FC9D /* Pods-RuneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RuneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7C686C8D628C5B4D96901A70092C026F /* TypeHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TypeHelper.swift; path = ReSwift/Utils/TypeHelper.swift; sourceTree = "<group>"; };
 		80BD18536CEBA1BA2EF2567175719C5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		84D736508F81C90331AF2F1FC481C42B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		8551100433789190E9CDA8FA10656980 /* Pods-Rune tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rune tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -63,30 +148,55 @@
 		88EF4F25E6FBC90200CC755DF6FEB138 /* Pods-Rune watchOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Rune watchOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		89E30CF1E65D3D2BF930F79EB55F72CD /* Pods-RuneTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RuneTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		8D9F84F65DF21DD4C56003C1B1585A6C /* Pods-Rune tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rune tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		90AB3AAD23833C86881F6171437421E7 /* State.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = State.swift; path = ReSwift/CoreTypes/State.swift; sourceTree = "<group>"; };
+		90D26B1C164F93AAF1BF894FAAC9DCE9 /* Pods_Rune_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rune_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95786064B7701C59F4217A1E8DA035DE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95BDAE9DF73B060366962F541CA07318 /* ReSwift-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ReSwift-tvOS-prefix.pch"; path = "../ReSwift-tvOS/ReSwift-tvOS-prefix.pch"; sourceTree = "<group>"; };
 		97EC1655AEBD13839BB1E7D2264279E5 /* Pods-Rune watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Rune watchOS.modulemap"; sourceTree = "<group>"; };
+		9C6D398BF0914D5F676DF6F71496F112 /* ReSwift-tvOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "ReSwift-tvOS.xcconfig"; path = "../ReSwift-tvOS/ReSwift-tvOS.xcconfig"; sourceTree = "<group>"; };
+		9D2521E1046140BE66C2564E9B4AF395 /* ReSwift-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ReSwift-watchOS-prefix.pch"; path = "../ReSwift-watchOS/ReSwift-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		A49778BA00EDF5DA694906817D6338BD /* Pods-Rune watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rune watchOS.release.xcconfig"; sourceTree = "<group>"; };
 		A5C26F29E0E7A699FB9571CC7F37B017 /* Pods-Rune watchOS Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rune watchOS Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		ABEC5F2F4F07A7E47AAB1A04C5C7D98E /* Pods_Rune_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rune_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB3366F56C36F8A288E0931ABB90A8BB /* ReSwift-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReSwift-iOS-prefix.pch"; sourceTree = "<group>"; };
 		B5826EC7AE503CC1CCBE8C3067861616 /* Pods-Rune watchOS Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rune watchOS Extension-frameworks.sh"; sourceTree = "<group>"; };
 		B644BF27CB7CB0C422F110DEC00F69B7 /* Pods-Rune watchOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rune watchOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		B9CD6B5B2167581398AFA28183253142 /* Pods_Rune_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rune_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C27639BAE4AFAB6D2674F7E0274A327D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C360B5458AAA042F277176558EA612D2 /* DispatchingStoreType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DispatchingStoreType.swift; path = ReSwift/CoreTypes/DispatchingStoreType.swift; sourceTree = "<group>"; };
+		C3EC80E1323841E440E05BDCE5123408 /* ReSwift-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ReSwift-watchOS-dummy.m"; path = "../ReSwift-watchOS/ReSwift-watchOS-dummy.m"; sourceTree = "<group>"; };
 		C45D0D1389FC3E85D3F2653712DBEEBD /* Pods-Rune watchOS Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Rune watchOS Extension.modulemap"; sourceTree = "<group>"; };
+		C4999D29DD9617DE2A76935DF954CF8E /* StoreType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoreType.swift; path = ReSwift/CoreTypes/StoreType.swift; sourceTree = "<group>"; };
+		C7B2726DF7D4CC2C14BF9FD7B0943B71 /* Reducer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Reducer.swift; path = ReSwift/CoreTypes/Reducer.swift; sourceTree = "<group>"; };
 		C8C96E209967E84F7EEB3C5CD0FF3B18 /* Pods-Rune watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Rune watchOS-umbrella.h"; sourceTree = "<group>"; };
-		CDAD76B13DEF1A7B6554C070B9ED6CCF /* Pods_Rune_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rune_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE7B32EC7132615814FE331C6EB3D71A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0B1DDB7C174388F64F1411BA3BB61F4 /* Pods-Rune watchOS Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Rune watchOS Extension-dummy.m"; sourceTree = "<group>"; };
-		D43C166FF593BCE38E59B76A57F4C4C0 /* Pods_Rune_watchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rune_watchOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1CA444529F68FDB70FC5A689BCBE6CC /* ReSwift-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "ReSwift-tvOS.modulemap"; path = "../ReSwift-tvOS/ReSwift-tvOS.modulemap"; sourceTree = "<group>"; };
+		D2CA2D93D1C69C81A083895BD9336165 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../ReSwift-watchOS/Info.plist"; sourceTree = "<group>"; };
 		DC6907F6D6CC3413394B0228D6955FF4 /* Pods-RuneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RuneTests.release.xcconfig"; sourceTree = "<group>"; };
+		E22AC27F2A2E6E2B3C825B3B208C3C6F /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E30C72898FF1B89666DBFA232C474065 /* ReSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5BDDC506038B78EBDE67A71F59A72D4 /* Pods-Rune iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Rune iOS.modulemap"; sourceTree = "<group>"; };
 		E6F115A3383F4F9215E3AD8411A33B22 /* Pods-Rune watchOS Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Rune watchOS Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E9B9D67C911FC5CCBDB4FBC68CD8B66B /* Pods-Rune tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rune tvOS-resources.sh"; sourceTree = "<group>"; };
 		F2C1F299A043033ECB516193A1A46311 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F628B3579AC8DBF266D5EF94375C7636 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../ReSwift-tvOS/Info.plist"; sourceTree = "<group>"; };
+		F64D85585D26A0A887937796115A6078 /* Pods_Rune_watchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rune_watchOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA0C669002F31A5C7AA1DA1651F993E /* Pods-Rune watchOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rune watchOS-frameworks.sh"; sourceTree = "<group>"; };
 		FC926C97A232B8F81312DEBADBDDCC3A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCC864B7C0C24912FF979B6674FBF4C5 /* StoreSubscriber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoreSubscriber.swift; path = ReSwift/CoreTypes/StoreSubscriber.swift; sourceTree = "<group>"; };
+		FFCCC17B273539561112226A91EB6C5F /* ReSwift-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ReSwift-watchOS-umbrella.h"; path = "../ReSwift-watchOS/ReSwift-watchOS-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0C06B118A803D426CE72B8545A45DE09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1163A33632B0AD4566C7DB8967EC667 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		401961560DDE6FEEAEB9F8078B3CC191 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -95,11 +205,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A1A3710EEA77886C8B9B13CE606273D /* Frameworks */ = {
+		6EBD3CECAAB884CE259C2B2232B67E1E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				143743688406B617708E161FE4F3DA47 /* Foundation.framework in Frameworks */,
+				01DBC726A5C55B323B754DF0262A0F05 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,19 +221,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C1363161413519B7D3845520EB2E96A1 /* Frameworks */ = {
+		8A76B6F01CE00C1E4C560334B1C375F5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E16F5C16E551066EB1F145756A6C4407 /* Foundation.framework in Frameworks */,
+				7B080F2780049217D3454B976B51F01A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D577B84F177675FD634EB93FB96CE707 /* Frameworks */ = {
+		B44BA45C2EA4E7A8F472689421B021F9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3BE9250571260A30BF86A88B7F1A174 /* Foundation.framework in Frameworks */,
+				0330FDF347689990E5514F711D74B917 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0986137C07B2407D5611BD09A541588 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				554A5DF51E51169825653BC1591F7A64 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD165774A2C8C81AB98D682B969E5C74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5F8210A8D8034AA6777D1F1D158B5FF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,13 +318,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		37843AFB400D5948266EFF83D844D298 /* SwiftLint */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SwiftLint;
-			sourceTree = "<group>";
-		};
 		4486F4CBDCEC94B422581EFA045E63DD /* Pods-Rune iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,25 +336,11 @@
 			path = "Target Support Files/Pods-Rune iOS";
 			sourceTree = "<group>";
 		};
-		4FAF764B0968FA76D985E563B50F54AF /* Pods */ = {
+		61DE22E493971571FFBBBE9625F353F2 /* SwiftLint */ = {
 			isa = PBXGroup;
 			children = (
-				C5603D18FA3FACCD8B1248AA66F68D0F /* SwiftFormat */,
-				37843AFB400D5948266EFF83D844D298 /* SwiftLint */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		5884C5CCCA6FBBF1DF139E205963997B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				ABEC5F2F4F07A7E47AAB1A04C5C7D98E /* Pods_Rune_iOS.framework */,
-				CDAD76B13DEF1A7B6554C070B9ED6CCF /* Pods_Rune_tvOS.framework */,
-				15F185738A64C9B5DE1CB2C2271D67AF /* Pods_Rune_watchOS.framework */,
-				D43C166FF593BCE38E59B76A57F4C4C0 /* Pods_Rune_watchOS_Extension.framework */,
-				1C6DE1702EBC6396CD822975A3401ED5 /* Pods_RuneTests.framework */,
-			);
-			name = Products;
+			path = SwiftLint;
 			sourceTree = "<group>";
 		};
 		718AA62F846050FA14C8EB44CC0B172B /* watchOS */ = {
@@ -246,13 +351,28 @@
 			name = watchOS;
 			sourceTree = "<group>";
 		};
+		78618146BBA9788D947633308FC34E4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90D26B1C164F93AAF1BF894FAAC9DCE9 /* Pods_Rune_iOS.framework */,
+				15DB589E034A55FB93C326A0B5AA7429 /* Pods_Rune_tvOS.framework */,
+				B9CD6B5B2167581398AFA28183253142 /* Pods_Rune_watchOS.framework */,
+				F64D85585D26A0A887937796115A6078 /* Pods_Rune_watchOS_Extension.framework */,
+				748C019FFE4DEAA0BFCCE080CDD279DC /* Pods_RuneTests.framework */,
+				E30C72898FF1B89666DBFA232C474065 /* ReSwift.framework */,
+				E22AC27F2A2E6E2B3C825B3B208C3C6F /* ReSwift.framework */,
+				5FE4E4F9FEE9B6E4F579C23757EED617 /* ReSwift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				E6CFD8EDE4986335A49682875A8F8C27 /* Frameworks */,
-				4FAF764B0968FA76D985E563B50F54AF /* Pods */,
-				5884C5CCCA6FBBF1DF139E205963997B /* Products */,
+				CB106F344A2DC989C536DBCB085503D4 /* Pods */,
+				78618146BBA9788D947633308FC34E4F /* Products */,
 				A8A1BDCE1DEC4E4CC754976634AC4AD4 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -287,19 +407,75 @@
 			path = "Target Support Files/Pods-Rune watchOS";
 			sourceTree = "<group>";
 		};
-		C5603D18FA3FACCD8B1248AA66F68D0F /* SwiftFormat */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SwiftFormat;
-			sourceTree = "<group>";
-		};
 		C5B41980B1580FA5F9625066CB410E26 /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
 				80BD18536CEBA1BA2EF2567175719C5A /* Foundation.framework */,
 			);
 			name = tvOS;
+			sourceTree = "<group>";
+		};
+		CB106F344A2DC989C536DBCB085503D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CED42DEACE0C6AF2EA5C85391185910F /* ReSwift */,
+				DB5D198990FD97DD946B103B322B5BE0 /* SwiftFormat */,
+				61DE22E493971571FFBBBE9625F353F2 /* SwiftLint */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CED42DEACE0C6AF2EA5C85391185910F /* ReSwift */ = {
+			isa = PBXGroup;
+			children = (
+				436487FBCCEB7F1E87C47F5B68C666D6 /* Action.swift */,
+				5778E64206107ADC4B10CE46B05DF4A6 /* Assertions.swift */,
+				403F98B3782067AF95D33FAADF229A5F /* Coding.swift */,
+				C360B5458AAA042F277176558EA612D2 /* DispatchingStoreType.swift */,
+				2DEA142F26C2DA616FD6091B0ED6C2E4 /* Middleware.swift */,
+				C7B2726DF7D4CC2C14BF9FD7B0943B71 /* Reducer.swift */,
+				90AB3AAD23833C86881F6171437421E7 /* State.swift */,
+				5AB99EECA17266A6514DD51984EBF16B /* Store.swift */,
+				FCC864B7C0C24912FF979B6674FBF4C5 /* StoreSubscriber.swift */,
+				C4999D29DD9617DE2A76935DF954CF8E /* StoreType.swift */,
+				5CA9EAD55A02F7DD89C76D002EB7D97B /* Subscription.swift */,
+				7C686C8D628C5B4D96901A70092C026F /* TypeHelper.swift */,
+				D8245354F76B93C613AE06FBC16C600D /* Support Files */,
+			);
+			path = ReSwift;
+			sourceTree = "<group>";
+		};
+		D8245354F76B93C613AE06FBC16C600D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2CA2D93D1C69C81A083895BD9336165 /* Info.plist */,
+				CE7B32EC7132615814FE331C6EB3D71A /* Info.plist */,
+				F628B3579AC8DBF266D5EF94375C7636 /* Info.plist */,
+				268E601F128D7F2679AF551DB6F4C8ED /* ReSwift-iOS.modulemap */,
+				5E8B3DD153E962CD01A2869E33735339 /* ReSwift-iOS.xcconfig */,
+				436A7F3ABA0F7227BB9AA997AAEDAB71 /* ReSwift-iOS-dummy.m */,
+				AB3366F56C36F8A288E0931ABB90A8BB /* ReSwift-iOS-prefix.pch */,
+				3FE59D9E1DA1DA489FFBD2801E601EDF /* ReSwift-iOS-umbrella.h */,
+				D1CA444529F68FDB70FC5A689BCBE6CC /* ReSwift-tvOS.modulemap */,
+				9C6D398BF0914D5F676DF6F71496F112 /* ReSwift-tvOS.xcconfig */,
+				43A624EAEC4201B4D73C9736755391E2 /* ReSwift-tvOS-dummy.m */,
+				95BDAE9DF73B060366962F541CA07318 /* ReSwift-tvOS-prefix.pch */,
+				5AFDC81216C253F2F26866EDBA0EBFC6 /* ReSwift-tvOS-umbrella.h */,
+				0E2B684443FCE4ABC8765466298B6C07 /* ReSwift-watchOS.modulemap */,
+				430BDA0F249670B3DF70A5CB1DC99090 /* ReSwift-watchOS.xcconfig */,
+				C3EC80E1323841E440E05BDCE5123408 /* ReSwift-watchOS-dummy.m */,
+				9D2521E1046140BE66C2564E9B4AF395 /* ReSwift-watchOS-prefix.pch */,
+				FFCCC17B273539561112226A91EB6C5F /* ReSwift-watchOS-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ReSwift-iOS";
+			sourceTree = "<group>";
+		};
+		DB5D198990FD97DD946B103B322B5BE0 /* SwiftFormat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SwiftFormat;
 			sourceTree = "<group>";
 		};
 		E6CFD8EDE4986335A49682875A8F8C27 /* Frameworks */ = {
@@ -315,19 +491,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1854F20A91FB0F0DFFDB583C234AFD57 /* Headers */ = {
+		7668BA02A4746CA45B656A36960F88E8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				590DDE4D3FC99D23770385C0BAC18C83 /* Pods-Rune watchOS Extension-umbrella.h in Headers */,
+				0B1CBFFB4248F5C107328E622253CFF3 /* ReSwift-iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7D5728358F85D41D75D7484DFA7723F0 /* Headers */ = {
+		909A02D310D302CB37C0B58BBD38CB13 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C96A68AD742D32BF89C012202093200 /* Pods-Rune iOS-umbrella.h in Headers */,
+				FA4DB48D3B393886B0AED9D89984FFCA /* ReSwift-tvOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,32 +523,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EE555D6CC8B4C01F2B146BCE891BA529 /* Headers */ = {
+		D922A609189242F7A1805775817B7C53 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9170AA9B6D1FE1414FA4448DDE9287F3 /* Pods-Rune tvOS-umbrella.h in Headers */,
+				5850636737D3E45AD136297BA41F79F3 /* ReSwift-watchOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF5E65A51AA811FD1495049C177F7A62 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				041AE4E079C86926B085D3670A93E0F2 /* Pods-Rune tvOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0D2A1482BE9F3983733313971B02C0F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				298D28A66DADED94582836DE5A8E26E1 /* Pods-Rune watchOS Extension-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2D19D5339269FBD1C83E867B90B684F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34DF18BC1537DED96261407D20A1D66E /* Pods-Rune iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2C3FDED029AA4A89D8FF038BEF0367DC /* Pods-Rune watchOS Extension */ = {
+		2C5E31A2A564D7EACE03B4C9928435B8 /* ReSwift-watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FFB7C81786739AAEBF241BBC8210B795 /* Build configuration list for PBXNativeTarget "Pods-Rune watchOS Extension" */;
+			buildConfigurationList = 00447B0F198D111E24F3DB06878A6BB5 /* Build configuration list for PBXNativeTarget "ReSwift-watchOS" */;
 			buildPhases = (
-				928E575E9F2FDADB5132F49E66B77867 /* Sources */,
-				D577B84F177675FD634EB93FB96CE707 /* Frameworks */,
-				1854F20A91FB0F0DFFDB583C234AFD57 /* Headers */,
+				BBB3D7F35ABB3D49B780C78141F0BFE7 /* Sources */,
+				B44BA45C2EA4E7A8F472689421B021F9 /* Frameworks */,
+				D922A609189242F7A1805775817B7C53 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-Rune watchOS Extension";
-			productName = "Pods-Rune watchOS Extension";
-			productReference = D43C166FF593BCE38E59B76A57F4C4C0 /* Pods_Rune_watchOS_Extension.framework */;
+			name = "ReSwift-watchOS";
+			productName = "ReSwift-watchOS";
+			productReference = E30C72898FF1B89666DBFA232C474065 /* ReSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3AFA96A716C1DC5D5E13DAC2F7C4DDFA /* Pods-RuneTests */ = {
@@ -389,41 +589,60 @@
 			);
 			name = "Pods-RuneTests";
 			productName = "Pods-RuneTests";
-			productReference = 1C6DE1702EBC6396CD822975A3401ED5 /* Pods_RuneTests.framework */;
+			productReference = 748C019FFE4DEAA0BFCCE080CDD279DC /* Pods_RuneTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		70FC5001F61D28A85DB3C40739D29DD9 /* Pods-Rune tvOS */ = {
+		722E4A7CF14D569B2E9CB36688660A3A /* ReSwift-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B36AD30466544AFE60E91FDA33358733 /* Build configuration list for PBXNativeTarget "Pods-Rune tvOS" */;
+			buildConfigurationList = 565FFF1A52D2438B1F017E8917A1DF43 /* Build configuration list for PBXNativeTarget "ReSwift-iOS" */;
 			buildPhases = (
-				FCB53D0F675ABCC681EA72FFE8224C2D /* Sources */,
-				6A1A3710EEA77886C8B9B13CE606273D /* Frameworks */,
-				EE555D6CC8B4C01F2B146BCE891BA529 /* Headers */,
+				5E91D2215D2965C12D7AC7F4C2723B65 /* Sources */,
+				CD165774A2C8C81AB98D682B969E5C74 /* Frameworks */,
+				7668BA02A4746CA45B656A36960F88E8 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-Rune tvOS";
-			productName = "Pods-Rune tvOS";
-			productReference = CDAD76B13DEF1A7B6554C070B9ED6CCF /* Pods_Rune_tvOS.framework */;
+			name = "ReSwift-iOS";
+			productName = "ReSwift-iOS";
+			productReference = 5FE4E4F9FEE9B6E4F579C23757EED617 /* ReSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		875776F8E56AD1F391DE54DF2376A822 /* Pods-Rune iOS */ = {
+		72694914BBFA55D99F27D59975A75B35 /* Pods-Rune iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D19281E1F7F6FDCF53F202ED264CFE6C /* Build configuration list for PBXNativeTarget "Pods-Rune iOS" */;
+			buildConfigurationList = E7ECCBE5CC4EE97451278FC34C329C7C /* Build configuration list for PBXNativeTarget "Pods-Rune iOS" */;
 			buildPhases = (
-				32F39ACEE59B216F2BB05BF819E2114F /* Sources */,
-				C1363161413519B7D3845520EB2E96A1 /* Frameworks */,
-				7D5728358F85D41D75D7484DFA7723F0 /* Headers */,
+				D14226811DE9BCDFDC3C5EAF9E54F9D0 /* Sources */,
+				6EBD3CECAAB884CE259C2B2232B67E1E /* Frameworks */,
+				F2D19D5339269FBD1C83E867B90B684F /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				70564362C58F510EE1B80C64168B621B /* PBXTargetDependency */,
 			);
 			name = "Pods-Rune iOS";
 			productName = "Pods-Rune iOS";
-			productReference = ABEC5F2F4F07A7E47AAB1A04C5C7D98E /* Pods_Rune_iOS.framework */;
+			productReference = 90D26B1C164F93AAF1BF894FAAC9DCE9 /* Pods_Rune_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9093360CA97BB4EB84265B601BAAC314 /* Pods-Rune watchOS Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12CA35234FCD0429F401ED0FFB80851D /* Build configuration list for PBXNativeTarget "Pods-Rune watchOS Extension" */;
+			buildPhases = (
+				BFDE1246D04A0CA12F5A31A58957924A /* Sources */,
+				C0986137C07B2407D5611BD09A541588 /* Frameworks */,
+				F0D2A1482BE9F3983733313971B02C0F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				843B55333DC4DF5F4DAF463B8C24923B /* PBXTargetDependency */,
+			);
+			name = "Pods-Rune watchOS Extension";
+			productName = "Pods-Rune watchOS Extension";
+			productReference = F64D85585D26A0A887937796115A6078 /* Pods_Rune_watchOS_Extension.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		BC9DEB9EF32D2E02D4B47BF7DCB7818B /* Pods-Rune watchOS */ = {
@@ -440,7 +659,42 @@
 			);
 			name = "Pods-Rune watchOS";
 			productName = "Pods-Rune watchOS";
-			productReference = 15F185738A64C9B5DE1CB2C2271D67AF /* Pods_Rune_watchOS.framework */;
+			productReference = B9CD6B5B2167581398AFA28183253142 /* Pods_Rune_watchOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CFC08CC1175C669BADAE3F7F408ABC20 /* ReSwift-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EB2438352D6943BE5A44AF2C1449AF4 /* Build configuration list for PBXNativeTarget "ReSwift-tvOS" */;
+			buildPhases = (
+				7755372F777B965D8BB29B6C8D244A6D /* Sources */,
+				8A76B6F01CE00C1E4C560334B1C375F5 /* Frameworks */,
+				909A02D310D302CB37C0B58BBD38CB13 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ReSwift-tvOS";
+			productName = "ReSwift-tvOS";
+			productReference = E22AC27F2A2E6E2B3C825B3B208C3C6F /* ReSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FC71F9F4F6C2FA4C667C83B108C63ED2 /* Pods-Rune tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF7F2FAC498345DE42003E1424BC89B8 /* Build configuration list for PBXNativeTarget "Pods-Rune tvOS" */;
+			buildPhases = (
+				2BCFEB04A31B677EB8AC9D4998FEC8A9 /* Sources */,
+				0C06B118A803D426CE72B8545A45DE09 /* Frameworks */,
+				DF5E65A51AA811FD1495049C177F7A62 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				436ACD5C94512FFEE79B3F0D220686F1 /* PBXTargetDependency */,
+			);
+			name = "Pods-Rune tvOS";
+			productName = "Pods-Rune tvOS";
+			productReference = 15DB589E034A55FB93C326A0B5AA7429 /* Pods_Rune_tvOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -450,7 +704,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0910;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -460,25 +714,28 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 5884C5CCCA6FBBF1DF139E205963997B /* Products */;
+			productRefGroup = 78618146BBA9788D947633308FC34E4F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				875776F8E56AD1F391DE54DF2376A822 /* Pods-Rune iOS */,
-				70FC5001F61D28A85DB3C40739D29DD9 /* Pods-Rune tvOS */,
+				72694914BBFA55D99F27D59975A75B35 /* Pods-Rune iOS */,
+				FC71F9F4F6C2FA4C667C83B108C63ED2 /* Pods-Rune tvOS */,
 				BC9DEB9EF32D2E02D4B47BF7DCB7818B /* Pods-Rune watchOS */,
-				2C3FDED029AA4A89D8FF038BEF0367DC /* Pods-Rune watchOS Extension */,
+				9093360CA97BB4EB84265B601BAAC314 /* Pods-Rune watchOS Extension */,
 				3AFA96A716C1DC5D5E13DAC2F7C4DDFA /* Pods-RuneTests */,
+				722E4A7CF14D569B2E9CB36688660A3A /* ReSwift-iOS */,
+				CFC08CC1175C669BADAE3F7F408ABC20 /* ReSwift-tvOS */,
+				2C5E31A2A564D7EACE03B4C9928435B8 /* ReSwift-watchOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		32F39ACEE59B216F2BB05BF819E2114F /* Sources */ = {
+		2BCFEB04A31B677EB8AC9D4998FEC8A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FD460CDE86485A52F6078CEB163BB73 /* Pods-Rune iOS-dummy.m in Sources */,
+				3742A9652340544E5511299802B409FB /* Pods-Rune tvOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +747,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5E91D2215D2965C12D7AC7F4C2723B65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3C24B283E4CDDF437D85862D2812B0A /* Action.swift in Sources */,
+				4F8805012ACD5B3585F4CB9AE04909B0 /* Assertions.swift in Sources */,
+				20AC4D131EB1B29468601ACB971BE248 /* Coding.swift in Sources */,
+				DF5E270D6131B718DC0370B55960F7C8 /* DispatchingStoreType.swift in Sources */,
+				3EC270D701AFC227EF5F2AA4872CB879 /* Middleware.swift in Sources */,
+				B571DE1099F0DA09C2D8C383F16C89A7 /* Reducer.swift in Sources */,
+				9D79FE8B2B674754286E06D1F2222471 /* ReSwift-iOS-dummy.m in Sources */,
+				F7F43726D1E8E0522AB558D37D8A2831 /* State.swift in Sources */,
+				69E2262E55F0E7E9C0FBEEC59E49D296 /* Store.swift in Sources */,
+				63D354D38B39BAA4E810F5B76AB13F24 /* StoreSubscriber.swift in Sources */,
+				34D4D88550DD7889823F333B44CA7A38 /* StoreType.swift in Sources */,
+				224C8B4D0395C33F4CC70BF932346B21 /* Subscription.swift in Sources */,
+				BE988D8498B73EB31BD4C3B8309772BE /* TypeHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7755372F777B965D8BB29B6C8D244A6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C122317292F2C2ADCDFDAB2028CB425C /* Action.swift in Sources */,
+				3B99B2D1A149FB9F5C0C0DF7977BD8A7 /* Assertions.swift in Sources */,
+				A75908C370E88B74F92C42AF5AE2B451 /* Coding.swift in Sources */,
+				6CADCCF412F9DB702C9726740EBD246D /* DispatchingStoreType.swift in Sources */,
+				6BAC910BDF5AE19A4D85FE162FE20E52 /* Middleware.swift in Sources */,
+				944446244AE1A82B7AEE0753FD418EE0 /* Reducer.swift in Sources */,
+				9E0976C6ACA222579D0AF2D2B7811B78 /* ReSwift-tvOS-dummy.m in Sources */,
+				FF9C267D96DC06516C963186275DF749 /* State.swift in Sources */,
+				4E13F25D9B1C4FB9E5DC27FD8960D734 /* Store.swift in Sources */,
+				21138BACBD231DF24AB3EB3AED04E62D /* StoreSubscriber.swift in Sources */,
+				BC09BF2E1EA7019D39820D5C6567B7C1 /* StoreType.swift in Sources */,
+				890ED22713D8974243D8CD97C9A2417C /* Subscription.swift in Sources */,
+				1DD45D043EC36F6C51EC97CD4155A127 /* TypeHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7D0C0A1DEAFD77CD8F9F50671CDC9FD5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -498,120 +795,67 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		928E575E9F2FDADB5132F49E66B77867 /* Sources */ = {
+		BBB3D7F35ABB3D49B780C78141F0BFE7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B947BD0691E7F113564D841C2E83625 /* Pods-Rune watchOS Extension-dummy.m in Sources */,
+				A78FA9BB6875B522F5802502A687E63D /* Action.swift in Sources */,
+				08D6A974B6134AFE5E53A41E42D10B87 /* Assertions.swift in Sources */,
+				7F33D6A8C741A83C1C1AAE5853786949 /* Coding.swift in Sources */,
+				4C89869EAC6193E5105D6E6997F8F4DC /* DispatchingStoreType.swift in Sources */,
+				EAE73899FAC07DC4CF2E720711140E2E /* Middleware.swift in Sources */,
+				EA947BCF180742C14E3EC5C0DD3977B0 /* Reducer.swift in Sources */,
+				E37E19276577AF185C9318BECF37B744 /* ReSwift-watchOS-dummy.m in Sources */,
+				B3CC58DE82DDB8482A857349585A1A7C /* State.swift in Sources */,
+				DD86E442EB9498A433FBB14FE0BD7548 /* Store.swift in Sources */,
+				DBA26D96988F7BD9EDCA67C0CB364B1B /* StoreSubscriber.swift in Sources */,
+				D3E832AD061365A5E7B436729A797A98 /* StoreType.swift in Sources */,
+				507DBAAD3B6C005DA6F3AA5C456C371F /* Subscription.swift in Sources */,
+				33DCF02C1E2CF790BB5CFE391E57DE01 /* TypeHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FCB53D0F675ABCC681EA72FFE8224C2D /* Sources */ = {
+		BFDE1246D04A0CA12F5A31A58957924A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7D537C7F387B13AFBBD3B1A8C665AA9 /* Pods-Rune tvOS-dummy.m in Sources */,
+				87FF5CA8029BAE08229FBBDF57B4A7AF /* Pods-Rune watchOS Extension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D14226811DE9BCDFDC3C5EAF9E54F9D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF70207327BAB2D5F0C96533B817DEA5 /* Pods-Rune iOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		436ACD5C94512FFEE79B3F0D220686F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ReSwift-tvOS";
+			target = CFC08CC1175C669BADAE3F7F408ABC20 /* ReSwift-tvOS */;
+			targetProxy = 570FFAFDD6615F3AD2AC0B3708E3E86B /* PBXContainerItemProxy */;
+		};
+		70564362C58F510EE1B80C64168B621B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ReSwift-iOS";
+			target = 722E4A7CF14D569B2E9CB36688660A3A /* ReSwift-iOS */;
+			targetProxy = A791D735139CA92353611AE6F9E0D61F /* PBXContainerItemProxy */;
+		};
+		843B55333DC4DF5F4DAF463B8C24923B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ReSwift-watchOS";
+			target = 2C5E31A2A564D7EACE03B4C9928435B8 /* ReSwift-watchOS */;
+			targetProxy = B2FDAB19153E9424B528B7547465A685 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		05D6B1CD5D9CB8792C3693FC7FBC69D8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 013915A3875331243B8293C49ACEB89D /* Pods-Rune iOS.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Rune iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Rune iOS/Pods-Rune iOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Rune_iOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		0FA9B885A377F1246AA9D41AA4A8C457 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_DEBUG=1",
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				TVOS_DEPLOYMENT_TARGET = 10.2;
-				WATCHOS_DEPLOYMENT_TARGET = 4.0;
-			};
-			name = Debug;
-		};
-		3F995D6DD005D2FEA5680EBE2C0906EF /* Debug */ = {
+		01637A0A7F6302B5B7AA8F0ABC81ABBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 879E19B76F5C79F8FEEAFE987EB99610 /* Pods-Rune tvOS.debug.xcconfig */;
 			buildSettings = {
@@ -620,19 +864,15 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-Rune tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Rune tvOS/Pods-Rune tvOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -640,6 +880,8 @@
 				PRODUCT_NAME = Pods_Rune_tvOS;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.2;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -647,7 +889,73 @@
 			};
 			name = Debug;
 		};
-		5DB4D58C1FC2579F2C3096FA16ACB10C /* Release */ = {
+		092DFE61458CF8D64E4D6D69AE1BFD55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 013915A3875331243B8293C49ACEB89D /* Pods-Rune iOS.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Rune iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Rune iOS/Pods-Rune iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Rune_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4213FECA388E0BFC7990EE6DEA3037FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E8B3DD153E962CD01A2869E33735339 /* ReSwift-iOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ReSwift-iOS/ReSwift-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReSwift-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ReSwift-iOS/ReSwift-iOS.modulemap";
+				PRODUCT_NAME = ReSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4E2C5D761BE88D0448FE3C3F724216D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8D9F84F65DF21DD4C56003C1B1585A6C /* Pods-Rune tvOS.release.xcconfig */;
 			buildSettings = {
@@ -656,19 +964,15 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-Rune tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Rune tvOS/Pods-Rune tvOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -676,50 +980,16 @@
 				PRODUCT_NAME = Pods_Rune_tvOS;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.2;
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		9378AE0EC176DAE9CB8B163C701E2017 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 217537AC65653D704BE652BB65C33D47 /* Pods-Rune iOS.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Rune iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Rune iOS/Pods-Rune iOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Rune_iOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		AAA37EA3516D1A10B1AC7BC5A1EE7338 /* Release */ = {
+		60E1CCA4FEBA1387B2F2AFF27617D5ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6C3AD476F041BDD4822825C57D70800D /* Pods-Rune watchOS Extension.release.xcconfig */;
 			buildSettings = {
@@ -729,19 +999,15 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-Rune watchOS Extension/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Rune watchOS Extension/Pods-Rune watchOS Extension.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -749,16 +1015,18 @@
 				PRODUCT_NAME = Pods_Rune_watchOS_Extension;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
-		B76B045CB3861BC3023DE76F35E8262D /* Release */ = {
+		6D9FAB3A74E742D8FCFF96890AAAA5CE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A49778BA00EDF5DA694906817D6338BD /* Pods-Rune watchOS.release.xcconfig */;
+			baseConfigurationReference = 430BDA0F249670B3DF70A5CB1DC99090 /* ReSwift-watchOS.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -766,40 +1034,133 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Rune watchOS/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/ReSwift-watchOS/ReSwift-watchOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReSwift-watchOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ReSwift-watchOS/ReSwift-watchOS.modulemap";
+				PRODUCT_NAME = ReSwift;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		70409188D400BE93E163CEC8ED528E4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74D35F1B04BD4B5F0B2D1B01AFC1FC9D /* Pods-RuneTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RuneTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Rune watchOS/Pods-Rune watchOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MODULEMAP_FILE = "Target Support Files/Pods-RuneTests/Pods-RuneTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Rune_watchOS;
-				SDKROOT = watchos;
+				PRODUCT_NAME = Pods_RuneTests;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Debug;
+		};
+		9D2AC134956C55F9BA147B7D0C7C8E08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC6907F6D6CC3413394B0228D6955FF4 /* Pods-RuneTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RuneTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RuneTests/Pods-RuneTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_RuneTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		BEF4E1DE86D5D0633278BA7B2503C848 /* Release */ = {
+		AC1C063445B18D5DBFF3CCC25BA471C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 430BDA0F249670B3DF70A5CB1DC99090 /* ReSwift-watchOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ReSwift-watchOS/ReSwift-watchOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReSwift-watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ReSwift-watchOS/ReSwift-watchOS.modulemap";
+				PRODUCT_NAME = ReSwift;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		B7BE5E2025E0EE828FF9B73783B864D3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -807,7 +1168,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -815,39 +1176,74 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 				TVOS_DEPLOYMENT_TARGET = 10.2;
-				VALIDATE_PRODUCT = YES;
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
-		C3D68F8FC52FA20A022456EAEDDAF3D3 /* Debug */ = {
+		B8266BE76715AD256A0A61B40D6A90F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E8B3DD153E962CD01A2869E33735339 /* ReSwift-iOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ReSwift-iOS/ReSwift-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReSwift-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ReSwift-iOS/ReSwift-iOS.modulemap";
+				PRODUCT_NAME = ReSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CB08FC3464F2066D4459ACB333FCBC22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A5C26F29E0E7A699FB9571CC7F37B017 /* Pods-Rune watchOS Extension.debug.xcconfig */;
 			buildSettings = {
@@ -857,19 +1253,15 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-Rune watchOS Extension/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Rune watchOS Extension/Pods-Rune watchOS Extension.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -877,6 +1269,8 @@
 				PRODUCT_NAME = Pods_Rune_watchOS_Extension;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -884,7 +1278,7 @@
 			};
 			name = Debug;
 		};
-		E38F09AA5D9E47021AF1D6F10CC5BBB1 /* Debug */ = {
+		D05117616A6C56BD0A7DE3A978E01C86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 36E63802BCB3B9B015120E063CE00A86 /* Pods-Rune watchOS.debug.xcconfig */;
 			buildSettings = {
@@ -894,19 +1288,15 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-Rune watchOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Rune watchOS/Pods-Rune watchOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -921,86 +1311,234 @@
 			};
 			name = Debug;
 		};
-		E6DFC552EDEDB0C16BCB2AC4178A3740 /* Debug */ = {
+		D226E192C58A98ADE1F44143C49FC306 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74D35F1B04BD4B5F0B2D1B01AFC1FC9D /* Pods-RuneTests.debug.xcconfig */;
+			baseConfigurationReference = A49778BA00EDF5DA694906817D6338BD /* Pods-Rune watchOS.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Rune watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Rune watchOS/Pods-Rune watchOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Rune_watchOS;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Release;
+		};
+		DF6291865897DF2C33C48A5740D64A66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C6D398BF0914D5F676DF6F71496F112 /* ReSwift-tvOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-RuneTests/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/ReSwift-tvOS/ReSwift-tvOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReSwift-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ReSwift-tvOS/ReSwift-tvOS.modulemap";
+				PRODUCT_NAME = ReSwift;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EB255DB13418F14D2712452D53E7D72F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C6D398BF0914D5F676DF6F71496F112 /* ReSwift-tvOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ReSwift-tvOS/ReSwift-tvOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReSwift-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ReSwift-tvOS/ReSwift-tvOS.modulemap";
+				PRODUCT_NAME = ReSwift;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ED15A4AB5E27905AA32CAE1606DD35CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 217537AC65653D704BE652BB65C33D47 /* Pods-Rune iOS.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Rune iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-RuneTests/Pods-RuneTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MODULEMAP_FILE = "Target Support Files/Pods-Rune iOS/Pods-Rune iOS.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_RuneTests;
+				PRODUCT_NAME = Pods_Rune_iOS;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		FAF9AE1DBDF7ADDC8F3E80433B1E4897 /* Release */ = {
+		FAB768D378C0D17E1A04591D26B7E54C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC6907F6D6CC3413394B0228D6955FF4 /* Pods-RuneTests.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-RuneTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-RuneTests/Pods-RuneTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_RuneTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		00447B0F198D111E24F3DB06878A6BB5 /* Build configuration list for PBXNativeTarget "ReSwift-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D9FAB3A74E742D8FCFF96890AAAA5CE /* Debug */,
+				AC1C063445B18D5DBFF3CCC25BA471C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0EB2438352D6943BE5A44AF2C1449AF4 /* Build configuration list for PBXNativeTarget "ReSwift-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF6291865897DF2C33C48A5740D64A66 /* Debug */,
+				EB255DB13418F14D2712452D53E7D72F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		12CA35234FCD0429F401ED0FFB80851D /* Build configuration list for PBXNativeTarget "Pods-Rune watchOS Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB08FC3464F2066D4459ACB333FCBC22 /* Debug */,
+				60E1CCA4FEBA1387B2F2AFF27617D5ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		17766F1155B12ACB07B92CB7BAA1E710 /* Build configuration list for PBXNativeTarget "Pods-RuneTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E6DFC552EDEDB0C16BCB2AC4178A3740 /* Debug */,
-				FAF9AE1DBDF7ADDC8F3E80433B1E4897 /* Release */,
+				70409188D400BE93E163CEC8ED528E4A /* Debug */,
+				9D2AC134956C55F9BA147B7D0C7C8E08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1008,8 +1546,17 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0FA9B885A377F1246AA9D41AA4A8C457 /* Debug */,
-				BEF4E1DE86D5D0633278BA7B2503C848 /* Release */,
+				FAB768D378C0D17E1A04591D26B7E54C /* Debug */,
+				B7BE5E2025E0EE828FF9B73783B864D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		565FFF1A52D2438B1F017E8917A1DF43 /* Build configuration list for PBXNativeTarget "ReSwift-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8266BE76715AD256A0A61B40D6A90F0 /* Debug */,
+				4213FECA388E0BFC7990EE6DEA3037FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1017,35 +1564,26 @@
 		A95F14C18C7BFD58F5D969E91A1F3073 /* Build configuration list for PBXNativeTarget "Pods-Rune watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E38F09AA5D9E47021AF1D6F10CC5BBB1 /* Debug */,
-				B76B045CB3861BC3023DE76F35E8262D /* Release */,
+				D05117616A6C56BD0A7DE3A978E01C86 /* Debug */,
+				D226E192C58A98ADE1F44143C49FC306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B36AD30466544AFE60E91FDA33358733 /* Build configuration list for PBXNativeTarget "Pods-Rune tvOS" */ = {
+		DF7F2FAC498345DE42003E1424BC89B8 /* Build configuration list for PBXNativeTarget "Pods-Rune tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3F995D6DD005D2FEA5680EBE2C0906EF /* Debug */,
-				5DB4D58C1FC2579F2C3096FA16ACB10C /* Release */,
+				01637A0A7F6302B5B7AA8F0ABC81ABBA /* Debug */,
+				4E2C5D761BE88D0448FE3C3F724216D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D19281E1F7F6FDCF53F202ED264CFE6C /* Build configuration list for PBXNativeTarget "Pods-Rune iOS" */ = {
+		E7ECCBE5CC4EE97451278FC34C329C7C /* Build configuration list for PBXNativeTarget "Pods-Rune iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9378AE0EC176DAE9CB8B163C701E2017 /* Debug */,
-				05D6B1CD5D9CB8792C3693FC7FBC69D8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FFB7C81786739AAEBF241BBC8210B795 /* Build configuration list for PBXNativeTarget "Pods-Rune watchOS Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C3D68F8FC52FA20A022456EAEDDAF3D3 /* Debug */,
-				AAA37EA3516D1A10B1AC7BC5A1EE7338 /* Release */,
+				ED15A4AB5E27905AA32CAE1606DD35CA /* Debug */,
+				092DFE61458CF8D64E4D6D69AE1BFD55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

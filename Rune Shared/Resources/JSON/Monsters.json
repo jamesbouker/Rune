@@ -48,6 +48,7 @@
         "asset" : "skeleton",
         "ai" : "sightedFollower",
         "range" : 2,
+        "shootRange" : 1,
         "isDirectional" : true,
         "isRanged" : true,
         "rangedItem" : "bone",
